@@ -78,7 +78,38 @@
     }
 html {
   scroll-behavior: smooth;
+}.contact{
+  text-align:center;
+  padding:70px 20px;
+  background:#020617;
 }
+
+.social-cards{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+
+.card{
+  padding:18px 28px;
+  border-radius:15px;
+  color:white;
+  text-decoration:none;
+  font-size:18px;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+}
+
+.whatsapp{ background:#25D366; }
+.telegram{ background:#0088cc; }
+.instagram{ background:#E1306C; }
+.youtube{ background:#FF0000; }
   </style>
 </head>
 
@@ -110,27 +141,30 @@ html {
     }
   </script>
 <!-- İLETİŞİM -->
-<div id="iletisim" style="text-align:center; padding:50px 20px; background:#020617;">
+<div id="iletisim" class="contact">
   <h2>İletişim</h2>
   <p>Bana ulaşmak için:</p>
 
-  <div style="margin-top:20px;">
+  <div class="social-cards">
 
-    <a href="https://wa.me/905015440670" target="_blank" style="margin:10px; text-decoration:none; color:#25D366;">
-      WhatsApp
+    <a class="card whatsapp" href="https://wa.me/905015440670" target="_blank">
+      💬 WhatsApp
     </a>
 
-    <a href=https://t.me/SefaAKAN target="_blank" style="margin:10px; text-decoration:none; color:#0088cc;">
-      Telegram
+    <a class="card telegram" href="https://t.me/SefaAKAN" target="_blank">
+      ✈️ Telegram
     </a>
 
-    <a href="https://www.instagram.com/sefa.akann/" target="_blank" style="margin:10px; text-decoration:none; color:#E1306C;">
-      Instagram
+    <a class="card instagram" href="https://www.instagram.com/sefa.akann/" target="_blank">
+      📸 Instagram
     </a>
 
-    <a href="https://www.youtube.com/@sefaakan62" target="_blank" style="margin:10px; text-decoration:none; color:#FF0000;">
-      YouTube
+    <a class="card youtube" href="https://youtube.com/@sefaakan62" target="_blank">
+      ▶️ YouTube
     </a>
+
+  </div>
+</div>
 
   </div>
 
