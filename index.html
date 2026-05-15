@@ -263,21 +263,40 @@ html {
 
 .test-card{
   width:280px;
-  padding:30px;
-  border-radius:25px;
+  padding:35px;
+  border-radius:30px;
   background:rgba(255,255,255,0.04);
-  border:1px solid rgba(168,85,247,0.25);
-  box-shadow:0 0 20px rgba(168,85,247,0.08);
-  backdrop-filter:blur(8px);
-  transition:0.3s;
+  border:1px solid rgba(56,189,248,0.2);
+
+  box-shadow:
+    0 0 20px rgba(56,189,248,0.08),
+    inset 0 0 20px rgba(255,255,255,0.02);
+
+  backdrop-filter:blur(12px);
+  transition:0.35s;
+  cursor:pointer;
 }
 
 .test-card:hover{
-  transform:translateY(-10px);
+  transform:translateY(-12px) scale(1.02);
+  border-color:#38bdf8;
+}
+
+.test-icon{
+  font-size:48px;
+  margin-bottom:20px;
 }
 
 .test-card h3{
+  font-size:24px;
+  margin-bottom:15px;
   color:#38bdf8;
+}
+
+.test-card p{
+  font-size:17px;
+  line-height:1.5;
+  opacity:0.85;
 }
 
 
@@ -575,29 +594,36 @@ Benim yaklaşımım yalnızca antrenman programı oluşturmak değil; performans
     
   </p>
 
-</div><div id="testler" class="tests">
+</div>
+<div id="testler" class="tests">
   <h2>Performans Testleri</h2>
 
   <div class="test-cards">
+
     <div class="test-card">
-      <h3>Vertical Jump Test</h3>
-      <p>Alt ekstremite patlayıcı güç değerlendirmesi.</p>
+      <div class="test-icon">⚡</div>
+      <h3>Speed Assessment</h3>
+      <p>Maksimum hız ve ivmelenme performans analizi.</p>
     </div>
 
     <div class="test-card">
-      <h3>30m Sprint Test</h3>
-      <p>Maksimum hız ve ivmelenme analizi.</p>
+      <div class="test-icon">💥</div>
+      <h3>Power Assessment</h3>
+      <p>Patlayıcı güç ve dikey sıçrama değerlendirmesi.</p>
     </div>
 
     <div class="test-card">
-      <h3>Agility Test</h3>
+      <div class="test-icon">🔄</div>
+      <h3>Agility Assessment</h3>
       <p>Yön değiştirme ve çeviklik performansı.</p>
     </div>
 
     <div class="test-card">
-      <h3>Mobility Assessment</h3>
-      <p>Hareket açıklığı ve mobilite değerlendirmesi.</p>
+      <div class="test-icon">🧠</div>
+      <h3>Movement Screening</h3>
+      <p>Mobilite, hareket kalitesi ve risk analizi.</p>
     </div>
+
   </div>
 </div>
 <div id="iletisim" class="contact">
