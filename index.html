@@ -717,7 +717,56 @@ body{
     transparent
   );
 }
+.contact-form{
+  max-width:650px;
+  margin:120px auto 80px;
+  padding:35px;
+  border-radius:30px;
 
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(56,189,248,0.2);
+  backdrop-filter:blur(12px);
+
+  box-shadow:
+    0 0 25px rgba(56,189,248,0.08);
+}
+
+.contact-form h3{
+  text-align:center;
+  font-size:34px;
+  margin-bottom:25px;
+}
+
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  margin-bottom:15px;
+  padding:16px;
+  border-radius:14px;
+  border:none;
+  outline:none;
+  background:rgba(255,255,255,0.08);
+  color:white;
+  font-size:16px;
+  box-sizing:border-box;
+}
+
+.contact-form textarea{
+  height:120px;
+  resize:none;
+}
+
+.contact-form button{
+  width:100%;
+  padding:16px;
+  border:none;
+  border-radius:16px;
+  background:#25D366;
+  color:#020617;
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
+}
 
 
 
@@ -863,8 +912,41 @@ Benim yaklaşımım yalnızca antrenman programı oluşturmak değil; performans
 </div>
 </div>
 
-
-
 </div>
+<div class="contact-form">
+  <h3>Performans Analizi İçin Başvur</h3>
+
+  <input type="text" id="name" placeholder="Ad Soyad">
+  <input type="text" id="sport" placeholder="Spor Branşı">
+  <input type="text" id="phone" placeholder="Telefon Numaran">
+  <textarea id="goal" placeholder="Hedefin / Notun"></textarea>
+
+  <button onclick="sendWhatsApp()">WhatsApp ile Başvur</button>
+</div>
+<script>
+function sendWhatsApp(){
+  const name = document.getElementById("name").value;
+  const sport = document.getElementById("sport").value;
+  const phone = document.getElementById("phone").value;
+  const goal = document.getElementById("goal").value;
+
+  const message =
+    "Merhaba, performans analizi için başvuru yapmak istiyorum.%0A%0A" +
+    "Ad Soyad: " + name + "%0A" +
+    "Spor Branşı: " + sport + "%0A" +
+    "Telefon: " + phone + "%0A" +
+    "Hedef / Not: " + goal;
+
+  window.open("https://wa.me/905015440670?text=" + message, "_blank");
+}
+</script>
+
+
+
+
+
+
+
+
 </body>
 </html>
