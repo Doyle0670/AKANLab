@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -74,6 +75,88 @@
   color:#25D366;
   border:2px solid rgba(37, 211, 102, 0.4);
   box-shadow:0 0 20px rgba(37, 211, 102, 0.4);
+}
+.contact{
+  text-align:center;
+  padding:100px 20px;
+  background: radial-gradient(circle at top, #17173a, #090918);
+}
+
+.contact h2{
+  color:white;
+  font-size:58px;
+  font-weight:700;
+  margin-bottom:50px;
+}
+
+.social-icons{
+  display:flex;
+  justify-content:center;
+  gap:35px;
+  flex-wrap:wrap;
+}
+
+.social-btn{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  font-size:52px;
+  transition:all 0.35s ease;
+  background:rgba(255,255,255,0.03);
+  backdrop-filter:blur(8px);
+}
+
+.social-btn:hover{
+  transform:translateY(-8px);
+}
+
+/* INSTAGRAM */
+.instagram{
+  color:#ff2f7d;
+  border:2px solid rgba(255,47,125,0.35);
+  box-shadow:
+    0 0 15px rgba(255,47,125,0.25),
+    inset 0 0 10px rgba(255,47,125,0.08);
+}
+
+/* X */
+.x{
+  color:#1da1f2;
+  border:2px solid rgba(29,161,242,0.35);
+  box-shadow:
+    0 0 15px rgba(29,161,242,0.25),
+    inset 0 0 10px rgba(29,161,242,0.08);
+}
+
+/* TELEGRAM */
+.telegram{
+  color:#199bff;
+  border:2px solid rgba(25,155,255,0.35);
+  box-shadow:
+    0 0 15px rgba(25,155,255,0.25),
+    inset 0 0 10px rgba(25,155,255,0.08);
+}
+
+/* YOUTUBE */
+.youtube{
+  color:#ff0000;
+  border:2px solid rgba(255,0,0,0.35);
+  box-shadow:
+    0 0 15px rgba(255,0,0,0.25),
+    inset 0 0 10px rgba(255,0,0,0.08);
+}
+
+/* WHATSAPP */
+.whatsapp{
+  color:#22e56d;
+  border:2px solid rgba(34,229,109,0.35);
+  box-shadow:
+    0 0 15px rgba(34,229,109,0.25),
+    inset 0 0 10px rgba(34,229,109,0.08);
 }
     body{
       margin:0;
@@ -247,28 +330,27 @@ Benim yaklaşımım yalnızca antrenman programı oluşturmak değil; performans
   <h2>Sosyal Medya</h2>
 
   <div class="social-icons">
-
-    <a href="https://www.instagram.com/sefa.akann/" class="icon instagram" target="_blank">
+    <a href="https://www.instagram.com/sefa.akann/" class="social-btn instagram" target="_blank">
       <i class="fa-brands fa-instagram"></i>
     </a>
 
-    <a href="https://x.com/19Sefa04" class="icon twitter" target="_blank">
+    <a href="https://x.com/19Sefa04" class="social-btn x" target="_blank">
       <i class="fa-brands fa-x-twitter"></i>
     </a>
 
-    <a href="https://t.me/SefaAKAN" class="icon telegram" target="_blank">
+    <a href="https://t.me/SefaAKAN" class="social-btn telegram" target="_blank">
       <i class="fa-brands fa-telegram"></i>
     </a>
 
-    <a href="https://youtube.com/@sefaakan62" class="icon youtube" target="_blank">
+    <a href="https://youtube.com/@sefaakan62" class="social-btn youtube" target="_blank">
       <i class="fa-brands fa-youtube"></i>
     </a>
 
-    <a href="https://wa.me/905015440670" class="icon whatsapp" target="_blank">
+    <a href="https://wa.me/905015440670" class="social-btn whatsapp" target="_blank">
       <i class="fa-brands fa-whatsapp"></i>
     </a>
-
   </div>
+</div>
 </div>
 
 
