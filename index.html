@@ -518,7 +518,7 @@ html {
   body{
     padding-top:140px;
   }
-}
+
 
 @media (max-width:768px){
 @media (max-width:768px){
@@ -914,7 +914,65 @@ body{
   font-weight:bold;
   cursor:pointer;
 }
+/* DESKTOP NAVBAR */
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
 
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+
+  padding:22px 70px;
+  box-sizing:border-box;
+
+  background:rgba(2,6,23,0.75);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(56,189,248,0.12);
+}
+
+.menu-toggle{
+  display:none;
+}
+
+.menu{
+  display:flex;
+  justify-content:center;
+  gap:42px;
+}
+
+.menu a{
+  text-decoration:none;
+  color:white;
+  font-size:17px;
+  font-weight:500;
+  transition:0.3s;
+  position:relative;
+}
+
+.menu a:hover{
+  color:#38bdf8;
+}
+
+.nav-socials{
+  display:flex;
+  justify-content:flex-end;
+  gap:22px;
+}
+
+.nav-socials a{
+  color:white;
+  font-size:20px;
+  transition:0.3s;
+}
+
+.nav-socials a:hover{
+  color:#38bdf8;
+  transform:translateY(-3px);
+}
 
 
 
