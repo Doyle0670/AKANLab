@@ -153,25 +153,73 @@
 
     /* HERO */
     .hero{
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-      height:100vh;
-      text-align:center;
-      }
-
-    .hero h1{
-  font-size:88px;
-  margin:0;
-  letter-spacing:4px;
-  line-height:1;
+  min-height:100vh;
+  padding:140px 40px 80px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
-    .hero p{
-  font-size:22px;
+.hero-wrapper{
+  width:90%;
+  max-width:1300px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:80px;
+}
+
+.hero-text{
+  flex:1;
+  text-align:left;
+}
+
+.hero-small{
+  color:#38bdf8;
+  letter-spacing:6px;
+  font-size:16px;
+  font-weight:bold;
+}
+
+.hero h1{
+  font-size:88px;
+  line-height:1;
+  margin:20px 0 10px;
+  color:white;
+}
+
+.hero h1 span{
+  color:#0ea5e9;
+}
+
+.hero h2{
+  font-size:34px;
+  color:rgba(255,255,255,0.8);
+  margin-bottom:25px;
+}
+
+.hero-desc{
+  max-width:520px;
+  font-size:21px;
+  line-height:1.6;
   opacity:0.85;
-  margin-top:10px;
+}
+
+.hero-image{
+  flex:1;
+  display:flex;
+  justify-content:center;
+}
+
+.hero-image img{
+  width:360px;
+  height:520px;
+  object-fit:cover;
+  border-radius:36px;
+  border:1px solid rgba(56,189,248,0.45);
+  box-shadow:
+    0 0 35px rgba(56,189,248,0.25),
+    0 0 90px rgba(37,99,235,0.15);
 }
 
     .btn{
@@ -386,37 +434,42 @@ html {
   }
 }
 
-
-.hero h1{
-  font-size:48px;
-}
-
-.hero h2{
-  font-size:20px;
-}
-
-.hero p{
-  font-size:22px;
-  opacity:0.85;
-  margin-top:10px;
-}
-
-
-
-
-.hero-wrapper{
-  flex-direction:column-reverse;
-  text-align:center;
-}
-
-
-
-.hero-image img{
-  width:260px;
-  height:260px;
-}
-
 @media (max-width:768px){
+@media (max-width:768px){
+  .hero{
+    padding:130px 20px 70px;
+  }
+
+  .hero-wrapper{
+    flex-direction:column-reverse;
+    gap:40px;
+    text-align:center;
+  }
+
+  .hero-text{
+    text-align:center;
+  }
+
+  .hero h1{
+    font-size:48px;
+  }
+
+  .hero h2{
+    font-size:24px;
+  }
+
+  .hero-desc{
+    font-size:17px;
+  }
+
+  .hero-image img{
+    width:240px;
+    height:320px;
+  }
+}
+
+
+
 
   .menu-toggle{
     display:block;
@@ -833,7 +886,7 @@ function toggleMenu(){
     </div>
 
     <div class="hero-image">
-      <img src="profile.jpeg" alt="Sefa Akan">
+      <img src="profile1.jpeg" alt="Sefa Akan">
     </div>
 
   </div>
