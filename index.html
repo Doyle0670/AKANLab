@@ -591,8 +591,73 @@ html {
 .contact-form button:hover{
   transform:translateY(-4px);
 }
+.hero-image img{
+  width:280px !important;
+  height:360px !important;
+  object-fit:cover;
+  border-radius:30px;
+}
 
+@media (max-width:768px){
+  .hero-image img{
+    width:190px !important;
+    height:240px !important;
+  }
+}
+.tests{
+  min-height:100vh;
+  padding:120px 40px;
+  text-align:center;
+  scroll-margin-top:120px;
+}
 
+.tests h2{
+  font-size:56px;
+  margin-bottom:60px;
+}
+
+.test-cards{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.test-card{
+  width:280px;
+  padding:35px;
+  border-radius:30px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(56,189,248,0.2);
+  box-shadow:
+    0 0 20px rgba(56,189,248,0.08),
+    inset 0 0 20px rgba(255,255,255,0.02);
+  backdrop-filter:blur(12px);
+  transition:0.35s;
+  cursor:pointer;
+}
+
+.test-card:hover{
+  transform:translateY(-12px) scale(1.02);
+  border-color:#38bdf8;
+}
+
+.test-icon{
+  font-size:48px;
+  margin-bottom:20px;
+}
+
+.test-card h3{
+  font-size:24px;
+  margin-bottom:15px;
+  color:#38bdf8;
+}
+
+.test-card p{
+  font-size:17px;
+  line-height:1.5;
+  opacity:0.85;
+}
 
 
 
@@ -722,7 +787,7 @@ Benim yaklaşımım yalnızca antrenman programı oluşturmak değil; performans
       <i class="fa-brands fa-instagram"></i>
     </a>
 
-    <a href="https://x.com/kullaniciadi" class="social-btn x" target="_blank">
+    <a href="https://x.com/19Sefa04" class="social-btn x" target="_blank">
       <i class="fa-brands fa-x-twitter"></i>
     </a>
 
