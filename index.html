@@ -231,7 +231,46 @@ html {
 
 .red-text{
   color:#ef4444;
-</style>
+.tests{
+  min-height:100vh;
+  padding:120px 40px;
+  text-align:center;
+  scroll-margin-top:120px;
+}
+
+.tests h2{
+  font-size:56px;
+  margin-bottom:60px;
+}
+
+.test-cards{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.test-card{
+  width:280px;
+  padding:30px;
+  border-radius:25px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(168,85,247,0.25);
+  box-shadow:0 0 20px rgba(168,85,247,0.08);
+  backdrop-filter:blur(8px);
+  transition:0.3s;
+}
+
+.test-card:hover{
+  transform:translateY(-10px);
+}
+
+.test-card h3{
+  color:#38bdf8;
+}
+
+
+  </style>
 </head>
 
 <body>
@@ -245,7 +284,7 @@ html {
       <a href="#">Ana Sayfa</a>
       <a href="#hakkimda">Hakkımda</a>
       <a href="#iletisim">İletişim</a>
-      <a href="#">Testler</a>
+      <a href="#testler">Testler</a>
     </div>
   </div>
   
@@ -253,7 +292,8 @@ html {
   <!-- HERO -->
   <div class="hero">
     <h1>SEFA AKAN ATLETİK PERFORMANSA HOŞ GELDİNİZ</h1>
-    <p>SEFA  AKAN - ATHLETİC PERFORMANCE COACH</p>
+    <p>
+</p>
 
     
   </div>
@@ -278,7 +318,32 @@ Benim yaklaşımım yalnızca antrenman programı oluşturmak değil; performans
     
   </p>
 
-</div><div id="iletisim" class="contact">
+</div><div id="testler" class="tests">
+  <h2>Performans Testleri</h2>
+
+  <div class="test-cards">
+    <div class="test-card">
+      <h3>Vertical Jump Test</h3>
+      <p>Alt ekstremite patlayıcı güç değerlendirmesi.</p>
+    </div>
+
+    <div class="test-card">
+      <h3>30m Sprint Test</h3>
+      <p>Maksimum hız ve ivmelenme analizi.</p>
+    </div>
+
+    <div class="test-card">
+      <h3>Agility Test</h3>
+      <p>Yön değiştirme ve çeviklik performansı.</p>
+    </div>
+
+    <div class="test-card">
+      <h3>Mobility Assessment</h3>
+      <p>Hareket açıklığı ve mobilite değerlendirmesi.</p>
+    </div>
+  </div>
+</div>
+<div id="iletisim" class="contact">
   <h2>Sosyal Medya</h2>
 
   <div class="social-icons">
