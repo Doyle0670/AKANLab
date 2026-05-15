@@ -314,15 +314,19 @@ html {
   color:#ff0000;
 }
   .about{
+  min-height:100vh;
+  padding:120px 30px;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
   text-align:center;
-  height:100vh;
-  font-size:30px;
   scroll-margin-top:120px;
-  background:transparent;
+}
+
+.about p{
+  max-width:900px;
+  line-height:1.7;
 }
 .blue-text{
   color:#38bdf8;
@@ -973,7 +977,9 @@ body{
   color:#38bdf8;
   transform:translateY(-3px);
 }
-
+html{
+  scroll-behavior:smooth;
+}
 
 
 
