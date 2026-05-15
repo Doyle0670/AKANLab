@@ -240,6 +240,8 @@ html {
 
 .red-text{
   color:#ef4444;
+}
+
 .tests{
   min-height:100vh;
   padding:120px 40px;
@@ -381,12 +383,7 @@ html {
 .hero p{
   font-size:18px;
 }
-@media (max-width:768px){
-  .hero-image img{
-    max-width:190px;
-    height:240px;
-  }
-}
+
 
 
 
@@ -399,23 +396,13 @@ html {
   text-align:center;
 }
 
-
+.hero-image img{
+  width:260px;
+  height:260px;
+}
 
 @media (max-width:768px){
 
-.contact-form{
-  padding:25px;
-}
-
-.contact-form h3{
-  font-size:28px;
-}
-
-
-
-
-
-  
   .menu-toggle{
     display:block;
   }
@@ -516,6 +503,7 @@ html {
   display:flex;
   justify-content:center;
 }
+
 .hero-image img{
   width:420px;
   height:420px;
@@ -534,137 +522,6 @@ html {
 .hero-image img:hover{
   transform:scale(1.03);
 }
-
-
-.tests{
-  min-height:100vh;
-  padding:120px 40px;
-  text-align:center;
-  scroll-margin-top:120px;
-}
-
-.tests h2{
-  font-size:56px;
-  margin-bottom:60px;
-}
-
-.test-cards{
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  flex-wrap:wrap;
-}
-
-.test-card{
-  width:280px;
-  padding:35px;
-  border-radius:30px;
-  background:rgba(255,255,255,0.04);
-  border:1px solid rgba(56,189,248,0.2);
-  box-shadow:
-    0 0 20px rgba(56,189,248,0.08),
-    inset 0 0 20px rgba(255,255,255,0.02);
-  backdrop-filter:blur(12px);
-  transition:0.35s;
-  cursor:pointer;
-}
-
-.test-card:hover{
-  transform:translateY(-12px) scale(1.02);
-  border-color:#38bdf8;
-}
-
-.test-icon{
-  font-size:48px;
-  margin-bottom:20px;
-}
-
-.test-card h3{
-  font-size:24px;
-  margin-bottom:15px;
-  color:#38bdf8;
-}
-
-.test-card p{
-  font-size:17px;
-  line-height:1.5;
-  opacity:0.85;
-}
-.hero-image img{
-  max-width:260px;
-  width:100%;
-  height:260px;
-  object-fit:cover;
-  border-radius:30px;
-  display:block;
-}
-/* FOTOĞRAF BOYUTUNU ZORLA SABİTLE */
-.hero-image{
-  max-width:320px !important;
-  flex:0 0 320px !important;
-}
-
-.hero-image img{
-  width:260px !important;
-  height:260px !important;
-  max-width:260px !important;
-  object-fit:cover !important;
-  border-radius:30px !important;
-}
-
-/* TESTLER PREMIUM TASARIM */
-.tests{
-  min-height:100vh !important;
-  padding:120px 40px !important;
-  text-align:center !important;
-  scroll-margin-top:120px !important;
-}
-
-.tests h2{
-  font-size:56px !important;
-  margin-bottom:60px !important;
-}
-
-.test-cards{
-  display:flex !important;
-  justify-content:center !important;
-  gap:30px !important;
-  flex-wrap:wrap !important;
-}
-
-.test-card{
-  width:280px !important;
-  padding:35px !important;
-  border-radius:30px !important;
-  background:rgba(255,255,255,0.04) !important;
-  border:1px solid rgba(56,189,248,0.2) !important;
-  box-shadow:0 0 20px rgba(56,189,248,0.08) !important;
-  backdrop-filter:blur(12px) !important;
-  transition:0.35s !important;
-}
-
-.test-card:hover{
-  transform:translateY(-12px) scale(1.02) !important;
-}
-
-.test-icon{
-  font-size:48px !important;
-  margin-bottom:20px !important;
-}
-
-.test-card h3{
-  font-size:24px !important;
-  color:#38bdf8 !important;
-}
-
-.test-card p{
-  font-size:17px !important;
-  line-height:1.5 !important;
-  opacity:0.85 !important;
-}
-
-
-
 
 
 
@@ -710,9 +567,9 @@ function toggleMenu(){
       </div>
     </div>
 
-   <div class="hero-image">
-  <img src="profile.jpeg" alt="Sefa Akan">
-</div>
+    <div class="hero-image">
+      <img src="profile1.jpeg" alt="Sefa Akan">
+    </div>
 
   </div>
 </div>
@@ -742,6 +599,7 @@ Benim yaklaşımım yalnızca antrenman programı oluşturmak değil; performans
   <h2>Performans Testleri</h2>
 
   <div class="test-cards">
+
     <div class="test-card">
       <div class="test-icon">⚡</div>
       <h3>Speed Assessment</h3>
@@ -765,13 +623,10 @@ Benim yaklaşımım yalnızca antrenman programı oluşturmak değil; performans
       <h3>Movement Screening</h3>
       <p>Mobilite, hareket kalitesi ve risk analizi.</p>
     </div>
+
   </div>
 </div>
-
 <div id="iletisim" class="contact">
-
-  
-
   <h2>Sosyal Medya</h2>
 
   <div class="social-icons">
@@ -796,11 +651,10 @@ Benim yaklaşımım yalnızca antrenman programı oluşturmak değil; performans
     </a>
   </div>
 </div>
+</div>
 
-<script>
-function toggleMenu(){
-  document.getElementById("mobileMenu").classList.toggle("active");
-}
-</script>
+
+
+</div>
 </body>
 </html>
