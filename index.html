@@ -123,6 +123,12 @@
       width:100%;
       box-sizing:border-box;
       z-index:1000;
+      .menu-toggle{
+  display:none;
+  font-size:32px;
+  cursor:pointer;
+  color:white;
+}
 
     }
 
@@ -340,6 +346,39 @@ html {
     padding-top:140px;
   }
 }
+@media (max-width:768px){
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .menu{
+    display:none;
+    flex-direction:column;
+    width:100%;
+    text-align:center;
+    background:#050816;
+    padding:20px 0;
+    margin-top:15px;
+    border-radius:20px;
+  }
+
+  .menu.active{
+    display:flex;
+  }
+
+  .navbar{
+    flex-wrap:wrap;
+    padding:15px 20px;
+  }
+
+  .menu a{
+    margin:12px 0;
+    font-size:18px;
+}
+
+
+
 
   </style>
 </head>
@@ -349,15 +388,15 @@ html {
 
   <!-- NAVBAR -->
   <div class="navbar">
-    <div class="logo">ATHLETİC PERFORMANCE COACH</div>
+  <div class="logo">ATHLETIC PERFORMANCE COACH</div>
 
-    <div class="menu">
-      <a href="#">Ana Sayfa</a>
-      <a href="#hakkimda">Hakkımda</a>
-      <a href="#iletisim">İletişim</a>
-      <a href="#testler">Testler</a>
-    </div>
+  <div class="menu">
+    <a href="#">Ana Sayfa</a>
+    <a href="#hakkimda">Hakkımda</a>
+    <a href="#iletisim">İletişim</a>
+    <a href="#testler">Testler</a>
   </div>
+</div>
   
 
   <!-- HERO -->
