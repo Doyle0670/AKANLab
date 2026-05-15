@@ -365,6 +365,23 @@ html {
   font-size:18px;
 }
 
+
+
+
+.hero-wrapper{
+  flex-direction:column-reverse;
+  text-align:center;
+}
+
+.hero-text{
+  text-align:center;
+}
+
+.hero-image img{
+  width:260px;
+  height:260px;
+}
+
 @media (max-width:768px){
 
   .menu-toggle{
@@ -448,6 +465,46 @@ html {
 .hero-btn:hover{
   transform:translateY(-6px);
 }
+.hero-wrapper{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:60px;
+  width:90%;
+  max-width:1400px;
+}
+
+.hero-text{
+  flex:1;
+  text-align:left;
+}
+
+.hero-image{
+  flex:1;
+  display:flex;
+  justify-content:center;
+}
+
+.hero-image img{
+  width:420px;
+  height:420px;
+  object-fit:cover;
+  border-radius:30px;
+
+  border:2px solid rgba(56,189,248,0.35);
+
+  box-shadow:
+    0 0 20px rgba(56,189,248,0.2),
+    0 0 50px rgba(168,85,247,0.15);
+
+  transition:0.4s;
+}
+
+.hero-image img:hover{
+  transform:scale(1.03);
+}
+
+
 
 
 
@@ -478,15 +535,23 @@ function toggleMenu(){
 
   <!-- HERO -->
  <div class="hero">
-  <div class="hero-content">
-    <h1>SEFA AKAN</h1>
-    <h2>ATHLETIC PERFORMANCE COACH</h2>
-    <p>Strength. Speed. Power. Performance.</p>
+  <div class="hero-wrapper">
 
-    <div class="hero-buttons">
-      <a href="#testler" class="hero-btn primary">Performans Testleri</a>
-      <a href="#iletisim" class="hero-btn secondary">İletişime Geç</a>
+    <div class="hero-text">
+      <h1>SEFA AKAN</h1>
+      <h2>ATHLETIC PERFORMANCE COACH</h2>
+      <p>Strength. Speed. Power. Performance.</p>
+
+      <div class="hero-buttons">
+        <a href="#testler" class="hero-btn primary">Performans Testleri</a>
+        <a href="#iletisim" class="hero-btn secondary">İletişime Geç</a>
+      </div>
     </div>
+
+    <div class="hero-image">
+      <img src="profile.jpg" alt="Sefa Akan">
+    </div>
+
   </div>
 </div>
 
