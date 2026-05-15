@@ -351,6 +351,20 @@ html {
     padding-top:140px;
   }
 }
+
+
+.hero h1{
+  font-size:48px;
+}
+
+.hero h2{
+  font-size:20px;
+}
+
+.hero p{
+  font-size:18px;
+}
+
 @media (max-width:768px){
 
   .menu-toggle{
@@ -382,7 +396,58 @@ html {
     font-size:18px;
   }
 }
+.hero-content{
+  text-align:center;
+}
 
+.hero h1{
+  font-size:82px;
+  margin:0;
+  letter-spacing:3px;
+}
+
+.hero h2{
+  font-size:28px;
+  color:#38bdf8;
+  margin:15px 0;
+  letter-spacing:2px;
+}
+
+.hero p{
+  font-size:22px;
+  opacity:0.8;
+}
+
+.hero-buttons{
+  margin-top:35px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.hero-btn{
+  padding:16px 32px;
+  border-radius:50px;
+  text-decoration:none;
+  font-size:18px;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.hero-btn.primary{
+  background:#38bdf8;
+  color:#020617;
+}
+
+.hero-btn.secondary{
+  border:2px solid #38bdf8;
+  color:#38bdf8;
+}
+
+.hero-btn:hover{
+  transform:translateY(-6px);
+}
 
 
 
@@ -412,13 +477,18 @@ function toggleMenu(){
   
 
   <!-- HERO -->
-  <div class="hero">
-    <h1>SEFA AKAN ATLETİK PERFORMANSA HOŞ GELDİNİZ</h1>
-    <p>
-</p>
+ <div class="hero">
+  <div class="hero-content">
+    <h1>SEFA AKAN</h1>
+    <h2>ATHLETIC PERFORMANCE COACH</h2>
+    <p>Strength. Speed. Power. Performance.</p>
 
-    
+    <div class="hero-buttons">
+      <a href="#testler" class="hero-btn primary">Performans Testleri</a>
+      <a href="#iletisim" class="hero-btn secondary">İletişime Geç</a>
+    </div>
   </div>
+</div>
 
   <script>
     function mesaj(){
