@@ -537,10 +537,11 @@ body{
   height:100%;
   z-index:-10;
   background:
-    radial-gradient(circle at 20% 20%, rgba(56,189,248,0.20), transparent 25%),
-    radial-gradient(circle at 80% 30%, rgba(37,99,235,0.18), transparent 25%),
-    linear-gradient(135deg, #020617, #050816, #0f172a);
-}
+  radial-gradient(circle at 15% 20%, rgba(56,189,248,0.22), transparent 20%),
+  radial-gradient(circle at 80% 25%, rgba(37,99,235,0.20), transparent 20%),
+  radial-gradient(circle at 65% 75%, rgba(59,130,246,0.14), transparent 25%),
+  radial-gradient(circle at 30% 85%, rgba(96,165,250,0.10), transparent 20%),
+  linear-gradient(135deg, #020617, #030712, #0f172a);}
 
 .stars{
   position:absolute;
@@ -580,6 +581,24 @@ body{
   background-size:900px 900px;
   opacity:0.35;
   animation-duration:160s;
+  .network{
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  opacity:0.12;
+  background-image:
+    linear-gradient(35deg, transparent 49%, rgba(56,189,248,0.4) 50%, transparent 51%),
+    linear-gradient(125deg, transparent 49%, rgba(56,189,248,0.25) 50%, transparent 51%);
+  background-size:400px 400px;
+  animation:networkMove 60s linear infinite;
+}
+
+
+
+
+
 }
 
 @keyframes moveStars{
@@ -591,6 +610,19 @@ body{
     transform:translateY(-500px);
   }
 }
+@keyframes networkMove{
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(-300px);
+  }
+}
+
+
+
+
 
 
 
@@ -607,6 +639,7 @@ function toggleMenu(){
   <div class="stars stars1"></div>
   <div class="stars stars2"></div>
   <div class="stars stars3"></div>
+  <div class="network"></div>
 </div>
   
 
