@@ -108,30 +108,7 @@
   background:#111;
   color:white;
   padding-top:0px;
-    background:linear-gradient(
-    -45deg,
-    #020617,
-    #0f172a,
-    #111827,
-    #0a192f
-  );
-
-  background-size:400% 400%;
-
-  animation:bgMove 12s ease infinite;
-}
-@keyframes bgMove{
-  0%{
-    background-position:0% 50%;
-  }
-
-  50%{
-    background-position:100% 50%;
-  }
-
-  100%{
-    background-position:0% 50%;
-  }
+  
 }
     
 
@@ -258,7 +235,28 @@ html {
 
 .red-text{
   color:#ef4444;
-}}</style>
+}}
+
+.stars{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:url("https://www.transparenttextures.com/patterns/stardust.png");
+  animation:moveStars 60s linear infinite;
+  z-index:-1;
+}@keyframes moveStars{
+  from{
+    transform:translateY(0);
+  }
+
+  to{
+    transform:translateY(-1000px);
+  }
+}
+
+</style>
 </head>
 
 <body>
@@ -275,6 +273,7 @@ html {
       <a href="#">Testler</a>
     </div>
   </div>
+  <div class="stars"></div>
 
   <!-- HERO -->
   <div class="hero">
