@@ -761,7 +761,16 @@ html, body{
 .video-box{
   border-radius:22px;
 }
+.video-section h2{
+  font-size:28px;
+  line-height:1.2;
+  max-width:100%;
+  overflow-wrap:break-word;
+}
 
+.video-section{
+  padding-top:90px;
+}
 
 
 
@@ -1469,7 +1478,7 @@ function toggleMenu(){
     <div class="loader-line"></div>
   </div>
 </div>
-  
+  <div id="top"></div>
   
   
   
@@ -1490,7 +1499,7 @@ function toggleMenu(){
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
   <div class="menu" id="mobileMenu">
-    <a href="#">Ana Sayfa</a>
+    <a href="#top">Ana Sayfa</a>
     <a href="#hakkimda">Hakkımda</a>
     <a href="#services">Hizmetler</a>
     <a href="#testler">Testler</a>
@@ -1823,7 +1832,13 @@ window.addEventListener("load", ()=>{
   }, 1800);
 });
 </script>
-
+<script>
+window.addEventListener("load", function(){
+  if(!window.location.hash){
+    window.scrollTo(0, 0);
+  }
+});
+</script>
 
 
 
