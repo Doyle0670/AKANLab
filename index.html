@@ -624,6 +624,13 @@ html {
   .navbar .menu.active{
     display:flex !important;
   }
+.footer-logo{
+  font-size:30px;
+}
+
+.footer-text{
+  font-size:15px;
+}
 
 }
 .hero-content{
@@ -1145,7 +1152,54 @@ html{
   opacity:1;
   transform:translateY(0);
 }
+.footer{
+  margin-top:120px;
+  padding:70px 30px;
+  text-align:center;
 
+  background:rgba(2,6,23,0.65);
+  border-top:1px solid rgba(56,189,248,0.12);
+  backdrop-filter:blur(14px);
+}
+
+.footer-logo{
+  font-size:42px;
+  font-weight:900;
+  letter-spacing:2px;
+}
+
+.footer-logo span{
+  color:#38bdf8;
+}
+
+.footer-text{
+  margin:18px 0 30px;
+  font-size:18px;
+  opacity:0.75;
+}
+
+.footer-socials{
+  display:flex;
+  justify-content:center;
+  gap:28px;
+  margin-bottom:30px;
+}
+
+.footer-socials a{
+  color:white;
+  font-size:28px;
+  transition:0.3s;
+}
+
+.footer-socials a:hover{
+  color:#38bdf8;
+  transform:translateY(-4px);
+}
+
+.footer-copy{
+  font-size:14px;
+  opacity:0.55;
+}
 
 
 
@@ -1379,6 +1433,36 @@ function toggleMenu(){
 
   <button onclick="sendWhatsApp()">WhatsApp ile Başvur</button>
 </div>
+<footer class="footer">
+  <div class="footer-logo">AKAN<span>LAB</span></div>
+
+  <p class="footer-text">
+    Athletic Performance Coach | Strength • Speed • Power • Performance
+  </p>
+
+  <div class="footer-socials">
+    <a href="https://www.instagram.com/sefa.akann/" target="_blank">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="https://youtube.com/@sefaakan62" target="_blank">
+      <i class="fa-brands fa-youtube"></i>
+    </a>
+
+    <a href="https://wa.me/905015440670" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <p class="footer-copy">
+    © 2026 Sefa Akan — All Rights Reserved
+  </p>
+</footer>
+
+
+
+
+
 <script>
 function sendWhatsApp(){
   const name = document.getElementById("name").value;
