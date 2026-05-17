@@ -1135,7 +1135,16 @@ html{
   line-height:1.6;
   opacity:0.82;
 }
+.fade-up{
+  opacity:0;
+  transform:translateY(80px);
+  transition:all 1s ease;
+}
 
+.fade-up.show{
+  opacity:1;
+  transform:translateY(0);
+}
 
 
 
@@ -1220,7 +1229,7 @@ function toggleMenu(){
 
   </div>
 </div>
-<div id="hakkimda" class="about">
+<div id="hakkimda" class="about fade-up"> 
   <div class="about-card">
 
     <p class="section-label">HAKKIMDA</p>
@@ -1249,7 +1258,7 @@ function toggleMenu(){
 
   </div>
 </div>
-<div id="services" class="services">
+<div id="services" class="services fade-up">
   <p class="section-label">HİZMETLER</p>
   <h2>Performans Gelişim Hizmetleri</h2>
 
@@ -1297,7 +1306,7 @@ function toggleMenu(){
 
 
 
-<div id="testler" class="tests">
+<div id="testler" class="tests fade-up">
   <h2>Performans Testleri</h2>
 
   <div class="test-cards">
@@ -1360,7 +1369,7 @@ function toggleMenu(){
 </div>
 
 </div>
-<div class="contact-form">
+<div class="contact-form fade-up">
   <h3>Performans Analizi İçin Başvur</h3>
 
   <input type="text" id="name" placeholder="Ad Soyad">
@@ -1424,6 +1433,27 @@ function openModal(type){
 function closeModal(){
   document.getElementById("testModal").style.display = "none";
 }
+const fadeElements = document.querySelectorAll(".fade-up");
+
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+},{
+  threshold:0.2
+});
+
+fadeElements.forEach(el=>{
+  observer.observe(el);
+});
+
+
+
+
+
+
 </script>
 
 
