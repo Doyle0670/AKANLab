@@ -193,7 +193,7 @@
 }
 
     /* HERO */
-    .hero{
+     .hero{
   min-height:100vh;
   padding:140px 40px 80px;
   display:flex;
@@ -750,7 +750,17 @@ html, body{
 .footer-logo span{
   display:block;
 }
+.video-section{
+  padding:80px 20px;
+}
 
+.video-section h2{
+  font-size:32px;
+}
+
+.video-box{
+  border-radius:22px;
+}
 
 
 
@@ -1413,7 +1423,32 @@ html, body{
   overflow-x:hidden;
   max-width:100%;
 }
+.video-section{
+  padding:120px 40px;
+  text-align:center;
+  scroll-margin-top:120px;
+}
 
+.video-section h2{
+  font-size:52px;
+  margin:20px 0 50px;
+}
+
+.video-box{
+  max-width:1000px;
+  margin:0 auto;
+  border-radius:35px;
+  overflow:hidden;
+  border:1px solid rgba(56,189,248,0.25);
+  box-shadow:
+    0 0 35px rgba(56,189,248,0.15),
+    0 0 90px rgba(37,99,235,0.08);
+}
+
+.video-box video{
+  width:100%;
+  display:block;
+}
 
 
 
@@ -1505,6 +1540,20 @@ function toggleMenu(){
 
   </div>
 </div>
+<section class="video-section fade-up">
+  <p class="section-label">SAHA ÇALIŞMALARI</p>
+  <h2>Performans Antrenmanlarından Kareler</h2>
+
+  <div class="video-box">
+    <video controls muted loop playsinline>
+      <source src="training-video.mp4" type="video/mp4">
+      Tarayıcınız video etiketini desteklemiyor.
+    </video>
+  </div>
+</section>
+
+
+
 <div id="hakkimda" class="about fade-up"> 
   <div class="about-card">
 
