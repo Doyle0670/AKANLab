@@ -771,7 +771,12 @@ html, body{
 .video-section{
   padding-top:90px;
 }
-
+.video-box video{
+    width:100%;
+    height:auto;
+    border-radius:20px;
+    object-fit:cover;
+  }
 
 
 
@@ -1554,7 +1559,7 @@ function toggleMenu(){
   <h2>Performans Antrenmanlarından Kareler</h2>
 
   <div class="video-box">
-   <video controls muted loop playsinline>
+  <video controls preload="metadata" playsinline webkit-playsinline>
   <source src="video.mp4" type="video/mp4">
 </video>
   </div>
