@@ -1541,17 +1541,7 @@ html, body{
 
   </style>
 </head>
-<script>
-function toggleMenu(){
-  document.getElementById("mobileMenu").classList.toggle("active");
-}
 
-document.querySelectorAll("#mobileMenu a").forEach(function(link){
-  link.addEventListener("click", function(){
-    document.getElementById("mobileMenu").classList.remove("active");
-  });
-});
-</script>
 <body>
   <div id="loader">
   <div class="loader-content">
@@ -1578,7 +1568,7 @@ document.querySelectorAll("#mobileMenu a").forEach(function(link){
   <div class="navbar">
   <div class="logo">AKAN <span>PERFORMANCE</span></div>
 
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<div class="menu-toggle" id="menuToggle">☰</div>
 
   <div class="menu" id="mobileMenu">
     <a href="#top">Ana Sayfa</a>
@@ -1921,7 +1911,25 @@ window.addEventListener("load", function(){
   }
 });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
 
+  const menuToggle = document.getElementById("menuToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const menuLinks = document.querySelectorAll("#mobileMenu a");
+
+  menuToggle.addEventListener("click", function(){
+    mobileMenu.classList.toggle("active");
+  });
+
+  menuLinks.forEach(function(link){
+    link.addEventListener("click", function(){
+      mobileMenu.classList.remove("active");
+    });
+  });
+
+});
+</script>
 
 
 
