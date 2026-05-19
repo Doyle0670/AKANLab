@@ -943,7 +943,6 @@ body{
 
 
 
-}
 
 @keyframes moveStars{
   from{
@@ -1462,6 +1461,69 @@ html, body{
   width:100%;
   display:block;
 }
+@media (max-width:768px){
+
+  .navbar{
+    display:grid !important;
+    grid-template-columns:1fr auto auto !important;
+    align-items:center !important;
+    padding:12px 14px !important;
+    position:fixed !important;
+  }
+
+  .logo{
+    justify-self:start !important;
+    font-size:13px !important;
+    white-space:nowrap !important;
+  }
+
+  .nav-socials{
+    justify-self:center !important;
+    display:flex !important;
+    gap:10px !important;
+  }
+
+  .nav-socials a{
+    font-size:13px !important;
+  }
+
+  .menu-toggle{
+    justify-self:end !important;
+    display:block !important;
+    font-size:22px !important;
+    color:white !important;
+    cursor:pointer !important;
+  }
+
+  #mobileMenu{
+    display:none !important;
+  }
+
+  #mobileMenu.active{
+    display:flex !important;
+    position:absolute !important;
+    top:58px !important;
+    left:14px !important;
+    right:14px !important;
+    width:auto !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    text-align:center !important;
+    padding:22px 0 !important;
+    border-radius:18px !important;
+    background:rgba(2,6,23,0.98) !important;
+    z-index:9999 !important;
+  }
+
+  #mobileMenu.active a{
+    display:block !important;
+    margin:12px 0 !important;
+    font-size:17px !important;
+  }
+}
+
+
+
 
 
 
@@ -1724,12 +1786,12 @@ html, body{
       <i class="fa-brands fa-instagram"></i>
     </a>
 
-    <a href="https://youtube.com/@sefaakan62" target="_blank">
-      <i class="fa-brands fa-youtube"></i>
-    </a>
-
     <a href="https://wa.me/905015440670" target="_blank">
       <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <a href="https://t.me/SefaAKAN" target="_blank">
+      <i class="fa-brands fa-telegram"></i>
     </a>
   </div>
 
