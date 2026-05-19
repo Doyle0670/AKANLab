@@ -411,23 +411,35 @@ html {
 
 
 @media (max-width:768px){
-  .navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 22px;
-    flex-wrap:wrap;
-  }
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 16px;
+  flex-wrap:nowrap;
+}
 
-  .logo{
-    font-size:24px;
-  }
+.logo{
+  font-size:16px;
+  white-space:nowrap;
+}
 
-  .menu-toggle{
+.nav-socials{
+  display:flex !important;
+  gap:12px;
+  align-items:center;
+}
+
+.nav-socials a{
+  font-size:14px;
+}
+
+.menu-toggle{
   display:block;
-  font-size:32px;
+  font-size:24px;
   color:white;
   cursor:pointer;
+  margin-left:10px;
 }
 
   .menu{
@@ -450,9 +462,7 @@ html {
     font-size:18px;
   }
 
-  .nav-socials{
-    display:none;
-  }
+ 
 
 
 
@@ -1623,7 +1633,7 @@ html, body{
 </div>
 <section class="video-section fade-up">
   <p class="section-label">SAHA ÇALIŞMALARI</p>
-  <h2>Performans Antrenmanlarından Kareler</h2>
+  <h2></h2>
 
   <div class="video-box">
   <video controls preload="metadata" playsinline webkit-playsinline>
