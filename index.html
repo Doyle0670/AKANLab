@@ -424,21 +424,29 @@ html {
 
   /* NAVBAR */
   .navbar{
-    display:flex;
-    justify-content:space-between;
+    display:grid;
+    grid-template-columns:1fr auto auto;
     align-items:center;
-    padding:14px 16px;
-    flex-wrap:nowrap;
+    gap:10px;
+    padding:12px 14px;
   }
 
   .logo{
-    font-size:14px;
+    font-size:13px;
     white-space:nowrap;
+  }
+
+  .menu-toggle{
+    display:block !important;
+    font-size:20px;
+    color:white;
+    cursor:pointer;
+    z-index:1002;
   }
 
   .nav-socials{
     display:flex !important;
-    gap:10px;
+    gap:8px;
     align-items:center;
   }
 
@@ -446,30 +454,26 @@ html {
     font-size:12px;
   }
 
-  .menu-toggle{
-    display:block !important;
-    font-size:22px;
-    color:white;
-    cursor:pointer;
-    margin-left:10px;
+  .navbar #mobileMenu{
+    display:none !important;
   }
 
-  #mobileMenu{
-    display:none;
+  .navbar #mobileMenu.active{
+    display:flex !important;
+    position:absolute;
+    top:60px;
+    left:14px;
+    right:14px;
+    width:auto;
     flex-direction:column;
-    width:100%;
     text-align:center;
-    margin-top:18px;
     padding:20px 0;
     border-radius:18px;
-    background:rgba(2,6,23,0.96);
+    background:rgba(2,6,23,0.98);
+    z-index:1001;
   }
 
-  #mobileMenu.active{
-    display:flex !important;
-  }
-
-  #mobileMenu a{
+  .navbar #mobileMenu a{
     margin:12px 0;
     font-size:17px;
   }
@@ -482,6 +486,7 @@ html {
 
   .hero-wrapper{
     width:100%;
+    max-width:100%;
     display:flex;
     flex-direction:column-reverse;
     align-items:center;
@@ -491,6 +496,7 @@ html {
 
   .hero-text{
     width:100%;
+    max-width:100%;
     text-align:center;
   }
 
@@ -605,6 +611,19 @@ html {
   .about p{
     font-size:16px;
     line-height:1.7;
+  }
+
+  /* SERVICES */
+  .service-cards{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:24px;
+  }
+
+  .service-card{
+    width:92%;
+    padding:28px;
   }
 
   /* TESTS */
