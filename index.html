@@ -424,62 +424,52 @@ html {
 
   /* NAVBAR */
   .navbar{
-    display:grid;
-    grid-template-columns:1fr auto auto;
+    display:flex;
+    justify-content:space-between;
     align-items:center;
-    padding:12px 10px;
-    gap:10px;
-    position:relative;
+    padding:14px 16px;
+    flex-wrap:nowrap;
   }
 
   .logo{
-    justify-self:start;
-    font-size:12px;
+    font-size:14px;
     white-space:nowrap;
-    margin:0;
   }
 
   .nav-socials{
     display:flex !important;
-    justify-self:center;
-    align-items:center;
     gap:10px;
+    align-items:center;
   }
 
   .nav-socials a{
-    font-size:13px;
-    color:white;
+    font-size:12px;
   }
 
   .menu-toggle{
     display:block !important;
-    justify-self:end;
     font-size:22px;
     color:white;
     cursor:pointer;
-    z-index:1002;
+    margin-left:10px;
   }
 
-  /* MOBILE MENU */
-  .navbar #mobileMenu{
-    display:none !important;
-  }
-
-  .navbar #mobileMenu.active{
-    display:flex !important;
-    position:absolute;
-    top:58px;
-    left:10px;
-    right:10px;
+  #mobileMenu{
+    display:none;
     flex-direction:column;
+    width:100%;
     text-align:center;
+    margin-top:18px;
     padding:20px 0;
     border-radius:18px;
-    background:rgba(2,6,23,0.98);
-    z-index:1001;
+    background:rgba(2,6,23,0.96);
   }
 
-  .navbar #mobileMenu a{
+  #mobileMenu.active{
+    display:flex !important;
+  }
+
+  #mobileMenu a{
     margin:12px 0;
     font-size:17px;
   }
@@ -487,7 +477,7 @@ html {
   /* HERO */
   .hero{
     min-height:auto;
-    padding:90px 20px 70px;
+    padding:110px 20px 70px;
   }
 
   .hero-wrapper{
@@ -558,10 +548,6 @@ html {
     padding:20px;
   }
 
-  .loader-content{
-    text-align:center;
-  }
-
   .loader-content h1{
     font-size:34px;
     line-height:1.1;
@@ -619,19 +605,6 @@ html {
   .about p{
     font-size:16px;
     line-height:1.7;
-  }
-
-  /* SERVICES */
-  .service-cards{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:24px;
-  }
-
-  .service-card{
-    width:92%;
-    padding:28px;
   }
 
   /* TESTS */
@@ -1532,17 +1505,18 @@ html, body{
   </div>
 
   <div class="nav-socials">
-  <a href="https://instagram.com/sefa.akann" target="_blank">
-    <i class="fab fa-instagram"></i>
-  </a>
+    <a href="https://www.instagram.com/sefa.akann/" target="_blank">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
 
-  <a href="https://wa.me/905015440670" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-  </a>
+    <a href="https://youtube.com/@sefaakan62" target="_blank">
+      <i class="fa-brands fa-youtube"></i>
+    </a>
 
-  <a href="https://t.me/SefaAKAN" target="_blank">
-    <i class="fab fa-telegram"></i>
-  </a>
+    <a href="https://wa.me/905015440670" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
 </div>
   
 
@@ -1858,28 +1832,27 @@ window.addEventListener("load", ()=>{
 </script>
 <script>
 window.addEventListener("load", function(){
-  setTimeout(function(){
+  if(!window.location.hash){
     window.scrollTo(0, 0);
-  }, 100);
+  }
 });
-
+</script>
+<script>
 document.addEventListener("DOMContentLoaded", function(){
 
   const menuToggle = document.getElementById("menuToggle");
   const mobileMenu = document.getElementById("mobileMenu");
   const menuLinks = document.querySelectorAll("#mobileMenu a");
 
-  if(menuToggle && mobileMenu){
-    menuToggle.addEventListener("click", function(){
-      mobileMenu.classList.toggle("active");
-    });
+  menuToggle.addEventListener("click", function(){
+    mobileMenu.classList.toggle("active");
+  });
 
-    menuLinks.forEach(function(link){
-      link.addEventListener("click", function(){
-        mobileMenu.classList.remove("active");
-      });
+  menuLinks.forEach(function(link){
+    link.addEventListener("click", function(){
+      mobileMenu.classList.remove("active");
     });
-  }
+  });
 
 });
 </script>
