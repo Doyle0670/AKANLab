@@ -584,6 +584,10 @@ html {
   padding:28px;
 }
 
+.stat-icon{
+  font-size:34px;
+}
+
 .stat-card h3{
   font-size:38px;
 }
@@ -591,6 +595,13 @@ html {
 .stat-card p{
   font-size:16px;
 }
+
+
+
+
+
+
+
 
 
   /* VIDEO */
@@ -1460,6 +1471,7 @@ html, body{
   overflow-x:hidden;
   max-width:100%;
 }
+/* STATS */
 .stats-section{
   display:flex;
   justify-content:center;
@@ -1469,33 +1481,37 @@ html, body{
 }
 
 .stat-card{
-  width:240px;
-  padding:32px;
+  width:260px;
+  padding:35px;
   border-radius:30px;
-
   background:rgba(255,255,255,0.04);
   border:1px solid rgba(56,189,248,0.18);
   backdrop-filter:blur(16px);
-
-  box-shadow:
-    0 0 20px rgba(56,189,248,0.08);
-
+  box-shadow:0 0 20px rgba(56,189,248,0.08);
   text-align:center;
   transition:0.35s;
 }
 
 .stat-card:hover{
   transform:translateY(-10px) scale(1.03);
+  box-shadow:0 0 35px rgba(56,189,248,0.18);
+}
+
+.stat-icon{
+  font-size:42px;
+  color:#38bdf8;
+  margin-bottom:18px;
 }
 
 .stat-card h3{
-  font-size:46px;
+  font-size:52px;
   color:#38bdf8;
   margin:0;
+  font-weight:900;
 }
 
 .stat-card p{
-  margin-top:12px;
+  margin-top:10px;
   font-size:18px;
   opacity:0.82;
 }
@@ -1681,20 +1697,30 @@ html, body{
   </div>
 </div>
 <section class="stats-section fade-up">
-  <div class="stat-card">
-    <h3>50+</h3>
+ <div class="stat-card">
+    <div class="stat-icon">
+      <i class="fa-solid fa-users"></i>
+    </div>
+    <h3 class="counter" data-target="100">0</h3>
     <p>Sporcu</p>
   </div>
 
   <div class="stat-card">
-    <h3>10+</h3>
+    <div class="stat-icon">
+      <i class="fa-solid fa-people-group"></i>
+    </div>
+    <h3 class="counter" data-target="10">0</h3>
     <p>Takım</p>
   </div>
 
   <div class="stat-card">
-    <h3>1000+</h3>
+    <div class="stat-icon">
+      <i class="fa-solid fa-dumbbell"></i>
+    </div>
+    <h3 class="counter" data-target="1000">0</h3>
     <p>Antrenman Saati</p>
   </div>
+
 </section>
 
 <section class="video-section fade-up">
@@ -2007,7 +2033,40 @@ document.addEventListener("DOMContentLoaded", function(){
 
 });
 </script>
+<script>
+const counters = document.querySelectorAll(".counter");
 
+const counterObserver = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+
+      const counter = entry.target;
+      const target = +counter.getAttribute("data-target");
+      let count = 0;
+      const increment = target / 80;
+
+      const updateCounter = () => {
+        if(count < target){
+          count += increment;
+          counter.innerText = Math.ceil(count) + "+";
+          requestAnimationFrame(updateCounter);
+        } else {
+          counter.innerText = target + "+";
+        }
+      };
+
+      updateCounter();
+      counterObserver.unobserve(counter);
+    }
+  });
+},{
+  threshold:0.5
+});
+
+counters.forEach(counter=>{
+  counterObserver.observe(counter);
+});
+</script>
 
 
 
