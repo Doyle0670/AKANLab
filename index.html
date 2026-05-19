@@ -818,26 +818,36 @@ html, body{
   margin:14px 0;
   font-size:18px;
 }
-  .navbar{
-    display:flex !important;
-    flex-wrap:wrap !important;
-    justify-content:space-between !important;
-    align-items:center !important;
-  }
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 16px;
+  flex-wrap:nowrap;
+}
 
-  .menu-toggle{
-    display:block !important;
-  }
+.logo{
+  font-size:16px;
+  white-space:nowrap;
+}
 
-  #mobileMenu{
-    display:none !important;
-    width:100% !important;
-  }
+.nav-socials{
+  display:flex !important;
+  gap:12px;
+  align-items:center;
+}
 
-  #mobileMenu.active{
-    display:flex !important;
-    flex-direction:column !important;
-  }
+.nav-socials a{
+  font-size:14px;
+}
+
+.menu-toggle{
+  display:block;
+  font-size:24px;
+  color:white;
+  cursor:pointer;
+  margin-left:10px;
+}
 }
 
 
