@@ -427,33 +427,40 @@ html {
     display:grid;
     grid-template-columns:1fr auto auto;
     align-items:center;
+    padding:12px 10px;
     gap:10px;
-    padding:12px 14px;
+    position:relative;
   }
 
   .logo{
-    font-size:13px;
+    justify-self:start;
+    font-size:12px;
     white-space:nowrap;
+    margin:0;
+  }
+
+  .nav-socials{
+    display:flex !important;
+    justify-self:center;
+    align-items:center;
+    gap:10px;
+  }
+
+  .nav-socials a{
+    font-size:13px;
+    color:white;
   }
 
   .menu-toggle{
     display:block !important;
-    font-size:20px;
+    justify-self:end;
+    font-size:22px;
     color:white;
     cursor:pointer;
     z-index:1002;
   }
 
-  .nav-socials{
-    display:flex !important;
-    gap:8px;
-    align-items:center;
-  }
-
-  .nav-socials a{
-    font-size:12px;
-  }
-
+  /* MOBILE MENU */
   .navbar #mobileMenu{
     display:none !important;
   }
@@ -461,10 +468,9 @@ html {
   .navbar #mobileMenu.active{
     display:flex !important;
     position:absolute;
-    top:60px;
-    left:14px;
-    right:14px;
-    width:auto;
+    top:58px;
+    left:10px;
+    right:10px;
     flex-direction:column;
     text-align:center;
     padding:20px 0;
@@ -481,12 +487,11 @@ html {
   /* HERO */
   .hero{
     min-height:auto;
-    padding:110px 20px 70px;
+    padding:90px 20px 70px;
   }
 
   .hero-wrapper{
     width:100%;
-    max-width:100%;
     display:flex;
     flex-direction:column-reverse;
     align-items:center;
@@ -496,7 +501,6 @@ html {
 
   .hero-text{
     width:100%;
-    max-width:100%;
     text-align:center;
   }
 
@@ -552,6 +556,10 @@ html {
     height:100vh;
     overflow:hidden;
     padding:20px;
+  }
+
+  .loader-content{
+    text-align:center;
   }
 
   .loader-content h1{
@@ -1524,18 +1532,17 @@ html, body{
   </div>
 
   <div class="nav-socials">
-    <a href="https://www.instagram.com/sefa.akann/" target="_blank">
-      <i class="fa-brands fa-instagram"></i>
-    </a>
+  <a href="https://instagram.com/sefa.akann" target="_blank">
+    <i class="fab fa-instagram"></i>
+  </a>
 
-    <a href="https://youtube.com/@sefaakan62" target="_blank">
-      <i class="fa-brands fa-youtube"></i>
-    </a>
+  <a href="https://wa.me/905015440670" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
-    <a href="https://wa.me/905015440670" target="_blank">
-      <i class="fa-brands fa-whatsapp"></i>
-    </a>
-  </div>
+  <a href="https://t.me/SefaAKAN" target="_blank">
+    <i class="fab fa-telegram"></i>
+  </a>
 </div>
   
 
