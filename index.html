@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+  <link rel="canonical" href="https://akanperformance.com">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  
+  
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <meta charset="UTF-8">
@@ -1805,15 +1810,21 @@ html, body{
   <p class="section-label">SAHA ÇALIŞMALARI</p>
 
   <div class="video-player">
-    <video id="mainVideo" controls preload="metadata" playsinline webkit-playsinline>
+    <video
+  id="mainVideo"
+  controls
+  preload="metadata"
+  poster="video-kapak-fotoğrafı.png"
+  playsinline
+  webkit-playsinline>
       <source src="video.mp4" type="video/mp4">
     </video>
   </div>
 
   <div class="video-tabs">
-    <button onclick="changeVideo('video.mp4', this)" class="active">DRILL 1</button>
-    <button onclick="changeVideo('video2.mp4', this)">DRILL 2</button>
-    <button onclick="changeVideo('video3.mp4', this)">DRILL 3</button>
+    <button onclick="changeVideo('video.mp4', 'video-kapak-fotoğrafı.png', this)" class="active">DRILL 1</button>
+    <button onclick="changeVideo('video2.mp4', 'video2-kapak-fotoğrafı.png', this)">DRILL 2</button>
+    <button onclick="changeVideo('video3.mp4', 'video3-kapak-fotoğrafı.png', this)">DRILL 3</button>
   </div>
 </section>
 
@@ -2150,13 +2161,13 @@ counters.forEach(counter=>{
 });
 </script>
 <script>
-function changeVideo(videoSrc, button){
+function changeVideo(videoSrc, posterSrc, button){
   const mainVideo = document.getElementById("mainVideo");
 
   mainVideo.pause();
+  mainVideo.poster = posterSrc;
   mainVideo.querySelector("source").src = videoSrc;
   mainVideo.load();
-  mainVideo.play();
 
   document.querySelectorAll(".video-tabs button").forEach(btn=>{
     btn.classList.remove("active");
