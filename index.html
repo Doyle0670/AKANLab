@@ -410,8 +410,57 @@ html {
   line-height:1.6;
   opacity:0.82;
 }
+/* TESTIMONIALS */
+.testimonials{
+  padding:120px 40px;
+  text-align:center;
+}
 
+.testimonials h2{
+  font-size:52px;
+  margin:20px 0 60px;
+}
 
+.testimonial-cards{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.testimonial-card{
+  width:320px;
+  padding:35px;
+  border-radius:30px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(56,189,248,0.18);
+  backdrop-filter:blur(16px);
+  box-shadow:0 0 20px rgba(56,189,248,0.08);
+  transition:0.35s;
+}
+
+.testimonial-card:hover{
+  transform:translateY(-12px) scale(1.03);
+  box-shadow:0 0 35px rgba(56,189,248,0.18);
+}
+
+.quote-icon{
+  font-size:34px;
+  color:#38bdf8;
+  margin-bottom:20px;
+}
+
+.testimonial-card p{
+  font-size:17px;
+  line-height:1.7;
+  opacity:0.85;
+}
+
+.testimonial-card h4{
+  margin-top:25px;
+  color:#38bdf8;
+  font-size:18px;
+}
 
 
 
@@ -598,14 +647,7 @@ html {
 }
 
 
-
-
-
-
-
-
-
-  /* VIDEO */
+ /* VIDEO */
   .video-section{
     padding:80px 20px;
     position:relative;
@@ -760,7 +802,33 @@ html {
   .cursor-glow{
     display:none;
   }
+/* TESTIMONIALS */
+.testimonials{
+  padding:80px 20px;
 }
+
+.testimonials h2{
+  font-size:34px;
+}
+
+.testimonial-cards{
+  gap:20px;
+}
+
+.testimonial-card{
+  width:92%;
+  padding:28px;
+}
+
+
+
+
+
+
+}
+
+
+
 
  
 
@@ -2000,6 +2068,53 @@ html, body{
 
   </div>
 </div>
+<section class="testimonials fade-up">
+  <p class="section-label">SPORCU YORUMLARI</p>
+  <h2>Gerçek Sonuçlar, Gerçek Geri Bildirimler</h2>
+
+  <div class="testimonial-cards">
+
+    <div class="testimonial-card">
+      <div class="quote-icon">
+        <i class="fa-solid fa-quote-left"></i>
+      </div>
+
+      <p>
+        6 haftalık sprint çalışmaları sonrası hızım ciddi şekilde arttı.
+        Sahada çok daha patlayıcı hissediyorum.
+      </p>
+
+      <h4>U17 Futbolcu</h4>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="quote-icon">
+        <i class="fa-solid fa-quote-left"></i>
+      </div>
+
+      <p>
+        Dikey sıçrama ve güç testleri sayesinde eksiklerimi net gördüm.
+        Program çok profesyoneldi.
+      </p>
+
+      <h4>Basketbol Oyuncusu</h4>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="quote-icon">
+        <i class="fa-solid fa-quote-left"></i>
+      </div>
+
+      <p>
+        Test sonuçları ve bireysel yaklaşım sayesinde performansım farklı seviyeye çıktı.
+      </p>
+
+      <h4>Profesyonel Sporcu</h4>
+    </div>
+
+  </div>
+</section>
+
 <div id="iletisim" class="contact">
   <h2>Sosyal Medya</h2>
 
