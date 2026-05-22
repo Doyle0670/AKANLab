@@ -646,7 +646,47 @@ html {
   margin-bottom:25px;
   text-shadow:0 0 15px rgba(56,189,248,0.8);
 }
+.video-player{
+  max-width:1000px;
+  margin:0 auto;
+  border-radius:35px;
+  overflow:hidden;
+  border:1px solid rgba(56,189,248,0.25);
+  box-shadow:
+    0 0 35px rgba(56,189,248,0.15),
+    0 0 90px rgba(37,99,235,0.08);
+}
 
+.video-player video{
+  width:100%;
+  display:block;
+}
+
+.video-tabs{
+  max-width:1000px;
+  margin:25px auto 0;
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.video-tabs button{
+  padding:12px 22px;
+  border-radius:30px;
+  border:1px solid rgba(56,189,248,0.25);
+  background:rgba(255,255,255,0.04);
+  color:white;
+  cursor:pointer;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.video-tabs button:hover,
+.video-tabs button.active{
+  background:#38bdf8;
+  color:#020617;
+}
 
 
 
@@ -1763,30 +1803,18 @@ html, body{
 
 <section class="video-section fade-up">
   <p class="section-label">SAHA ÇALIŞMALARI</p>
-  <h2></h2>
-  
 
-  <div class="video-gallery">
-
-  <div class="video-box">
-    <video controls preload="metadata" playsinline webkit-playsinline>
+  <div class="video-player">
+    <video id="mainVideo" controls preload="metadata" playsinline webkit-playsinline>
       <source src="video.mp4" type="video/mp4">
     </video>
   </div>
 
-  <div class="video-box">
-    <video controls preload="metadata" playsinline webkit-playsinline>
-      <source src="video2.mp4" type="video/mp4">
-    </video>
+  <div class="video-tabs">
+    <button onclick="changeVideo('video.mp4', this)" class="active">Video 1</button>
+    <button onclick="changeVideo('video2.mp4', this)">Video 2</button>
+    <button onclick="changeVideo('video3.mp4', this)">Video 3</button>
   </div>
-
-  <div class="video-box">
-    <video controls preload="metadata" playsinline webkit-playsinline>
-      <source src="video3.mp4" type="video/mp4">
-    </video>
-  </div>
-
-</div>
 </section>
 
 
@@ -2121,7 +2149,22 @@ counters.forEach(counter=>{
   counterObserver.observe(counter);
 });
 </script>
+<script>
+function changeVideo(videoSrc, button){
+  const mainVideo = document.getElementById("mainVideo");
 
+  mainVideo.pause();
+  mainVideo.querySelector("source").src = videoSrc;
+  mainVideo.load();
+  mainVideo.play();
+
+  document.querySelectorAll(".video-tabs button").forEach(btn=>{
+    btn.classList.remove("active");
+  });
+
+  button.classList.add("active");
+}
+</script>
 
 
 
