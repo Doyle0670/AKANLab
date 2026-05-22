@@ -551,33 +551,29 @@ html {
     border-radius:28px;
   }
 
-  /* LOADER */
-  #loader{
-    width:100vw;
-    height:100vh;
-    overflow:hidden;
-    padding:20px;
-  }
+ /* LOADER MOBILE */
+.loader-logo{
+  font-size:38px;
+  line-height:1.05;
+}
 
-  .loader-content h1{
-    font-size:34px;
-    line-height:1.1;
-    letter-spacing:2px;
-  }
+.loader-logo span{
+  font-size:40px;
+}
 
-  .loader-content h1 span{
-    display:block;
-    font-size:36px;
-  }
+.loader-content p{
+  font-size:11px;
+  letter-spacing:3px;
+}
 
-  .loader-content p{
-    font-size:11px;
-    letter-spacing:2px;
-  }
+.loader-content small{
+  font-size:10px;
+  letter-spacing:3px;
+}
 
-  .loader-line{
-    width:140px;
-  }
+.loader-progress{
+  width:180px;
+}
 /* STATS */
 .stats-section{
   padding:20px 20px 60px;
@@ -1443,10 +1439,10 @@ html{
   transform:translate(-50%, -50%);
   transition:transform 0.08s linear;
 }
+/* PREMIUM LOADER */
 #loader{
   position:fixed;
-  top:0;
-  left:0;
+  inset:0;
   width:100%;
   height:100%;
   z-index:99999;
@@ -1456,58 +1452,78 @@ html{
   align-items:center;
   text-align:center;
 
-  background:#020617;
+  background:
+    radial-gradient(circle at 50% 40%, rgba(56,189,248,0.12), transparent 30%),
+    #020617;
 
-  transition:opacity 0.8s ease;
+  transition:opacity 0.8s ease, visibility 0.8s ease;
 }
 
-.loader-content h1{
-  font-size:54px;
-  margin:0;
-  letter-spacing:4px;
+.loader-content{
+  animation:loaderEnter 1s ease forwards;
 }
 
-.loader-content h1 span{
+.loader-logo{
+  font-size:58px;
+  font-weight:900;
+  letter-spacing:3px;
+  color:white;
+  text-shadow:
+    0 0 18px rgba(255,255,255,0.18),
+    0 0 35px rgba(56,189,248,0.18);
+}
+
+.loader-logo span{
+  display:block;
   color:#38bdf8;
 }
 
 .loader-content p{
-  margin-top:14px;
+  margin-top:18px;
   letter-spacing:6px;
-  font-size:16px;
-  opacity:0.8;
+  font-size:14px;
+  opacity:0.78;
 }
 
-.loader-line{
-  width:220px;
+.loader-content small{
+  display:block;
+  margin-top:18px;
+  font-size:11px;
+  letter-spacing:4px;
+  opacity:0.55;
+}
+
+.loader-progress{
+  width:260px;
   height:4px;
   margin:35px auto 0;
-  border-radius:10px;
-
-  background:linear-gradient(
-    90deg,
-    transparent,
-    #38bdf8,
-    transparent
-  );
-
-  animation:loadingMove 1.4s infinite;
+  border-radius:20px;
+  background:rgba(255,255,255,0.08);
+  overflow:hidden;
 }
 
-@keyframes loadingMove{
-  0%{
-    transform:scaleX(0.3);
-    opacity:0.3;
+.loader-progress-bar{
+  width:0%;
+  height:100%;
+  background:linear-gradient(90deg, transparent, #38bdf8, transparent);
+  animation:loaderProgress 1.8s ease forwards;
+}
+
+@keyframes loaderProgress{
+  to{
+    width:100%;
+  }
+}
+
+@keyframes loaderEnter{
+  from{
+    opacity:0;
+    transform:translateY(30px) scale(0.96);
   }
 
-  50%{
-    transform:scaleX(1);
+  to{
     opacity:1;
-  }
-
-  100%{
-    transform:scaleX(0.3);
-    opacity:0.3;
+    transform:translateY(0) scale(1);
   }
 
 
@@ -1735,9 +1751,17 @@ html, body{
 <body>
   <div id="loader">
   <div class="loader-content">
-    <h1>AKAN <span>PERFORMANCE</span></h1>
-    <p>ATHLETIC PERFORMANCE</p>
-    <div class="loader-line"></div>
+    <div class="loader-logo">
+      AKAN <span>PERFORMANCE</span>
+    </div>
+
+    <p>ATHLETIC PERFORMANCE SYSTEM</p>
+
+    <div class="loader-progress">
+      <div class="loader-progress-bar"></div>
+    </div>
+
+    <small>INITIALIZING...</small>
   </div>
 </div>
   <div id="top"></div>
