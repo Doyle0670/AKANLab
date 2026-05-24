@@ -800,19 +800,34 @@ html {
 
 
   /* ABOUT */
-  .about{
-    padding:80px 20px;
-    text-align:center;
-  }
+ .about{
+  padding:80px 20px;
+}
 
-  .about h2{
-    font-size:36px;
-  }
+.about-container{
+  flex-direction:column;
+  gap:35px;
+}
 
-  .about p{
-    font-size:16px;
-    line-height:1.7;
-  }
+.about-content{
+  min-width:100%;
+}
+
+.about-content h2{
+  font-size:34px;
+}
+
+.about-text{
+  font-size:16px;
+}
+
+.about-grid{
+  grid-template-columns:1fr;
+}
+
+.about-image img{
+  max-width:280px;
+}
 
   /* TESTS */
   .test-cards{
@@ -951,41 +966,91 @@ html {
   opacity:0.85;
   margin-top:10px;
 }
+/* ABOUT */
+.about{
+  padding:120px 40px;
+}
 
-  .about{
-    height:auto;
-    padding:100px 20px;
-    font-size:18px;
-  }
+.about-container{
+  max-width:1400px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  gap:60px;
+  flex-wrap:wrap;
+}
 
-  .about h2{
-    font-size:38px;
-  }
+.about-image{
+  flex:1;
+  min-width:320px;
+  text-align:center;
+}
 
-  .contact h2,
-  .tests h2{
-    font-size:38px;
-  }
+.about-image img{
+  width:100%;
+  max-width:420px;
+  border-radius:35px;
+  border:1px solid rgba(56,189,248,0.18);
+  box-shadow:
+    0 0 30px rgba(56,189,248,0.12),
+    0 0 90px rgba(37,99,235,0.08);
+}
 
-  .social-icons{
-    gap:18px;
-  }
+.about-content{
+  flex:1.5;
+  min-width:400px;
+}
 
-  .social-btn{
-    width:75px;
-    height:75px;
-    font-size:34px;
-  }
+.about-content h2{
+  font-size:52px;
+  margin:18px 0 30px;
+}
 
-  .test-card{
-    width:100%;
-    max-width:320px;
-  }
+.about-text{
+  font-size:19px;
+  line-height:1.8;
+  opacity:0.85;
+  margin-bottom:40px;
+}
 
-  body{
-    padding-top:140px;
-  }
+.about-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;
+}
 
+.about-card{
+  padding:28px;
+  border-radius:28px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(56,189,248,0.18);
+  backdrop-filter:blur(16px);
+  box-shadow:0 0 20px rgba(56,189,248,0.08);
+  transition:0.35s;
+}
+
+.about-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 30px rgba(56,189,248,0.16);
+}
+
+.about-card h3{
+  color:#38bdf8;
+  margin-bottom:20px;
+  font-size:22px;
+}
+
+.about-card ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.about-card li{
+  margin-bottom:12px;
+  opacity:0.85;
+  line-height:1.6;
+}
 
 
 
@@ -2029,37 +2094,67 @@ html, body{
   </div>
 </section>
 
+<section id="hakkimda" class="about fade-up">
+  <div class="about-container">
 
+    <div class="about-image">
+      <img src="profile1.jpeg" alt="Sefa Akan">
+    </div>
 
-<div id="hakkimda" class="about fade-up"> 
-  <div class="about-card">
+    <div class="about-content">
+      <p class="section-label">HAKKIMDA</p>
 
-    <p class="section-label">HAKKIMDA</p>
+      <h2>Bilimsel Yaklaşım, Saha Deneyimi, Gerçek Sonuçlar</h2>
 
-    <h2>Performansı Ölç, Geliştir, Zirveye Taşı</h2>
+      <p class="about-text">
+        Sporcu performans gelişiminde bilimsel testler, performans analizi ve saha uygulamalarını bir araya getirerek bireysel ve takım bazlı gelişim programları oluşturuyorum.
+        Hız, kuvvet, çeviklik, patlayıcı güç ve atletik performans gelişimine odaklanıyorum.
+      </p>
 
-    <p class="about-text">
-      Ben <span class="red-text">Sefa Akan</span>, Athletic Performance Coach olarak
-      sporcuların güç, hız, çeviklik, dayanıklılık ve hareket kalitesini bilimsel
-      yöntemlerle geliştirmelerine yardımcı oluyorum.
-    </p>
+      <div class="about-grid">
 
-    <p class="about-text">
-      Antrenman yaklaşımım; test, analiz ve kişiye özel performans planlaması üzerine
-      kuruludur. Amaç yalnızca daha fazla çalışmak değil, doğru verilerle daha akıllı
-      çalışmaktır.
-    </p>
+        <div class="about-card">
+          <h3>🎓 Eğitim & Sertifikalar</h3>
+          <ul>
+            <li>Gazi Üniversitesi</li>
+            <li>1. Kademe Fitness Antrenörlüğü</li>
+            <li>1. Kademe Atletizm Antrenörlüğü</li>
+            <li>1. Kademe Parkur Antrenörlüğü</li>
+            <li>1. Kademe Modern Pentatlon</li>
+            <li>Çocuk Atletizmi Eğitimi</li>
+          </ul>
+        </div>
 
-    <div class="about-tags">
-      <span>Strength</span>
-      <span>Speed</span>
-      <span>Power</span>
-      <span>Agility</span>
-      <span>Mobility</span>
+        <div class="about-card">
+          <h3>🏆 Deneyim</h3>
+          <ul>
+            <li>Aktif 50 kişilik çocuk atletizm grubu</li>
+            <li>Altyapı futbolcuları performans gelişimi</li>
+            <li>Aktif milli takım sporcuları ile çalışma</li>
+            <li>Bireysel performans testleri</li>
+            <li>Atletik performans geliştirme programları</li>
+          </ul>
+        </div>
+
+        <div class="about-card">
+          <h3>⚡ Uzmanlık Alanları</h3>
+          <ul>
+            <li>Sprint Development</li>
+            <li>Strength Training</li>
+            <li>Performance Testing</li>
+            <li>Agility & Change of Direction</li>
+            <li>Biomechanics Analysis</li>
+            <li>Athlete Development</li>
+          </ul>
+        </div>
+
+      </div>
     </div>
 
   </div>
-</div>
+</section>
+
+
 <div id="services" class="services fade-up">
   <p class="section-label">HİZMETLER</p>
   <h2>Performans Gelişim Hizmetleri</h2>
