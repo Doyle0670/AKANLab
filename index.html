@@ -854,6 +854,15 @@ html {
   max-width:240px;
 }
 
+.whatsapp-float{
+  width:58px !important;
+  height:58px !important;
+  font-size:28px !important;
+  right:16px !important;
+  bottom:16px !important;
+}
+
+
   /* TESTS */
   .test-cards{
     display:flex;
@@ -1955,7 +1964,36 @@ html, body{
   box-shadow:0 0 25px rgba(56,189,248,0.35);
 }
 
+/* WHATSAPP FLOAT */
+.whatsapp-float{
+  position:fixed;
+  right:25px;
+  bottom:25px;
+  width:68px;
+  height:68px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#25D366,#128C7E);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size:34px;
+  text-decoration:none;
+  z-index:9999;
 
+  box-shadow:
+    0 0 20px rgba(37,211,102,0.35),
+    0 0 50px rgba(37,211,102,0.18);
+
+  transition:0.3s ease;
+}
+
+.whatsapp-float:hover{
+  transform:scale(1.12);
+  box-shadow:
+    0 0 30px rgba(37,211,102,0.5),
+    0 0 70px rgba(37,211,102,0.25);
+}
 
 
 
@@ -2600,7 +2638,9 @@ function changeVideo(videoSrc, posterSrc, button){
 }
 </script>
 
-
+<a href="https://wa.me/905015440670" class="whatsapp-float" target="_blank">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
 
 
 
