@@ -2691,7 +2691,42 @@ function changeVideo(videoSrc, posterSrc, button){
 <a href="https://wa.me/905015440670" class="whatsapp-float" target="_blank">
   <i class="fa-brands fa-whatsapp"></i>
 </a>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
 
+  const trBtn = document.getElementById("trBtn");
+  const enBtn = document.getElementById("enBtn");
+
+  function switchLanguage(lang){
+    document.querySelectorAll("[data-tr][data-en]").forEach(function(el){
+      el.innerHTML = el.getAttribute("data-" + lang);
+    });
+
+    if(trBtn && enBtn){
+      trBtn.classList.toggle("active", lang === "tr");
+      enBtn.classList.toggle("active", lang === "en");
+    }
+
+    localStorage.setItem("siteLang", lang);
+  }
+
+  if(trBtn){
+    trBtn.addEventListener("click", function(){
+      switchLanguage("tr");
+    });
+  }
+
+  if(enBtn){
+    enBtn.addEventListener("click", function(){
+      switchLanguage("en");
+    });
+  }
+
+  const savedLang = localStorage.getItem("siteLang") || "tr";
+  switchLanguage(savedLang);
+
+});
+</script>
 
 
 
