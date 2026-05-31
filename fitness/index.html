@@ -1,344 +1,209 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AKAN PERFORMANCE</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-background:#0a0a0a;
-color:white;
-}
-
-header{
-padding:20px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-position:fixed;
-width:100%;
-background:rgba(0,0,0,.85);
-backdrop-filter:blur(10px);
-z-index:1000;
-}
-
-.logo{
-font-size:28px;
-font-weight:900;
-}
-
-.logo span{
-color:#B4FF39;
-.subtitle{
-    font-size:11px;
-    font-weight:500;
-    letter-spacing:3px;
-    color:#bdbdbd;
-    margin-top:-3px;
-}
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin-left:25px;
-font-weight:500;
-}
-
-.hero{
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:20px;
-background:
-linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.7)),
-url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1920");
-background-size:cover;
-background-position:center;
-}
-
-.hero-content h1{
-font-size:70px;
-font-weight:900;
-line-height:1;
-}
-
-.hero-content span{
-color:#B4FF39;
-}
-
-.hero-content p{
-margin-top:20px;
-font-size:20px;
-max-width:700px;
-}
-
-.btn{
-display:inline-block;
-margin-top:30px;
-padding:15px 35px;
-background:#B4FF39;
-color:black;
-font-weight:700;
-text-decoration:none;
-border-radius:50px;
-}
-
-section{
-padding:100px 8%;
-}
-
-.title{
-font-size:45px;
-margin-bottom:40px;
-font-weight:900;
-}
-
-.about{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:50px;
-}
-
-.card{
-background:#151515;
-padding:30px;
-border-radius:20px;
-}
-
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.service{
-background:#151515;
-padding:30px;
-border-radius:20px;
-transition:.3s;
-}
-
-.service:hover{
-transform:translateY(-10px);
-}
-
-.service h3{
-color:#B4FF39;
-margin-bottom:10px;
-}
-
-.education ul{
-list-style:none;
-}
-
-.education li{
-padding:12px 0;
-border-bottom:1px solid #333;
-}
-
-.contact{
-text-align:center;
-background:#B4FF39;
-color:black;
-border-radius:30px;
-padding:60px;
-}
-
-.contact h2{
-font-size:50px;
-margin-bottom:20px;
-}
-
-footer{
-text-align:center;
-padding:30px;
-color:#777;
-}
-
-@media(max-width:768px){
-
-.hero-content h1{
-font-size:45px;
-}
-
-.about{
-grid-template-columns:1fr;
-}
-
-nav{
-display:none;
-}
-
-.contact h2{
-font-size:35px;
-}
-
-}
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akan Performance Fitness</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-
-<nav class="navbar">
-  <div class="logo">
-    AKAN PERFORMANCE
-    <span>FITNESS</span>
-  </div>
-
-  <div class="nav-links">
-    <a href="#hakkimda">Hakkımda</a>
-    <a href="#hizmetler">Hizmetler</a>
-    <a href="#egitimler">Eğitimler</a>
-    <a href="#iletisim">İletişim</a>
-  </div>
-
-  <div class="nav-right">
-    <a href="https://www.instagram.com/sefa.akann/" target="_blank">Instagram</a>
-    <div class="language">
-      <a href="#">TR</a>
-      <span>/</span>
-      <a href="#">EN</a>
+  <nav class="navbar">
+    <div class="logo">
+      AKAN PERFORMANCE
+      <span>FITNESS</span>
     </div>
-  </div>
-</nav>
 
-</header>
+    <div class="nav-links">
+      <a href="#hakkimda">Hakkımda</a>
+      <a href="#programlar">Programlar</a>
+      <a href="#beslenme">Beslenme</a>
+      <a href="#sss">SSS</a>
+      <a href="#iletisim">İletişim</a>
+    </div>
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>
-      DAHA GÜÇLÜ<br>
-      DAHA HIZLI<br>
-      <span>DAHA ATLETİK</span>
-    </h1>
+    <div class="nav-right">
+      <a href="https://www.instagram.com/sefa.akann/" target="_blank">Instagram</a>
+      <div class="language">
+        <a href="#">TR</a>
+        <span>/</span>
+        <a href="#">EN</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <p class="subtitle">Online Fitness Koçluğu</p>
+
+      <h1>
+        GÜÇLEN<br>
+        KAS KAZAN<br>
+        <span>YAĞ YAK</span>
+      </h1>
+
+      <p class="hero-text">
+        Kişiye özel antrenman ve beslenme planları ile hedeflerine
+        bilimsel, sürdürülebilir ve takip edilebilir bir sistemle ulaş.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#iletisim" class="btn">Ücretsiz Ön Görüşme</a>
+        <a href="#programlar" class="btn-outline">Programları İncele</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="hakkimda" class="about">
+    <div class="section-title">
+      <p>Hakkımda</p>
+      <h2>Merhaba, Ben Sefa Akan</h2>
+    </div>
+
+    <div class="about-box">
+      <p>
+        Fitness ve performans antrenörüyüm. Bilimsel temelli antrenman,
+        beslenme ve takip sistemleri ile danışanlarımın kas kazanımı,
+        yağ kaybı, güç artışı ve daha sağlıklı bir yaşam tarzı kazanmasına
+        yardımcı oluyorum.
+      </p>
+
+      <p>
+        Amacım kısa süreli, sürdürülemez diyetler yerine; kişinin yaşamına
+        uygun, uygulanabilir ve sonuç veren bir fitness sistemi oluşturmaktır.
+      </p>
+    </div>
+  </section>
+
+  <section id="programlar" class="programs">
+    <div class="section-title">
+      <p>Programlar</p>
+      <h2>Sana Uygun Fitness Hizmetleri</h2>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Online Koçluk</h3>
+        <p>
+          Hedefine özel antrenman, beslenme ve haftalık takip sistemi.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Kas Kazanımı</h3>
+        <p>
+          Hacim kazanmak, güçlenmek ve daha estetik bir fizik oluşturmak isteyenler için.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Yağ Yakımı</h3>
+        <p>
+          Kas kaybını minimumda tutarak yağ oranını düşürmeye yönelik planlama.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Kişiye Özel Antrenman</h3>
+        <p>
+          Seviye, hedef, ekipman ve zamanına göre hazırlanmış antrenman sistemi.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Beslenme Takibi</h3>
+        <p>
+          Kalori, makro ve öğün düzenine göre sürdürülebilir beslenme planı.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Haftalık Kontrol</h3>
+        <p>
+          Form takibi, ölçüm değerlendirmesi ve programa düzenli güncelleme.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="beslenme" class="nutrition">
+    <div class="section-title">
+      <p>Beslenme</p>
+      <h2>Sürdürülebilir Beslenme Yaklaşımı</h2>
+    </div>
+
+    <div class="nutrition-content">
+      <p>
+        Katı yasaklar ve kısa süreli diyetler yerine; hedefe, yaşam düzenine
+        ve günlük alışkanlıklara uygun bir beslenme sistemi oluşturulur.
+      </p>
+
+      <ul>
+        <li>Kalori ihtiyacı hesaplanır.</li>
+        <li>Protein, karbonhidrat ve yağ dengesi belirlenir.</li>
+        <li>Hedefe göre kilo alma, kilo verme veya koruma planı yapılır.</li>
+        <li>Haftalık değişimlere göre sistem güncellenir.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="results">
+    <div class="section-title">
+      <p>Sonuç</p>
+      <h2>Hedef Odaklı Değişim</h2>
+    </div>
+
+    <div class="result-box">
+      <h3>Senin hedefin, senin planın.</h3>
+      <p>
+        Her danışanın vücut yapısı, günlük yaşamı, seviyesi ve hedefi farklıdır.
+        Bu yüzden hazır programlar yerine kişiye özel planlama yapılır.
+      </p>
+    </div>
+  </section>
+
+  <section id="sss" class="faq">
+    <div class="section-title">
+      <p>SSS</p>
+      <h2>Sık Sorulan Sorular</h2>
+    </div>
+
+    <div class="faq-item">
+      <h3>Programlar kişiye özel mi?</h3>
+      <p>Evet. Antrenman ve beslenme planı hedeflerine, seviyene ve yaşam düzenine göre hazırlanır.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Online koçluk nasıl işliyor?</h3>
+      <p>Haftalık takip, ölçüm kontrolü ve düzenli program güncellemeleri ile ilerleme sağlanır.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Spor salonuna gitmem şart mı?</h3>
+      <p>Hayır. Evde, salonda veya mevcut ekipmanlarına göre program hazırlanabilir.</p>
+    </div>
+  </section>
+
+  <section id="iletisim" class="contact">
+    <div class="section-title">
+      <p>İletişim</p>
+      <h2>Hedefine Birlikte Ulaşalım</h2>
+    </div>
 
     <p>
-      Kişiye özel antrenman, atletik performans gelişimi ve online koçluk hizmetleri.
+      Fitness hedeflerin için ücretsiz ön görüşme almak istersen benimle iletişime geç.
     </p>
 
-    <a href="#iletisim" class="btn">Ücretsiz Ön Görüşme</a>
-  </div>
-</section>
+    <div class="contact-buttons">
+      <a href="https://www.instagram.com/sefa.akann/" target="_blank" class="btn">
+        Instagram
+      </a>
 
-<section id="about">
-
-<h2 class="title">Hakkımda</h2>
-
-<div class="about">
-
-<div>
-<p style="font-size:18px; line-height:1.8;">
-Merhaba, ben Sefa Akan. Fitness, atletizm ve atletik performans alanlarında çalışan bir antrenörüm.
-Aktif olarak çocuk atletizm grupları, altyapı futbolcuları ve milli takım seviyesindeki sporcularla çalışıyorum.
-Amacım sporcuların performanslarını bilimsel yöntemlerle geliştirmek ve sürdürülebilir başarı sağlamaktır.
-</p>
-</div>
-
-<div class="card">
-<h3>Uzmanlık Alanları</h3>
-<br>
-<p>✓ Atletik Performans</p>
-<p>✓ Kuvvet ve Kondisyon</p>
-<p>✓ Futbol Performansı</p>
-<p>✓ Çocuk Atletizmi</p>
-<p>✓ Sprint ve Çeviklik</p>
-<p>✓ Online Koçluk</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="services">
-
-<h2 class="title">Hizmetler</h2>
-
-<div class="services">
-
-<div class="service">
-<h3>Atletik Performans</h3>
-<p>Sürat, çeviklik, kuvvet ve patlayıcı güç gelişimi.</p>
-</div>
-
-<div class="service">
-<h3>Kişisel Antrenörlük</h3>
-<p>Kas kazanımı, yağ kaybı ve genel kondisyon gelişimi.</p>
-</div>
-
-<div class="service">
-<h3>Online Koçluk</h3>
-<p>Uzaktan takip ve kişiye özel programlar.</p>
-</div>
-
-<div class="service">
-<h3>Sporcu Gelişimi</h3>
-<p>Futbolcular ve performans sporcuları için özel sistem.</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="education">
-
-<h2 class="title">Eğitimler</h2>
-
-<div class="card education">
-
-<ul>
-<li>Gazi Üniversitesi</li>
-<li>1. Kademe Fitness Antrenörlüğü</li>
-<li>1. Kademe Atletizm Antrenörlüğü</li>
-<li>1. Kademe Parkur Antrenörlüğü</li>
-<li>1. Kademe Modern Pentatlon</li>
-<li>Çocuk Atletizmi Eğitimi</li>
-</ul>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<div class="contact">
-
-<h2>İletişime Geç</h2>
-
-<p>
-Online Koçluk ve Atletik Performans Programları İçin
-</p>
-
-<br>
-
-<a class="btn" href="https://instagram.com/sefa.akann">
-Instagram
-</a>
-
-</div>
-
-</section>
-
-<footer>
-© 2026 AKAN PERFORMANCE
-</footer>
+      <a href="https://wa.me/905015440670" target="_blank" class="btn-outline">
+        WhatsApp
+      </a>
+    </div>
+  </section>
 
 </body>
 </html>
