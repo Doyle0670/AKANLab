@@ -604,6 +604,39 @@ html {
     font-size:18px !important;
   }
 
+  .menu{
+  display:none;
+  position:absolute;
+  top:75px;
+  right:15px;
+
+  width:220px;
+
+  flex-direction:column;
+  align-items:center;
+  gap:20px;
+
+  padding:25px;
+
+  background:rgba(2,6,23,0.95);
+  backdrop-filter:blur(15px);
+
+  border:1px solid rgba(56,189,248,0.2);
+  border-radius:20px;
+
+  box-shadow:0 0 30px rgba(56,189,248,0.15);
+}
+
+.menu.active{
+  display:flex;
+}
+
+.menu a{
+  width:100%;
+  text-align:center;
+  padding:10px 0;
+}
+
   .menu-toggle{
     justify-self:end !important;
     display:block !important;
@@ -2184,7 +2217,7 @@ html, body{
     <a href="#services" data-tr="Hizmetler" data-en="Services">Hizmetler</a>
     <a href="#testler" data-tr="Testler" data-en="Tests">Testler</a>
     <a href="#iletisim" data-tr="İletişim" data-en="Contact">İletişim</a>
-    <a href="/fitness/" data-tr="Fitness" data-en="Fitness">Fitness</a>
+    <a href="/fıtness/" data-tr="Fıtness" data-en="Fıtness">Fıtness</a>
   </div>
 
   <div class="nav-socials">
