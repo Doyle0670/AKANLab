@@ -192,8 +192,8 @@
 
     
 
-    /* NAVBAR */
-   .navbar{
+  /* NAVBAR */
+.navbar{
   position:fixed;
   top:0;
   left:0;
@@ -201,8 +201,9 @@
   z-index:1000;
 
   display:grid;
-  grid-template-columns:1fr auto 1fr;
+  grid-template-columns:auto 1fr auto;
   align-items:center;
+  gap:35px;
 
   padding:22px 70px;
   box-sizing:border-box;
@@ -213,10 +214,12 @@
 }
 
 .logo{
-  font-size:30px;
+  justify-self:start;
+  font-size:26px;
   font-weight:900;
   color:white;
   letter-spacing:1px;
+  white-space:nowrap;
 }
 
 .logo span{
@@ -224,18 +227,21 @@
 }
 
 .menu{
+  justify-self:center;
   display:flex;
+  align-items:center;
   justify-content:center;
-  gap:40px;
+  gap:32px;
 }
 
 .menu a{
   text-decoration:none;
   color:white;
-  font-size:17px;
+  font-size:16px;
   font-weight:500;
   transition:0.3s;
   position:relative;
+  white-space:nowrap;
 }
 
 .menu a:hover{
@@ -258,20 +264,51 @@
 }
 
 .nav-socials{
+  justify-self:end;
   display:flex;
+  align-items:center;
   justify-content:flex-end;
-  gap:22px;
+  gap:16px;
 }
 
 .nav-socials a{
   color:white;
-  font-size:20px;
+  font-size:18px;
   transition:0.3s;
 }
 
 .nav-socials a:hover{
   color:#38bdf8;
   transform:translateY(-3px);
+}
+
+.language-toggle{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  margin-left:8px;
+}
+
+.lang-btn{
+  padding:6px 10px;
+  border-radius:20px;
+  border:1px solid rgba(56,189,248,0.3);
+  background:rgba(255,255,255,0.04);
+  color:white;
+  font-size:12px;
+  font-weight:700;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.lang-btn.active,
+.lang-btn:hover{
+  background:#38bdf8;
+  color:#020617;
+}
+
+.menu-toggle{
+  display:none;
 }
 
     /* HERO */
@@ -2138,11 +2175,19 @@ html, body{
 </div>
   <div class="cursor-glow"></div>
 
-  <!-- NAVBAR -->
   <div class="navbar">
   <div class="logo">AKAN <span>PERFORMANCE</span></div>
 
-    <div class="nav-socials">
+  <div class="menu" id="mobileMenu">
+    <a href="#top" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a>
+    <a href="#hakkimda" data-tr="Hakkımda" data-en="About">Hakkımda</a>
+    <a href="#services" data-tr="Hizmetler" data-en="Services">Hizmetler</a>
+    <a href="#testler" data-tr="Testler" data-en="Tests">Testler</a>
+    <a href="#iletisim" data-tr="İletişim" data-en="Contact">İletişim</a>
+    <a href="/fitness/" data-tr="Fitness" data-en="Fitness">Fitness</a>
+  </div>
+
+  <div class="nav-socials">
     <a href="https://www.instagram.com/sefa.akann/" target="_blank">
       <i class="fa-brands fa-instagram"></i>
     </a>
@@ -2151,37 +2196,19 @@ html, body{
       <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-   <a href="https://t.me/SefaAKAN" target="_blank">
+    <a href="https://t.me/SefaAKAN" target="_blank">
       <i class="fa-brands fa-telegram"></i>
     </a>
+
+    <div class="language-toggle">
+      <button id="trBtn" class="lang-btn active">TR</button>
+      <button id="enBtn" class="lang-btn">EN</button>
+    </div>
   </div>
-<div class="language-toggle">
-  <button id="trBtn" class="lang-btn active">TR</button>
-  <button id="enBtn" class="lang-btn">EN</button>
+
+  <div class="menu-toggle" id="menuToggle">☰</div>
 </div>
 
-<div class="menu-toggle" id="menuToggle">☰</div>
-
-  <div class="menu" id="mobileMenu">
-    <a href="#top" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a>
-
-<a href="#hakkimda" data-tr="Hakkımda" data-en="About">Hakkımda</a>
-
-<a href="#services" data-tr="Hizmetler" data-en="Services">Hizmetler</a>
-
-<a href="#testler" data-tr="Testler" data-en="Tests">Testler</a>
-
-<a href="#iletisim" data-tr="İletişim" data-en="Contact">İletişim</a>
-  
-<a href="/fıtness/" data-tr="Fitness" data-en="Fıtness">Fitness</a>
-
-</div>
-
-
-
- 
-</div>
-  
 
   <!-- HERO -->
  <div class="hero">
