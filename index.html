@@ -192,7 +192,7 @@
 
     
 
-   /* DESKTOP NAVBAR FIX */
+ /* DESKTOP NAVBAR FIX */
 .navbar{
   position:fixed;
   top:0;
@@ -201,8 +201,9 @@
   z-index:1000;
 
   display:grid;
-  grid-template-columns:1fr auto 1fr;
+  grid-template-columns:auto 1fr auto;
   align-items:center;
+  gap:40px;
 
   padding:22px 70px;
   box-sizing:border-box;
@@ -221,18 +222,32 @@
   white-space:nowrap;
 }
 
+.logo span{
+  color:#0ea5e9 !important;
+}
+
 .menu{
   justify-self:center;
-  display:flex;
+  display:flex !important;
   align-items:center;
-  gap:38px;
+  justify-content:center;
+  gap:34px;
+}
+
+.menu a{
+  display:inline-block;
+  color:white;
+  text-decoration:none;
+  font-size:17px;
+  font-weight:500;
+  white-space:nowrap;
 }
 
 .nav-socials{
   justify-self:end;
   display:flex;
   align-items:center;
-  gap:18px;
+  gap:16px;
 }
 
 .language-toggle{
@@ -2136,18 +2151,14 @@ html, body{
   <div class="menu-toggle" id="menuToggle">☰</div>
 </div>
 
-  <div class="menu" id="mobileMenu">
+<div class="menu" id="mobileMenu">
     <a href="#top" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a>
-
-<a href="#hakkimda" data-tr="Hakkımda" data-en="About">Hakkımda</a>
-
-<a href="#services" data-tr="Hizmetler" data-en="Services">Hizmetler</a>
-
-<a href="#testler" data-tr="Testler" data-en="Tests">Testler</a>
-
-<a href="#iletisim" data-tr="İletişim" data-en="Contact">İletişim</a>
-  
-<a href="/fitness/">Fitness</a>
+    <a href="#hakkimda" data-tr="Hakkımda" data-en="About">Hakkımda</a>
+    <a href="#services" data-tr="Hizmetler" data-en="Services">Hizmetler</a>
+    <a href="#testler" data-tr="Testler" data-en="Tests">Testler</a>
+    <a href="#iletisim" data-tr="İletişim" data-en="Contact">İletişim</a>
+    <a href="/fitness/" data-tr="Fitness" data-en="Fitness">Fitness</a>
+  </div>
 
 </div>
 
