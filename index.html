@@ -192,8 +192,8 @@
 
     
 
-    /* NAVBAR */
-   .navbar{
+   /* DESKTOP NAVBAR FIX */
+.navbar{
   position:fixed;
   top:0;
   left:0;
@@ -213,65 +213,36 @@
 }
 
 .logo{
-  font-size:30px;
+  justify-self:start;
+  font-size:24px;
   font-weight:900;
   color:white;
   letter-spacing:1px;
-}
-
-.logo span{
-  color:#0ea5e9;
+  white-space:nowrap;
 }
 
 .menu{
+  justify-self:center;
   display:flex;
-  justify-content:center;
-  gap:40px;
-}
-
-.menu a{
-  text-decoration:none;
-  color:white;
-  font-size:17px;
-  font-weight:500;
-  transition:0.3s;
-  position:relative;
-}
-
-.menu a:hover{
-  color:#38bdf8;
-}
-
-.menu a::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-8px;
-  width:0;
-  height:2px;
-  background:#38bdf8;
-  transition:0.3s;
-}
-
-.menu a:hover::after{
-  width:100%;
+  align-items:center;
+  gap:38px;
 }
 
 .nav-socials{
+  justify-self:end;
   display:flex;
-  justify-content:flex-end;
-  gap:22px;
+  align-items:center;
+  gap:18px;
 }
 
-.nav-socials a{
-  color:white;
-  font-size:20px;
-  transition:0.3s;
+.language-toggle{
+  display:flex;
+  gap:6px;
+  margin-left:8px;
 }
 
-.nav-socials a:hover{
-  color:#38bdf8;
-  transform:translateY(-3px);
+.menu-toggle{
+  display:none;
 }
 
     /* HERO */
@@ -2155,12 +2126,15 @@ html, body{
       <i class="fa-brands fa-telegram"></i>
     </a>
   </div>
-<div class="language-toggle">
-  <button id="trBtn" class="lang-btn active">TR</button>
-  <button id="enBtn" class="lang-btn">EN</button>
-</div>
 
-<div class="menu-toggle" id="menuToggle">☰</div>
+<div class="language-toggle">
+      <button id="trBtn" class="lang-btn active">TR</button>
+      <button id="enBtn" class="lang-btn">EN</button>
+    </div>
+  </div>
+
+  <div class="menu-toggle" id="menuToggle">☰</div>
+</div>
 
   <div class="menu" id="mobileMenu">
     <a href="#top" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a>
@@ -2172,7 +2146,10 @@ html, body{
 <a href="#testler" data-tr="Testler" data-en="Tests">Testler</a>
 
 <a href="#iletisim" data-tr="İletişim" data-en="Contact">İletişim</a>
-  </div>
+  
+<a href="/fitness/">Fitness</a>
+
+</div>
 
  
 </div>
