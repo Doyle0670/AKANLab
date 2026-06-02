@@ -21,30 +21,34 @@ a {
 }
 
 /* HEADER */
-
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 999;
-  background: rgba(9, 9, 11, 0.8);
+  background: rgba(5, 5, 5, 0.88);
   backdrop-filter: blur(18px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .navbar {
+  width: 100%;
   max-width: 1280px;
-  margin: auto;
-  padding: 18px 20px;
-  display: flex;
+  height: 86px;
+  margin: 0 auto;
+  padding: 0 48px;
+
+  display: grid;
+  grid-template-columns: 260px 1fr 140px;
   align-items: center;
-  justify-content: space-between;
 }
 
 .logo {
-  font-size: 22px;
+  color: #ffffff;
+  font-size: 23px;
   font-weight: 900;
+  line-height: 1;
   letter-spacing: -1px;
 }
 
@@ -54,45 +58,52 @@ a {
 
 .logo small {
   display: block;
-  font-size: 11px;
-  color: #a1a1aa;
-  letter-spacing: 4px;
-  margin-top: 3px;
+  margin-top: 8px;
+  color: #ffffff;
+  font-size: 13px;
+  letter-spacing: 6px;
+  font-weight: 700;
 }
 
 .nav-links {
   display: flex;
-  gap: 32px;
-  color: #d4d4d8;
-  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  gap: 42px;
 }
 
 .nav-links a {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
   transition: 0.3s;
 }
 
 .nav-links a:hover {
-  color: #ffffff;
+  color: #a3e635;
 }
 
 .nav-btn {
+  justify-self: end;
   background: #a3e635;
-  color: #09090b;
-  padding: 12px 24px;
+  color: #050505;
+  padding: 15px 28px;
   border-radius: 999px;
-  font-weight: 800;
+  font-size: 15px;
+  font-weight: 900;
   transition: 0.3s;
 }
 
 .nav-btn:hover {
   background: #bef264;
+  transform: translateY(-2px);
 }
 
 /* HERO */
 
 .hero {
   position: relative;
-  padding: 140px 20px 90px;
+  padding: 170px 20px 90px;
   min-height: 100vh;
 }
 
@@ -629,5 +640,30 @@ footer {
   .contact-box,
   .nutrition-box {
     padding: 32px 24px;
+  }
+}@media (max-width: 900px) {
+  .navbar {
+    height: auto;
+    padding: 18px 22px;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    text-align: center;
+  }
+
+  .logo {
+    justify-self: center;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .nav-btn {
+    justify-self: center;
+  }
+
+  .hero {
+    padding-top: 240px;
   }
 }
