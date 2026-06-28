@@ -45,7 +45,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- SEO -->
-<title>Sefa Akan | Athletic Performance Coach | Speed, Strength & Performance Training</title>
+<title>Sefa Akan | Atletik Performans Antrenörü | Hız, Kuvvet ve Performans</title>
 
 <meta name="description" content="Sefa Akan Athletic Performance Coach. Speed development, strength training, agility testing, performance analysis and athlete development programs.">
 
@@ -2448,6 +2448,233 @@ html, body{
   }
 }
 
+
+
+/* ===============================
+   PREMIUM GENEL DÜZENLEME
+   Hero, hizmetler, CTA ve mobil boyut final ayarı
+================================ */
+@media (min-width:769px){
+  .nav-socials a:nth-of-type(n+3){
+    display:none !important;
+  }
+
+  .hero{
+    min-height:92vh !important;
+    padding:130px 40px 70px !important;
+  }
+
+  .hero-wrapper{
+    max-width:1180px !important;
+    gap:70px !important;
+  }
+
+  .hero-small{
+    font-size:13px !important;
+    letter-spacing:5px !important;
+    margin-bottom:16px !important;
+  }
+
+  .hero h1{
+    font-size:70px !important;
+    line-height:.95 !important;
+    letter-spacing:1.5px !important;
+    margin:12px 0 12px !important;
+  }
+
+  .hero h2{
+    font-size:28px !important;
+    line-height:1.25 !important;
+    margin:0 0 18px !important;
+  }
+
+  .hero-desc{
+    max-width:560px !important;
+    font-size:19px !important;
+    line-height:1.65 !important;
+    opacity:.88 !important;
+  }
+
+  .hero-image img{
+    width:310px !important;
+    height:430px !important;
+  }
+}
+
+.hero-badges{
+  margin-top:24px;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.hero-badges span{
+  padding:10px 16px;
+  border-radius:999px;
+  color:#38bdf8;
+  font-weight:800;
+  font-size:13px;
+  letter-spacing:.5px;
+  background:rgba(56,189,248,0.08);
+  border:1px solid rgba(56,189,248,0.22);
+  box-shadow:inset 0 0 12px rgba(56,189,248,0.04);
+}
+
+.service-card h3{
+  margin-bottom:8px !important;
+}
+
+.service-subtitle{
+  color:#ffffff !important;
+  opacity:.95 !important;
+  font-size:16px !important;
+  font-weight:800 !important;
+  margin:0 0 14px !important;
+}
+
+.cta-section{
+  padding:20px 40px 100px;
+  text-align:center;
+}
+
+.cta-card{
+  width:88%;
+  max-width:920px;
+  margin:0 auto;
+  padding:55px 45px;
+  border-radius:34px;
+  background:rgba(255,255,255,0.045);
+  border:1px solid rgba(56,189,248,0.22);
+  backdrop-filter:blur(16px);
+  box-shadow:
+    0 0 32px rgba(56,189,248,0.10),
+    inset 0 0 24px rgba(255,255,255,0.025);
+}
+
+.cta-card h2{
+  max-width:760px;
+  margin:14px auto 18px;
+  font-size:38px;
+  line-height:1.22;
+}
+
+.cta-card p:not(.section-label){
+  max-width:650px;
+  margin:0 auto 28px;
+  font-size:18px;
+  line-height:1.7;
+  opacity:.82;
+}
+
+/* Arka planı biraz daha premium ve daha az kalabalık yapar */
+.stars1{ opacity:.55 !important; }
+.stars2{ opacity:.32 !important; }
+.stars3{ opacity:.22 !important; }
+.network{ opacity:.07 !important; }
+.particles{ opacity:.22 !important; }
+
+@media (max-width:768px){
+  .nav-socials a:nth-of-type(n+3){
+    display:none !important;
+  }
+
+  .hero{
+    padding:100px 18px 55px !important;
+  }
+
+  .hero-wrapper{
+    gap:28px !important;
+  }
+
+  .hero-small{
+    font-size:11px !important;
+    letter-spacing:3px !important;
+  }
+
+  .hero h1{
+    font-size:42px !important;
+    letter-spacing:1px !important;
+    margin:10px 0 !important;
+  }
+
+  .hero h2{
+    font-size:20px !important;
+  }
+
+  .hero-desc{
+    max-width:335px !important;
+    font-size:14.5px !important;
+    line-height:1.6 !important;
+  }
+
+  .hero-badges{
+    justify-content:center;
+    gap:8px;
+    margin-top:18px;
+  }
+
+  .hero-badges span{
+    padding:8px 12px;
+    font-size:11.5px;
+  }
+
+  .hero-buttons{
+    margin-top:22px !important;
+  }
+
+  .hero-btn{
+    min-width:155px !important;
+    padding:12px 16px !important;
+    font-size:13px !important;
+  }
+
+  .services h2,
+  .tests h2,
+  .testimonials h2{
+    font-size:30px !important;
+    line-height:1.25 !important;
+  }
+
+  .service-subtitle{
+    font-size:15px !important;
+  }
+
+  .cta-section{
+    padding:10px 18px 80px;
+  }
+
+  .cta-card{
+    width:100%;
+    box-sizing:border-box;
+    padding:34px 20px;
+    border-radius:26px;
+  }
+
+  .cta-card h2{
+    font-size:25px;
+  }
+
+  .cta-card p:not(.section-label){
+    font-size:15px;
+  }
+}
+
+@media (max-width:420px){
+  .hero h1{
+    font-size:36px !important;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .hero-btn{
+    width:100%;
+    max-width:260px;
+  }
+}
+
 </style>
 </head>
 
@@ -2494,16 +2721,12 @@ html, body{
   </div>
 
   <div class="nav-socials">
-    <a href="https://www.instagram.com/sefa.akann/" target="_blank">
+    <a href="https://www.instagram.com/sefa.akann/" target="_blank" aria-label="Instagram">
       <i class="fa-brands fa-instagram"></i>
     </a>
 
-    <a href="https://wa.me/905015440670" target="_blank">
+    <a href="https://wa.me/905015440670" target="_blank" aria-label="WhatsApp">
       <i class="fa-brands fa-whatsapp"></i>
-    </a>
-
-    <a href="https://t.me/SefaAKAN" target="_blank">
-      <i class="fa-brands fa-telegram"></i>
     </a>
 
     <div class="language-toggle">
@@ -2538,14 +2761,21 @@ html, body{
 
       <p
         class="hero-desc"
-        data-tr="Sporcuların hız, kuvvet, çeviklik ve patlayıcı güç gelişimini bilimsel testler ve saha uygulamalarıyla takip ediyor; bireysel hedeflere uygun performans programları hazırlıyorum."
-        data-en="I track athletes’ speed, strength, agility and power development through scientific testing and field-based training, creating performance programs tailored to individual goals.">
-        Sporcuların hız, kuvvet, çeviklik ve patlayıcı güç gelişimini bilimsel testler ve saha uygulamalarıyla takip ediyor; bireysel hedeflere uygun performans programları hazırlıyorum.
+        data-tr="Hız, kuvvet, çeviklik ve patlayıcı güç gelişimi için bilimsel testlere dayalı, kişiye özel antrenman sistemi."
+        data-en="A personalized training system based on scientific testing for speed, strength, agility and explosive power development.">
+        Hız, kuvvet, çeviklik ve patlayıcı güç gelişimi için bilimsel testlere dayalı, kişiye özel antrenman sistemi.
       </p>
 
+      <div class="hero-badges">
+        <span data-tr="Hız" data-en="Speed">Hız</span>
+        <span data-tr="Kuvvet" data-en="Strength">Kuvvet</span>
+        <span data-tr="Çeviklik" data-en="Agility">Çeviklik</span>
+        <span data-tr="Patlayıcı Güç" data-en="Power">Patlayıcı Güç</span>
+      </div>
+
       <div class="hero-buttons">
-        <a href="#testler" class="hero-btn primary" data-tr="Testleri İncele" data-en="View Tests">Testleri İncele</a>
-        <a href="#iletisim" class="hero-btn secondary" data-tr="İletişime Geç" data-en="Contact">İletişime Geç</a>
+        <a href="https://wa.me/905015440670" target="_blank" class="hero-btn primary" data-tr="WhatsApp ile Başvur" data-en="Apply via WhatsApp">WhatsApp ile Başvur</a>
+        <a href="#testler" class="hero-btn secondary" data-tr="Testleri İncele" data-en="View Tests">Testleri İncele</a>
       </div>
     </div>
 
@@ -2599,7 +2829,7 @@ html, body{
 
   <div class="video-tabs">
     <button onclick="changeVideo('editvideo1.mp4','video-kapak-fotoğrafı.png', this)" class="active">GENEL</button>
-    <button onclick="changeVideo('video.mp4','video-kapak-fotoğrafı.png', this)" class="active">DRILL 1</button>
+    <button onclick="changeVideo('video.mp4','video-kapak-fotoğrafı.png', this)">DRILL 1</button>
     <button onclick="changeVideo('video2.mp4','video2-kapak-fotoğrafı.png', this)">DRILL 2</button>
     <button onclick="changeVideo('video3.mp4','video3-kapak-fotoğrafı.png', this)">DRILL 3</button>
   </div>
@@ -2613,13 +2843,19 @@ html, body{
     </div>
 
     <div class="about-content">
-      <p class="section-label">HAKKIMDA</p>
+      <p class="section-label" data-tr="HAKKIMDA" data-en="ABOUT">HAKKIMDA</p>
 
-      <h2>Bilimsel Yaklaşım, Saha Deneyimi, Gerçek Sonuçlar</h2>
+      <h2
+        data-tr="Bilimsel Yaklaşım, Saha Deneyimi, Ölçülebilir Sonuçlar"
+        data-en="Scientific Approach, Field Experience, Measurable Results">
+        Bilimsel Yaklaşım, Saha Deneyimi, Ölçülebilir Sonuçlar
+      </h2>
 
-      <p class="about-text">
-        Sporcu performans gelişiminde bilimsel testler, performans analizi ve saha uygulamalarını bir araya getirerek bireysel ve takım bazlı gelişim programları oluşturuyorum.
-        Hız, kuvvet, çeviklik, patlayıcı güç ve atletik performans gelişimine odaklanıyorum.
+      <p
+        class="about-text"
+        data-tr="Futbol, basketbol, atletizm ve bireysel sporcularda hız, kuvvet, çeviklik, patlayıcı güç ve sakatlık sonrası performansa dönüş süreçleri üzerine çalışıyorum. Amacım; bilimsel testlerle sporcunun güçlü ve gelişime açık yönlerini belirlemek, ardından sahaya uygun bireysel gelişim programı oluşturmaktır."
+        data-en="I work with football, basketball, athletics and individual athletes on speed, strength, agility, explosive power and return-to-performance processes. My goal is to identify each athlete’s strengths and development areas through scientific testing, then build a field-based individual performance plan.">
+        Futbol, basketbol, atletizm ve bireysel sporcularda hız, kuvvet, çeviklik, patlayıcı güç ve sakatlık sonrası performansa dönüş süreçleri üzerine çalışıyorum. Amacım; bilimsel testlerle sporcunun güçlü ve gelişime açık yönlerini belirlemek, ardından sahaya uygun bireysel gelişim programı oluşturmaktır.
       </p>
 
       <div class="about-grid">
@@ -2667,51 +2903,74 @@ html, body{
 
 
 <div id="services" class="services fade-up">
-  <p class="section-label">HİZMETLER</p>
-  <h2>Performans Gelişim Hizmetleri</h2>
+  <p class="section-label" data-tr="HİZMETLER" data-en="SERVICES">HİZMETLER</p>
+  <h2
+    data-tr="Performans Gelişim Hizmetleri"
+    data-en="Performance Development Services">
+    Performans Gelişim Hizmetleri
+  </h2>
 
   <div class="service-cards">
 
     <div class="service-card">
       <div class="service-icon">🏃</div>
       <h3>Athletic Performance Training</h3>
-      <p>Kişiye özel performans geliştirme antrenmanları.</p>
+      <p class="service-subtitle" data-tr="Atletik Performans Antrenmanı" data-en="Athletic Performance Training">Atletik Performans Antrenmanı</p>
+      <p data-tr="Sporcunun branşına, yaşına ve hedeflerine göre kişiye özel performans geliştirme süreci."
+         data-en="A personalized performance development process based on the athlete’s sport, age and goals.">Sporcunun branşına, yaşına ve hedeflerine göre kişiye özel performans geliştirme süreci.</p>
     </div>
 
     <div class="service-card">
       <div class="service-icon">⚡</div>
       <h3>Speed Development</h3>
-      <p>Hız, ivmelenme ve sprint performans gelişimi.</p>
+      <p class="service-subtitle" data-tr="Hız ve Sprint Gelişimi" data-en="Speed and Sprint Development">Hız ve Sprint Gelişimi</p>
+      <p data-tr="İvmelenme, maksimum hız, sprint mekaniği ve yön değiştirme kalitesini geliştirmeye yönelik çalışmalar."
+         data-en="Training focused on acceleration, maximum speed, sprint mechanics and change-of-direction quality.">İvmelenme, maksimum hız, sprint mekaniği ve yön değiştirme kalitesini geliştirmeye yönelik çalışmalar.</p>
     </div>
 
     <div class="service-card">
       <div class="service-icon">📊</div>
       <h3>Testing & Monitoring</h3>
-      <p>Bilimsel testlerle performans takibi ve analiz.</p>
+      <p class="service-subtitle" data-tr="Test ve Performans Takibi" data-en="Testing and Performance Monitoring">Test ve Performans Takibi</p>
+      <p data-tr="Sprint, sıçrama, çeviklik ve hareket kalitesi ölçümleriyle gelişimin düzenli olarak takip edilmesi."
+         data-en="Regular tracking through sprint, jump, agility and movement-quality assessments.">Sprint, sıçrama, çeviklik ve hareket kalitesi ölçümleriyle gelişimin düzenli olarak takip edilmesi.</p>
     </div>
 
     <div class="service-card">
       <div class="service-icon">🧘</div>
       <h3>Mobility & Movement</h3>
-      <p>Hareket kalitesi, mobilite ve biomekanik gelişim.</p>
+      <p class="service-subtitle" data-tr="Mobilite ve Hareket Kalitesi" data-en="Mobility and Movement Quality">Mobilite ve Hareket Kalitesi</p>
+      <p data-tr="Mobilite, stabilite ve temel hareket paternleri üzerinden daha verimli ve güvenli hareket altyapısı oluşturma."
+         data-en="Building a safer and more efficient movement base through mobility, stability and fundamental movement patterns.">Mobilite, stabilite ve temel hareket paternleri üzerinden daha verimli ve güvenli hareket altyapısı oluşturma.</p>
     </div>
 
     <div class="service-card">
       <div class="service-icon">🩺</div>
       <h3>Return to Performance</h3>
-      <p>Sakatlık sonrası performansa güvenli dönüş planı.</p>
+      <p class="service-subtitle" data-tr="Performansa Güvenli Dönüş" data-en="Safe Return to Performance">Performansa Güvenli Dönüş</p>
+      <p data-tr="Sakatlık sonrası sporcunun kontrollü, ölçülebilir ve güvenli şekilde performansa dönüş planı."
+         data-en="A controlled, measurable and safe return-to-performance plan after injury.">Sakatlık sonrası sporcunun kontrollü, ölçülebilir ve güvenli şekilde performansa dönüş planı.</p>
     </div>
 
   </div>
 </div>
 
-
-
-
-
-
-
-
+<section class="cta-section fade-up">
+  <div class="cta-card">
+    <p class="section-label" data-tr="BAŞVURU" data-en="APPLICATION">BAŞVURU</p>
+    <h2
+      data-tr="Performansını ölçmek ve gelişim planını oluşturmak ister misin?"
+      data-en="Do you want to measure your performance and build your development plan?">
+      Performansını ölçmek ve gelişim planını oluşturmak ister misin?
+    </h2>
+    <p
+      data-tr="Branşını, hedefini ve mevcut seviyeni paylaş; sana uygun test ve antrenman sürecini birlikte planlayalım."
+      data-en="Share your sport, goal and current level; let’s plan the right testing and training process for you.">
+      Branşını, hedefini ve mevcut seviyeni paylaş; sana uygun test ve antrenman sürecini birlikte planlayalım.
+    </p>
+    <a href="https://wa.me/905015440670" target="_blank" class="hero-btn primary" data-tr="WhatsApp'tan Başvur" data-en="Apply on WhatsApp">WhatsApp'tan Başvur</a>
+  </div>
+</section>
 
 
 <div id="testler" class="tests fade-up">
@@ -2825,14 +3084,14 @@ html, body{
 
 </div>
 <div class="contact-form fade-up">
-  <h3>Performans Analizi İçin Başvur</h3>
+  <h3 data-tr="Performans Analizi İçin Başvur" data-en="Apply for Performance Analysis">Performans Analizi İçin Başvur</h3>
 
-  <input type="text" id="name" placeholder="Ad Soyad">
-  <input type="text" id="sport" placeholder="Spor Branşı">
-  <input type="text" id="phone" placeholder="Telefon Numaran">
-  <textarea id="goal" placeholder="Hedefin / Notun"></textarea>
+  <input type="text" id="name" placeholder="Ad Soyad / Full Name">
+  <input type="text" id="sport" placeholder="Spor Branşı / Sport">
+  <input type="text" id="phone" placeholder="Telefon Numaran / Phone">
+  <textarea id="goal" placeholder="Hedefin / Notun / Goal"></textarea>
 
-  <button onclick="sendWhatsApp()">WhatsApp ile Başvur</button>
+  <button onclick="sendWhatsApp()" data-tr="WhatsApp ile Başvur" data-en="Apply via WhatsApp">WhatsApp ile Başvur</button>
 </div>
 <footer class="footer">
   <div class="footer-logo">AKAN <span>PERFORMANCE</span></div>
