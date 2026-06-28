@@ -2675,6 +2675,138 @@ html, body{
   }
 }
 
+
+
+/* ===============================
+   HAKKIMDA BÖLÜMÜ KAYMA DÜZELTME
+   Sadece #hakkimda alanını etkiler
+================================ */
+@media (min-width:769px){
+
+  #hakkimda.about{
+    min-height:auto !important;
+    padding:120px 40px !important;
+    text-align:left !important;
+    scroll-margin-top:110px !important;
+  }
+
+  #hakkimda .about-container{
+    width:90% !important;
+    max-width:1400px !important;
+    margin:0 auto !important;
+    display:flex !important;
+    flex-direction:row !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    gap:60px !important;
+    flex-wrap:nowrap !important;
+  }
+
+  #hakkimda .about-image{
+    flex:0 0 34% !important;
+    min-width:300px !important;
+    text-align:center !important;
+  }
+
+  #hakkimda .about-image img{
+    width:100% !important;
+    max-width:360px !important;
+    height:460px !important;
+    object-fit:cover !important;
+    object-position:center !important;
+    border-radius:35px !important;
+    display:block !important;
+    margin:0 auto !important;
+  }
+
+  #hakkimda .about-content{
+    flex:1 !important;
+    min-width:0 !important;
+    max-width:860px !important;
+    text-align:left !important;
+  }
+
+  #hakkimda .section-label{
+    display:block !important;
+    text-align:left !important;
+    margin-bottom:18px !important;
+  }
+
+  #hakkimda .about-content h2{
+    font-size:44px !important;
+    line-height:1.15 !important;
+    margin:0 0 24px !important;
+    text-align:left !important;
+  }
+
+  #hakkimda .about-text{
+    max-width:850px !important;
+    font-size:18px !important;
+    line-height:1.8 !important;
+    padding:0 !important;
+    margin:0 0 36px !important;
+    text-align:left !important;
+  }
+
+  #hakkimda .about-grid{
+    width:100% !important;
+    display:grid !important;
+    grid-template-columns:repeat(3, minmax(0, 1fr)) !important;
+    gap:22px !important;
+  }
+
+  #hakkimda .about-card{
+    width:auto !important;
+    max-width:none !important;
+    padding:30px 24px !important;
+    text-align:left !important;
+  }
+
+  #hakkimda .about-card h3{
+    font-size:20px !important;
+    text-align:left !important;
+  }
+
+  #hakkimda .about-card ul{
+    padding:0 !important;
+    margin:0 !important;
+  }
+
+  #hakkimda .about-card li{
+    font-size:15px !important;
+    line-height:1.7 !important;
+    text-align:left !important;
+  }
+}
+
+@media (max-width:768px){
+  #hakkimda.about{
+    padding:75px 16px !important;
+    text-align:center !important;
+  }
+
+  #hakkimda .about-container{
+    width:100% !important;
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    gap:28px !important;
+  }
+
+  #hakkimda .about-content,
+  #hakkimda .section-label,
+  #hakkimda .about-content h2,
+  #hakkimda .about-text{
+    text-align:center !important;
+  }
+
+  #hakkimda .about-grid{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:18px !important;
+  }
+}
+
 </style>
 </head>
 
