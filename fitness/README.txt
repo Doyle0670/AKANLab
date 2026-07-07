@@ -12,3 +12,6 @@ Not:
 Bu pakette hareket görselleri .png olarak bağlandı.
 HTML içindeki görsel yolları /fitness/exercises/...png şeklindedir.
 Eski exercises içindeki .svg dosyalarını silip bu paketteki exercises klasörünü kullanman daha temiz olur.
+
+
+NOT: Bu pakette exercises klasöründeki tüm hareket görsellerine AKAN PERFORMANCE / AP logosu sağ alt köşede sahiplik işareti olarak eklenmiştir.
