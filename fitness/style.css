@@ -1037,3 +1037,270 @@ section {
     height:56px;
   }
 }
+
+
+/* ===============================
+   ONLINE KOÇLUK PAKETLERİ
+================================ */
+
+.section-desc{
+  max-width:760px;
+  margin:0 auto;
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.8;
+}
+
+.coaching-packages{
+  padding:105px 20px;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(163,230,53,0.12), transparent 34%),
+    rgba(24,24,27,0.36);
+}
+
+.package-grid{
+  max-width:1180px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:24px;
+  align-items:stretch;
+}
+
+.package-card{
+  position:relative;
+  min-height:100%;
+  padding:36px 30px;
+  border-radius:34px;
+  background:rgba(9,9,11,0.88);
+  border:1px solid rgba(163,230,53,0.16);
+  box-shadow:0 28px 80px rgba(0,0,0,0.24);
+  display:flex;
+  flex-direction:column;
+  transition:.3s;
+}
+
+.package-card:hover{
+  transform:translateY(-8px);
+  border-color:rgba(163,230,53,0.48);
+  box-shadow:0 30px 90px rgba(0,0,0,0.34), 0 0 34px rgba(163,230,53,0.08);
+}
+
+.package-card.featured{
+  border-color:rgba(163,230,53,0.55);
+  box-shadow:0 32px 100px rgba(163,230,53,0.10);
+}
+
+.popular-label{
+  position:absolute;
+  top:20px;
+  right:22px;
+  padding:8px 14px;
+  border-radius:999px;
+  background:var(--accent);
+  color:var(--dark);
+  font-size:12px;
+  font-weight:900;
+}
+
+.package-badge{
+  width:max-content;
+  padding:8px 14px;
+  border-radius:999px;
+  color:var(--accent-2);
+  background:rgba(163,230,53,0.08);
+  border:1px solid rgba(163,230,53,0.18);
+  font-size:13px;
+  font-weight:900;
+  margin-bottom:24px;
+}
+
+.package-card h3{
+  font-size:30px;
+  line-height:1.1;
+  margin-bottom:18px;
+  letter-spacing:-1px;
+}
+
+.package-card p{
+  color:var(--muted);
+  line-height:1.75;
+  margin-bottom:24px;
+}
+
+.package-card ul{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  margin-bottom:30px;
+}
+
+.package-card li{
+  color:#e4e4e7;
+  line-height:1.5;
+  padding-left:28px;
+  position:relative;
+}
+
+.package-card li::before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  color:var(--accent);
+  font-weight:900;
+}
+
+.package-btn{
+  margin-top:auto;
+  width:100%;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:16px 20px;
+  border-radius:999px;
+  background:var(--accent);
+  color:var(--dark);
+  font-weight:900;
+  transition:.3s;
+}
+
+.package-btn:hover{
+  background:var(--accent-2);
+  transform:translateY(-3px);
+}
+
+/* ===============================
+   FITNESS SSS
+================================ */
+
+.fitness-faq{
+  padding:105px 20px;
+  background:rgba(255,255,255,0.02);
+  border-top:1px solid var(--line);
+}
+
+.faq-container{
+  max-width:920px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.faq-item{
+  border-radius:24px;
+  overflow:hidden;
+  background:rgba(24,24,27,0.82);
+  border:1px solid rgba(163,230,53,0.14);
+}
+
+.faq-question{
+  width:100%;
+  padding:22px 24px;
+  background:transparent;
+  border:none;
+  color:var(--text);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:18px;
+  cursor:pointer;
+  font-size:18px;
+  font-weight:900;
+  text-align:left;
+}
+
+.faq-question span{
+  width:30px;
+  height:30px;
+  min-width:30px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--accent);
+  color:var(--dark);
+  font-size:22px;
+  font-weight:900;
+  transition:.25s;
+}
+
+.faq-answer{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .35s ease;
+}
+
+.faq-answer p{
+  padding:0 24px 24px;
+  margin:0;
+  color:var(--muted);
+  line-height:1.8;
+}
+
+.faq-item.active .faq-answer{
+  max-height:260px;
+}
+
+.faq-item.active .faq-question span{
+  transform:rotate(45deg);
+}
+
+/* Paketler ve SSS mobil */
+@media (max-width:1080px){
+  .navbar{
+    grid-template-columns:230px 1fr 120px;
+  }
+
+  .nav-links{
+    gap:16px;
+  }
+
+  .nav-links a{
+    font-size:14px;
+  }
+
+  .package-grid{
+    grid-template-columns:1fr;
+    max-width:720px;
+  }
+}
+
+@media (max-width:560px){
+  .coaching-packages,
+  .fitness-faq{
+    padding:78px 18px;
+  }
+
+  .section-desc{
+    font-size:15px;
+  }
+
+  .package-card{
+    padding:30px 22px;
+    border-radius:28px;
+  }
+
+  .popular-label{
+    position:static;
+    width:max-content;
+    margin-bottom:14px;
+  }
+
+  .package-card h3{
+    font-size:26px;
+  }
+
+  .faq-question{
+    padding:20px;
+    font-size:16px;
+  }
+
+  .faq-answer p{
+    padding:0 20px 22px;
+    font-size:15px;
+  }
+}
