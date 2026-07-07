@@ -977,3 +977,63 @@ section {
     margin:18px auto 0 !important;
   }
 }
+
+
+/* ===============================
+   FINAL KONTROL DÜZELTMELERİ
+   Mobil taşma, WhatsApp butonu ve hero kart hizası
+================================ */
+.whatsapp-float::before{
+  content:"✆";
+  color:white;
+  font-size:30px;
+  font-weight:900;
+}
+
+@media (min-width:861px){
+  .hero-visual{
+    justify-content:center !important;
+  }
+}
+
+@media (max-width:560px){
+  .navbar{
+    padding:0 12px;
+  }
+
+  .logo{
+    font-size:16px;
+    letter-spacing:-0.5px;
+  }
+
+  .logo small{
+    font-size:9px;
+    letter-spacing:3px;
+  }
+
+  .hero h1{
+    font-size:42px;
+  }
+
+  .floating-card{
+    width:100% !important;
+    max-width:320px !important;
+    padding:18px;
+    border-radius:24px;
+  }
+
+  .floating-card h3{
+    font-size:20px;
+  }
+
+  .contact{
+    padding-bottom:130px;
+  }
+
+  .whatsapp-float{
+    right:14px;
+    bottom:14px;
+    width:56px;
+    height:56px;
+  }
+}
