@@ -3021,6 +3021,37 @@ html, body{
   }
 }
 
+
+
+/* ===============================
+   SAHA GALERİSİ VIDEO BİRLEŞTİRME
+   Video alanı artık ayrı "Saha Çalışmaları" bölümü değil,
+   Saha Galerisi başlığı altında gösterilir.
+================================ */
+.gallery-video{
+  max-width:920px;
+  margin:0 auto 58px;
+}
+
+.gallery-section .video-player{
+  max-width:820px;
+  margin:0 auto;
+}
+
+.gallery-section .video-tabs{
+  margin:28px auto 0;
+}
+
+@media (max-width:768px){
+  .gallery-video{
+    margin:0 auto 40px;
+  }
+
+  .gallery-section .video-player{
+    width:92%;
+  }
+}
+
 </style>
 </head>
 
@@ -3159,32 +3190,7 @@ html, body{
 
 </section>
 
-<section class="video-section fade-up">
-  <p class="section-label">SAHA ÇALIŞMALARI</p>
-
-  <div class="video-player">
-    <video
-  id="mainVideo"
-  controls
-  preload="metadata"
-  poster="video-kapak-fotoğrafı.png"
-  playsinline
-  webkit-playsinline>
-  <source src="video.mp4" type="video/mp4">
-</video>
-  </div>
-
-  <div class="video-tabs">
-    <button onclick="changeVideo('editvideo1.mp4','video-kapak-fotoğrafı.png', this)" class="active">GENEL</button>
-    <button onclick="changeVideo('video.mp4','video-kapak-fotoğrafı.png', this)">DRILL 1</button>
-    <button onclick="changeVideo('video2.mp4','video2-kapak-fotoğrafı.png', this)">DRILL 2</button>
-    <button onclick="changeVideo('video3.mp4','video3-kapak-fotoğrafı.png', this)">DRILL 3</button>
-  </div>
-</section>
-
-
-
-<!-- GALERİ / SAHA ÇALIŞMALARI -->
+<!-- SAHA GALERİSİ -->
 <section id="galeri" class="gallery-section fade-up">
   <p class="section-label" data-tr="SAHA GALERİSİ" data-en="FIELD GALLERY">SAHA GALERİSİ</p>
   <h2 data-tr="Antrenman, Test ve Gelişim Sürecinden Kareler" data-en="Training, Testing and Development in Action">
@@ -3193,10 +3199,31 @@ html, body{
 
   <p
     class="gallery-desc"
-    data-tr="Saha çalışmalarında sprint, kuvvet, çeviklik ve performans testlerini bir araya getirerek sporcunun gelişimini ölçülebilir şekilde takip ediyorum."
-    data-en="Field sessions combine sprint, strength, agility and performance testing to track athlete development in a measurable way.">
-    Saha çalışmalarında sprint, kuvvet, çeviklik ve performans testlerini bir araya getirerek sporcunun gelişimini ölçülebilir şekilde takip ediyorum.
+    data-tr="Saha çalışmalarında sprint, kuvvet, çeviklik ve performans testlerini bir araya getirerek sporcunun gelişimini ölçülebilir şekilde takip ediyorum. Aşağıdaki videolar ve çalışma başlıkları sürecin nasıl ilerlediğini gösterir."
+    data-en="Field sessions combine sprint, strength, agility and performance testing to track athlete development in a measurable way. The videos and training categories below show how the process works.">
+    Saha çalışmalarında sprint, kuvvet, çeviklik ve performans testlerini bir araya getirerek sporcunun gelişimini ölçülebilir şekilde takip ediyorum. Aşağıdaki videolar ve çalışma başlıkları sürecin nasıl ilerlediğini gösterir.
   </p>
+
+  <div class="gallery-video">
+    <div class="video-player">
+      <video
+        id="mainVideo"
+        controls
+        preload="metadata"
+        poster="video-kapak-fotoğrafı.png"
+        playsinline
+        webkit-playsinline>
+        <source src="video.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="video-tabs">
+      <button onclick="changeVideo('editvideo1.mp4','video-kapak-fotoğrafı.png', this)" class="active">GENEL</button>
+      <button onclick="changeVideo('video.mp4','video-kapak-fotoğrafı.png', this)">DRILL 1</button>
+      <button onclick="changeVideo('video2.mp4','video2-kapak-fotoğrafı.png', this)">DRILL 2</button>
+      <button onclick="changeVideo('video3.mp4','video3-kapak-fotoğrafı.png', this)">DRILL 3</button>
+    </div>
+  </div>
 
   <div class="gallery-grid">
     <div class="gallery-card">
