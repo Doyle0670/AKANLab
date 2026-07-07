@@ -2842,6 +2842,121 @@ html, body{
     padding:16px 18px;
   }
 }
+/* ===============================
+   SIK SORULAN SORULAR
+================================ */
+
+.faq-section{
+  padding:120px 40px;
+  text-align:center;
+  scroll-margin-top:120px;
+}
+
+.faq-section h2{
+  font-size:50px;
+  max-width:850px;
+  margin:20px auto 60px;
+  line-height:1.15;
+}
+
+.faq-container{
+  max-width:920px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+.faq-item{
+  border-radius:24px;
+  overflow:hidden;
+  background:rgba(255,255,255,0.045);
+  border:1px solid rgba(56,189,248,0.18);
+  backdrop-filter:blur(14px);
+  box-shadow:0 0 20px rgba(56,189,248,0.06);
+}
+
+.faq-question{
+  width:100%;
+  padding:22px 26px;
+  border:none;
+  outline:none;
+  background:transparent;
+  color:white;
+  cursor:pointer;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+
+  font-size:18px;
+  font-weight:800;
+  text-align:left;
+}
+
+.faq-question span{
+  width:32px;
+  height:32px;
+  min-width:32px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:#38bdf8;
+  color:#020617;
+  font-size:22px;
+  font-weight:900;
+  transition:0.3s;
+}
+
+.faq-answer{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height 0.35s ease;
+}
+
+.faq-answer p{
+  padding:0 26px 24px;
+  margin:0;
+  text-align:left;
+  font-size:16px;
+  line-height:1.8;
+  opacity:0.82;
+}
+
+.faq-item.active .faq-answer{
+  max-height:260px;
+}
+
+.faq-item.active .faq-question span{
+  transform:rotate(45deg);
+}
+
+/* MOBİL */
+@media (max-width:768px){
+
+  .faq-section{
+    padding:80px 18px;
+  }
+
+  .faq-section h2{
+    font-size:30px;
+    line-height:1.25;
+    margin-bottom:36px;
+  }
+
+  .faq-question{
+    padding:20px;
+    font-size:16px;
+  }
+
+  .faq-answer p{
+    padding:0 20px 22px;
+    font-size:15px;
+  }
+}
 
 </style>
 </head>
@@ -3226,6 +3341,85 @@ html, body{
     </div>
 
   </div>
+  <!-- SIK SORULAN SORULAR -->
+<section id="sss" class="faq-section fade-up">
+  <p class="section-label">SIK SORULAN SORULAR</p>
+  <h2>Performans Antrenmanı Hakkında Merak Edilenler</h2>
+
+  <div class="faq-container">
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Performans testi ne kadar sürer?
+        <span>+</span>
+      </button>
+
+      <div class="faq-answer">
+        <p>
+          Test içeriğine göre değişmekle birlikte genellikle 45-75 dakika arasında sürer.
+          Sprint, sıçrama, çeviklik ve hareket kalitesi testleri sporcunun branşına göre planlanır.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Hangi yaş gruplarıyla çalışıyorsunuz?
+        <span>+</span>
+      </button>
+
+      <div class="faq-answer">
+        <p>
+          Çocuk, altyapı, genç sporcu ve yetişkin sporcularla çalışıyorum.
+          Programlama yaşa, gelişim seviyesine, branşa ve antrenman geçmişine göre yapılır.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Antrenmanlar bireysel mi takım halinde mi yapılır?
+        <span>+</span>
+      </button>
+
+      <div class="faq-answer">
+        <p>
+          Hem bireysel sporcularla hem de takım gruplarıyla çalışılabilir.
+          Bireysel çalışmalarda sporcunun eksiklerine özel program hazırlanır;
+          takım çalışmalarında ise grup performans takibi ve branşa uygun gelişim hedeflenir.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Sakatlık sonrası performansa dönüş süreci nasıl ilerler?
+        <span>+</span>
+      </button>
+
+      <div class="faq-answer">
+        <p>
+          Öncelikle sporcunun mevcut hareket kalitesi, kuvvet seviyesi ve saha içi hazır oluş durumu değerlendirilir.
+          Ardından kontrollü yüklenme, kuvvet gelişimi, çeviklik ve branşa dönüş aşamaları planlanır.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Online program veya uzaktan takip yapıyor musunuz?
+        <span>+</span>
+      </button>
+
+      <div class="faq-answer">
+        <p>
+          Evet. Sporcunun hedefi, ekipman durumu, branşı ve haftalık uygunluk durumuna göre uzaktan takip edilebilir
+          antrenman programı hazırlanabilir.
+        </p>
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <div id="iletisim" class="contact">
@@ -3505,7 +3699,21 @@ document.addEventListener("DOMContentLoaded", function(){
 
 });
 </script>
+<script>
+document.querySelectorAll(".faq-question").forEach(function(question){
+  question.addEventListener("click", function(){
+    const item = this.parentElement;
 
+    document.querySelectorAll(".faq-item").forEach(function(faq){
+      if(faq !== item){
+        faq.classList.remove("active");
+      }
+    });
+
+    item.classList.toggle("active");
+  });
+});
+</script>
 
 
 
