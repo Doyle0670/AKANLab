@@ -3887,6 +3887,36 @@ html, body{
   outline-offset:4px;
 }
 
+
+
+/* ===============================
+   BLOG KART BAŞLIK HİZASI DÜZELTME
+   Kart içindeki kategori ve başlık başlangıçlarını aynı hizaya getirir.
+================================ */
+.blog-card{
+  justify-content:flex-start !important;
+}
+
+.blog-card span{
+  margin-top:0 !important;
+  margin-bottom:18px !important;
+}
+
+.blog-card h3{
+  min-height:58px !important;
+  display:flex !important;
+  align-items:flex-start !important;
+}
+
+.blog-card p{
+  margin-top:0 !important;
+}
+
+@media (max-width:768px){
+  .blog-card h3{
+    min-height:auto !important;
+  }
+}
 </style>
 </head>
 
