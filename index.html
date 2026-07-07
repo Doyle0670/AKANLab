@@ -66,7 +66,8 @@
     "sameAs": [
       "https://www.instagram.com/sefa.akann/",
       "https://x.com/19Sefa04",
-      "https://youtube.com/@sefaakan62"
+      "https://youtube.com/@sefaakan62",
+      "https://t.me/SefaAKAN"
     ]
   }
   </script>
@@ -88,7 +89,8 @@
     "sameAs": [
       "https://www.instagram.com/sefa.akann/",
       "https://x.com/19Sefa04",
-      "https://youtube.com/@sefaakan62"
+      "https://youtube.com/@sefaakan62",
+      "https://t.me/SefaAKAN"
     ]
   }
   </script>
@@ -3262,6 +3264,156 @@ html, body{
 }
 
 
+
+/* ===============================
+   RESMİ SOSYAL MEDYA HESAPLARI
+   Google ve marka görünürlüğü için resmi hesaplar bölümü
+================================ */
+
+.official-socials{
+  padding:105px 40px 90px;
+  text-align:center;
+  scroll-margin-top:120px;
+}
+
+.official-socials h2{
+  max-width:850px;
+  margin:20px auto 20px;
+  font-size:46px;
+  line-height:1.15;
+}
+
+.official-socials > p:not(.section-label){
+  max-width:760px;
+  margin:0 auto 48px;
+  font-size:18px;
+  line-height:1.8;
+  opacity:.82;
+}
+
+.official-social-grid{
+  max-width:1050px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(4, minmax(0, 1fr));
+  gap:22px;
+}
+
+.official-social-grid a{
+  min-height:165px;
+  padding:28px 18px;
+  border-radius:30px;
+  background:rgba(255,255,255,.045);
+  border:1px solid rgba(56,189,248,.20);
+  color:white;
+  text-decoration:none;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+
+  backdrop-filter:blur(14px);
+  box-shadow:
+    0 0 24px rgba(56,189,248,.07),
+    inset 0 0 18px rgba(255,255,255,.025);
+
+  transition:.35s ease;
+}
+
+.official-social-grid a:hover{
+  transform:translateY(-8px);
+  border-color:rgba(56,189,248,.45);
+  box-shadow:
+    0 0 34px rgba(56,189,248,.16),
+    0 0 80px rgba(37,99,235,.06);
+}
+
+.official-social-grid i{
+  font-size:38px;
+  color:#38bdf8;
+  margin-bottom:4px;
+}
+
+.official-social-grid span{
+  font-size:20px;
+  font-weight:900;
+  letter-spacing:.4px;
+}
+
+.official-social-grid small{
+  font-size:14px;
+  opacity:.68;
+}
+
+.official-social-grid .instagram-link i{
+  color:#ff2f7d;
+}
+
+.official-social-grid .youtube-link i{
+  color:#ff0000;
+}
+
+.official-social-grid .x-link i{
+  color:#ffffff;
+}
+
+.official-social-grid .telegram-link i{
+  color:#199bff;
+}
+
+@media (max-width:900px){
+  .official-social-grid{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    max-width:620px;
+  }
+}
+
+@media (max-width:768px){
+  .official-socials{
+    padding:80px 18px 70px;
+  }
+
+  .official-socials h2{
+    font-size:30px;
+    line-height:1.25;
+  }
+
+  .official-socials > p:not(.section-label){
+    font-size:15px;
+    margin-bottom:34px;
+  }
+
+  .official-social-grid{
+    gap:16px;
+  }
+
+  .official-social-grid a{
+    min-height:140px;
+    padding:22px 14px;
+    border-radius:24px;
+  }
+
+  .official-social-grid i{
+    font-size:31px;
+  }
+
+  .official-social-grid span{
+    font-size:16px;
+  }
+
+  .official-social-grid small{
+    font-size:12px;
+  }
+}
+
+@media (max-width:420px){
+  .official-social-grid{
+    grid-template-columns:1fr;
+  }
+}
+
 </style>
 </head>
 
@@ -3860,6 +4012,55 @@ html, body{
 
   <button onclick="sendWhatsApp()" data-tr="WhatsApp ile Başvur" data-en="Apply via WhatsApp">WhatsApp ile Başvur</button>
 </div>
+
+<!-- RESMİ SOSYAL MEDYA HESAPLARI -->
+<section id="resmi-hesaplar" class="official-socials fade-up">
+  <p
+    class="section-label"
+    data-tr="RESMİ HESAPLAR"
+    data-en="OFFICIAL ACCOUNTS">
+    RESMİ HESAPLAR
+  </p>
+
+  <h2
+    data-tr="Sefa Akan Resmi Sosyal Medya Hesapları"
+    data-en="Sefa Akan Official Social Media Accounts">
+    Sefa Akan Resmi Sosyal Medya Hesapları
+  </h2>
+
+  <p
+    data-tr="Antrenman içerikleri, saha çalışmaları, performans testleri ve güncel paylaşımlar için resmi sosyal medya hesaplarımı takip edebilirsiniz."
+    data-en="Follow my official social media accounts for training content, field work, performance testing and current updates.">
+    Antrenman içerikleri, saha çalışmaları, performans testleri ve güncel paylaşımlar için resmi sosyal medya hesaplarımı takip edebilirsiniz.
+  </p>
+
+  <div class="official-social-grid">
+    <a class="instagram-link" href="https://www.instagram.com/sefa.akann/" target="_blank" rel="noopener" aria-label="Sefa Akan Instagram">
+      <i class="fa-brands fa-instagram"></i>
+      <span>Instagram</span>
+      <small>@sefa.akann</small>
+    </a>
+
+    <a class="youtube-link" href="https://youtube.com/@sefaakan62" target="_blank" rel="noopener" aria-label="Sefa Akan YouTube">
+      <i class="fa-brands fa-youtube"></i>
+      <span>YouTube</span>
+      <small>@sefaakan62</small>
+    </a>
+
+    <a class="x-link" href="https://x.com/19Sefa04" target="_blank" rel="noopener" aria-label="Sefa Akan X">
+      <i class="fa-brands fa-x-twitter"></i>
+      <span>X</span>
+      <small>@19Sefa04</small>
+    </a>
+
+    <a class="telegram-link" href="https://t.me/SefaAKAN" target="_blank" rel="noopener" aria-label="Sefa Akan Telegram">
+      <i class="fa-brands fa-telegram"></i>
+      <span>Telegram</span>
+      <small>@SefaAKAN</small>
+    </a>
+  </div>
+</section>
+
 <footer class="footer">
   <div class="footer-logo">AKAN <span>PERFORMANCE</span></div>
 
