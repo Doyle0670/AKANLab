@@ -441,7 +441,7 @@ section {
 }
 
 .education-card li::before {
-  content: "✓";
+  content: "âœ“";
   color: var(--accent);
   font-weight: 900;
 }
@@ -586,7 +586,7 @@ section {
 }
 
 .nutrition-box li::before {
-  content: "✓";
+  content: "âœ“";
   position: absolute;
   left: 0;
   color: var(--accent);
@@ -703,7 +703,7 @@ section {
 }
 
 .whatsapp-float::before {
-  content: "☎";
+  content: "â˜";
   color: white;
   font-size: 30px;
   font-weight: 900;
@@ -951,7 +951,7 @@ section {
 }
 
 
-/* FOTOĞRAF ÜZERİNE GELEN KART DÜZELTME */
+/* FOTOÄRAF ÃœZERÄ°NE GELEN KART DÃœZELTME */
 .hero-visual{
   flex-direction:column !important;
   gap:22px !important;
@@ -980,11 +980,11 @@ section {
 
 
 /* ===============================
-   FINAL KONTROL DÜZELTMELERİ
-   Mobil taşma, WhatsApp butonu ve hero kart hizası
+   FINAL KONTROL DÃœZELTMELERÄ°
+   Mobil taÅŸma, WhatsApp butonu ve hero kart hizasÄ±
 ================================ */
 .whatsapp-float::before{
-  content:"✆";
+  content:"âœ†";
   color:white;
   font-size:30px;
   font-weight:900;
@@ -1040,7 +1040,7 @@ section {
 
 
 /* ===============================
-   ONLINE KOÇLUK PAKETLERİ
+   ONLINE KOÃ‡LUK PAKETLERÄ°
 ================================ */
 
 .section-desc{
@@ -1146,7 +1146,7 @@ section {
 }
 
 .package-card li::before{
-  content:"✓";
+  content:"âœ“";
   position:absolute;
   left:0;
   color:var(--accent);
@@ -1307,7 +1307,7 @@ section {
 
 
 /* ===============================
-   HAREKET KÜTÜPHANESİ
+   HAREKET KÃœTÃœPHANESÄ°
 ================================ */
 .exercise-library{
   padding:105px 20px;
