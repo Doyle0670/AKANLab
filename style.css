@@ -4411,3 +4411,41 @@ html, body{
   }
 }
 
+/* FITNESS YAZISI BOYUT DÜZELTMESİ */
+@media (min-width:1101px){
+  .brand-extra{
+    font-size:1em !important;
+  }
+
+  .brand-fitness{
+    font-size:1em !important;
+    font-weight:900 !important;
+  }
+
+  .brand-separator{
+    font-size:.82em !important;
+  }
+}
+
+@media (min-width:769px) and (max-width:1100px){
+  .brand-extra{
+    font-size:.95em !important;
+  }
+
+  .brand-fitness{
+    font-size:1em !important;
+    font-weight:900 !important;
+  }
+}
+
+@media (max-width:768px){
+  .brand-extra{
+    font-size:11px !important;
+  }
+
+  .brand-fitness{
+    font-size:11px !important;
+    font-weight:900 !important;
+  }
+}
+
