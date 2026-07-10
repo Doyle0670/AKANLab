@@ -3948,3 +3948,180 @@ html, body{
     object-fit:cover !important;
   }
 }
+
+/* Step 5: mobil hero oranları ve rozet hizası */
+@media (max-width:768px){
+  .hero{
+    padding:96px 20px 44px !important;
+    min-height:auto !important;
+  }
+
+  .hero-wrapper{
+    width:100% !important;
+    max-width:430px !important;
+    margin:0 auto !important;
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    gap:26px !important;
+  }
+
+  .hero-text{
+    width:100% !important;
+    max-width:390px !important;
+    text-align:center !important;
+  }
+
+  .hero-small{
+    width:100% !important;
+    margin:0 auto 12px !important;
+    font-size:11px !important;
+    line-height:1.45 !important;
+    letter-spacing:3.4px !important;
+    white-space:normal !important;
+  }
+
+  .hero h1{
+    margin:0 auto 12px !important;
+    font-size:clamp(48px, 12vw, 58px) !important;
+    line-height:.98 !important;
+    letter-spacing:.5px !important;
+    white-space:nowrap !important;
+  }
+
+  .hero h2{
+    max-width:360px !important;
+    margin:0 auto 16px !important;
+    font-size:clamp(23px, 6.2vw, 28px) !important;
+    line-height:1.24 !important;
+    letter-spacing:.6px !important;
+  }
+
+  .hero-desc{
+    max-width:360px !important;
+    margin:0 auto !important;
+    font-size:16px !important;
+    line-height:1.62 !important;
+    opacity:.9 !important;
+  }
+
+  .hero-badges{
+    width:min(100%, 360px) !important;
+    margin:24px auto 0 !important;
+    display:grid !important;
+    grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
+    gap:10px !important;
+    align-items:stretch !important;
+  }
+
+  .hero-badges span{
+    box-sizing:border-box !important;
+    width:100% !important;
+    min-width:0 !important;
+    min-height:48px !important;
+    padding:10px 12px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    border-radius:999px !important;
+    font-size:14px !important;
+    line-height:1.15 !important;
+    white-space:nowrap !important;
+  }
+
+  .hero-buttons{
+    width:min(100%, 360px) !important;
+    margin:22px auto 0 !important;
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    gap:12px !important;
+  }
+
+  .hero-btn{
+    box-sizing:border-box !important;
+    width:100% !important;
+    min-width:0 !important;
+    min-height:62px !important;
+    padding:15px 18px !important;
+    border-radius:999px !important;
+    font-size:16px !important;
+    line-height:1.15 !important;
+  }
+
+  .hero-image{
+    width:100% !important;
+    margin-top:8px !important;
+    justify-content:center !important;
+  }
+
+  .hero-image img{
+    width:min(78vw, 330px) !important;
+    height:min(56vh, 430px) !important;
+    max-height:430px !important;
+    object-fit:cover !important;
+    object-position:center top !important;
+    border-radius:24px !important;
+  }
+}
+
+@media (max-width:420px){
+  .hero{
+    padding-left:18px !important;
+    padding-right:18px !important;
+  }
+
+  .hero-text{
+    max-width:354px !important;
+  }
+
+  .hero h1{
+    font-size:clamp(43px, 12.6vw, 52px) !important;
+  }
+
+  .hero h2{
+    max-width:330px !important;
+    font-size:clamp(21px, 6.1vw, 25px) !important;
+  }
+
+  .hero-desc{
+    max-width:330px !important;
+    font-size:15.2px !important;
+  }
+
+  .hero-badges,
+  .hero-buttons{
+    width:min(100%, 336px) !important;
+  }
+
+  .hero-badges span{
+    min-height:46px !important;
+    padding:9px 10px !important;
+    font-size:13.2px !important;
+  }
+
+  .hero-btn{
+    min-height:58px !important;
+    font-size:15.2px !important;
+  }
+
+  .hero-image img{
+    width:min(78vw, 310px) !important;
+    height:min(52vh, 400px) !important;
+  }
+}
+
+@media (max-width:360px){
+  .hero h1{
+    font-size:40px !important;
+  }
+
+  .hero-badges{
+    grid-template-columns:1fr !important;
+    width:min(100%, 300px) !important;
+  }
+
+  .hero-buttons{
+    width:min(100%, 300px) !important;
+  }
+}
