@@ -4125,3 +4125,96 @@ html, body{
     width:min(100%, 300px) !important;
   }
 }
+
+/* Step 6: navbar marka yazısı ve fitness bağlantısı */
+.logo.brand-logo{
+  min-width:0 !important;
+  display:flex !important;
+  align-items:baseline !important;
+  gap:7px !important;
+  line-height:1 !important;
+  white-space:nowrap !important;
+}
+
+.logo.brand-logo a{
+  text-decoration:none !important;
+}
+
+.brand-main{
+  color:#ffffff !important;
+}
+
+.brand-main span,
+.brand-fitness{
+  color:#0ea5e9 !important;
+}
+
+.brand-extra{
+  display:inline-flex !important;
+  align-items:baseline !important;
+  gap:6px !important;
+}
+
+.brand-separator{
+  color:rgba(255,255,255,.62) !important;
+  font-weight:900 !important;
+}
+
+.brand-fitness{
+  font-weight:900 !important;
+  transition:color .25s ease, opacity .25s ease !important;
+}
+
+.brand-fitness:hover{
+  color:#ffffff !important;
+}
+
+@media (min-width:769px){
+  .logo.brand-logo{
+    font-size:clamp(18px, 1.35vw, 26px) !important;
+    letter-spacing:.7px !important;
+  }
+
+  .brand-extra{
+    font-size:.82em !important;
+  }
+}
+
+@media (max-width:768px){
+  .navbar{
+    grid-template-columns:minmax(0, 1fr) auto auto !important;
+  }
+
+  .logo.brand-logo{
+    max-width:168px !important;
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:3px !important;
+    font-size:13px !important;
+    line-height:1.05 !important;
+    letter-spacing:.35px !important;
+    white-space:normal !important;
+  }
+
+  .brand-main,
+  .brand-extra{
+    white-space:nowrap !important;
+  }
+
+  .brand-extra{
+    gap:5px !important;
+    font-size:11px !important;
+    letter-spacing:.7px !important;
+  }
+}
+
+@media (max-width:380px){
+  .logo.brand-logo{
+    max-width:148px !important;
+    font-size:11.8px !important;
+  }
+
+  .brand-extra{
+    font-size:10.4px !important;
+  }
+}
