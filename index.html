@@ -3917,6 +3917,156 @@ html, body{
     min-height:auto !important;
   }
 }
+
+
+/* =========================================================
+   FITNESS SAYFASIYLA UYUMLU MOBİL HAMBURGER MENÜ
+========================================================= */
+@media (max-width:768px){
+
+  .navbar{
+    min-height:68px !important;
+    padding:0 14px !important;
+    grid-template-columns:minmax(0,1fr) auto auto !important;
+    gap:10px !important;
+    background:rgba(2,6,23,.96) !important;
+  }
+
+  .logo{
+    font-size:15px !important;
+    letter-spacing:-.4px !important;
+  }
+
+  .menu-toggle{
+    appearance:none !important;
+    -webkit-appearance:none !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    width:42px !important;
+    height:42px !important;
+    padding:0 !important;
+    border-radius:13px !important;
+    border:1px solid rgba(56,189,248,.34) !important;
+    background:rgba(255,255,255,.045) !important;
+    color:#fff !important;
+    font-size:23px !important;
+    line-height:1 !important;
+    cursor:pointer !important;
+    transition:transform .25s ease, background .25s ease, border-color .25s ease !important;
+    z-index:10002 !important;
+  }
+
+  .menu-toggle:hover,
+  .menu-toggle:focus-visible{
+    background:rgba(56,189,248,.12) !important;
+    border-color:rgba(56,189,248,.62) !important;
+    outline:none !important;
+  }
+
+  .menu-toggle.active{
+    transform:rotate(90deg) !important;
+    background:rgba(56,189,248,.14) !important;
+  }
+
+  #mobileMenu{
+    display:flex !important;
+    position:fixed !important;
+    top:78px !important;
+    left:12px !important;
+    right:12px !important;
+    width:auto !important;
+    max-height:calc(100dvh - 94px) !important;
+    overflow-y:auto !important;
+    padding:14px !important;
+    border-radius:20px !important;
+    border:1px solid rgba(56,189,248,.24) !important;
+    background:rgba(2,6,23,.98) !important;
+    backdrop-filter:blur(20px) !important;
+    -webkit-backdrop-filter:blur(20px) !important;
+    box-shadow:0 24px 70px rgba(0,0,0,.48), 0 0 35px rgba(56,189,248,.08) !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    justify-content:flex-start !important;
+    gap:5px !important;
+    z-index:10001 !important;
+
+    opacity:0 !important;
+    visibility:hidden !important;
+    pointer-events:none !important;
+    transform:translateY(-12px) scale(.98) !important;
+    transform-origin:top right !important;
+    transition:opacity .24s ease, transform .24s ease, visibility .24s ease !important;
+  }
+
+  #mobileMenu.active{
+    opacity:1 !important;
+    visibility:visible !important;
+    pointer-events:auto !important;
+    transform:translateY(0) scale(1) !important;
+  }
+
+  #mobileMenu a{
+    display:flex !important;
+    align-items:center !important;
+    width:100% !important;
+    min-height:46px !important;
+    padding:12px 15px !important;
+    border-radius:13px !important;
+    color:#fff !important;
+    font-size:15px !important;
+    font-weight:700 !important;
+    text-align:left !important;
+    transition:background .2s ease, color .2s ease, transform .2s ease !important;
+  }
+
+  #mobileMenu a:hover,
+  #mobileMenu a:focus-visible{
+    background:rgba(56,189,248,.12) !important;
+    color:#38bdf8 !important;
+    transform:translateX(3px) !important;
+    outline:none !important;
+  }
+
+  body.menu-open{
+    overflow:hidden !important;
+  }
+
+  body.menu-open::after{
+    content:"";
+    position:fixed;
+    inset:68px 0 0;
+    z-index:9998;
+    background:rgba(2,6,23,.48);
+    backdrop-filter:blur(3px);
+    -webkit-backdrop-filter:blur(3px);
+  }
+}
+
+@media (max-width:420px){
+  .navbar{
+    min-height:64px !important;
+    padding:0 12px !important;
+  }
+
+  .menu-toggle{
+    width:39px !important;
+    height:39px !important;
+    font-size:21px !important;
+  }
+
+  #mobileMenu{
+    top:72px !important;
+    left:10px !important;
+    right:10px !important;
+    max-height:calc(100dvh - 84px) !important;
+  }
+
+  body.menu-open::after{
+    inset:64px 0 0;
+  }
+}
+
 </style>
 </head>
 
@@ -3981,7 +4131,7 @@ html, body{
     </div>
   </div>
 
-  <div class="menu-toggle" id="menuToggle">☰</div>
+  <button class="menu-toggle" id="menuToggle" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mobileMenu">☰</button>
 </div>
 
 
@@ -4813,21 +4963,69 @@ window.addEventListener("load", function(){
 </script>
 <script>
 document.addEventListener("DOMContentLoaded", function(){
-
   const menuToggle = document.getElementById("menuToggle");
   const mobileMenu = document.getElementById("mobileMenu");
   const menuLinks = document.querySelectorAll("#mobileMenu a");
 
-  menuToggle.addEventListener("click", function(){
-    mobileMenu.classList.toggle("active");
+  if(!menuToggle || !mobileMenu) return;
+
+  function openMenu(){
+    mobileMenu.classList.add("active");
+    menuToggle.classList.add("active");
+    menuToggle.textContent = "×";
+    menuToggle.setAttribute("aria-expanded", "true");
+    menuToggle.setAttribute("aria-label", "Menüyü kapat");
+    document.body.classList.add("menu-open");
+  }
+
+  function closeMenu(){
+    mobileMenu.classList.remove("active");
+    menuToggle.classList.remove("active");
+    menuToggle.textContent = "☰";
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Menüyü aç");
+    document.body.classList.remove("menu-open");
+  }
+
+  function toggleMenu(){
+    if(mobileMenu.classList.contains("active")){
+      closeMenu();
+    }else{
+      openMenu();
+    }
+  }
+
+  menuToggle.addEventListener("click", function(event){
+    event.stopPropagation();
+    toggleMenu();
+  });
+
+  mobileMenu.addEventListener("click", function(event){
+    event.stopPropagation();
   });
 
   menuLinks.forEach(function(link){
-    link.addEventListener("click", function(){
-      mobileMenu.classList.remove("active");
-    });
+    link.addEventListener("click", closeMenu);
   });
 
+  document.addEventListener("click", function(){
+    if(window.innerWidth <= 768){
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("keydown", function(event){
+    if(event.key === "Escape"){
+      closeMenu();
+      menuToggle.focus();
+    }
+  });
+
+  window.addEventListener("resize", function(){
+    if(window.innerWidth > 768){
+      closeMenu();
+    }
+  });
 });
 </script>
 <script>
