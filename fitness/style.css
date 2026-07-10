@@ -1586,3 +1586,83 @@ section {
   }
 }
 
+/* =========================================================
+   MOBİL MENÜ ÇUBUĞU SON DÜZENLEME
+   Logo solda, hamburger sağda ve daha kompakt header
+========================================================= */
+@media (max-width: 860px) {
+  .header {
+    background: rgba(5, 5, 5, 0.96) !important;
+  }
+
+  .navbar {
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 68px !important;
+    padding: 0 16px !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+
+  .logo {
+    justify-self: start !important;
+    min-width: 0 !important;
+    font-size: 16px !important;
+    line-height: 1 !important;
+    letter-spacing: -0.7px !important;
+  }
+
+  .logo small {
+    margin-top: 7px !important;
+    font-size: 8px !important;
+    letter-spacing: 4px !important;
+  }
+
+  .menu-toggle {
+    justify-self: end !important;
+    margin-left: auto !important;
+    width: 42px !important;
+    height: 42px !important;
+    padding: 0 !important;
+    border-radius: 13px !important;
+    font-size: 23px !important;
+    line-height: 1 !important;
+    border: 1px solid rgba(163, 230, 53, 0.34) !important;
+    background: rgba(255, 255, 255, 0.035) !important;
+  }
+
+  .nav-links {
+    top: 76px !important;
+    left: 12px !important;
+    right: 12px !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .navbar {
+    min-height: 64px !important;
+    padding: 0 13px !important;
+  }
+
+  .logo {
+    font-size: 14px !important;
+  }
+
+  .logo small {
+    font-size: 7px !important;
+    letter-spacing: 3.5px !important;
+  }
+
+  .menu-toggle {
+    width: 39px !important;
+    height: 39px !important;
+    font-size: 21px !important;
+  }
+
+  .nav-links {
+    top: 72px !important;
+  }
+}
+
