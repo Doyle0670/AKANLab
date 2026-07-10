@@ -4066,3 +4066,86 @@ html, body{
     height:350px !important;
   }
 }
+
+/* Step 4: sadece masaustu yazı ve buton oranları */
+@media (min-width:1024px){
+  .hero{
+    min-height:calc(100svh - 86px) !important;
+    padding:110px 42px 58px !important;
+  }
+
+  .hero-wrapper{
+    width:min(86%, 1160px) !important;
+    max-width:1160px !important;
+    grid-template-columns:minmax(0, 1.04fr) minmax(320px, .96fr) !important;
+    gap:clamp(42px, 5vw, 76px) !important;
+  }
+
+  .hero-text{
+    max-width:610px !important;
+  }
+
+  .hero-small{
+    font-size:12px !important;
+    letter-spacing:4.4px !important;
+    margin-bottom:13px !important;
+  }
+
+  .hero h1{
+    font-size:clamp(58px, 5.4vw, 78px) !important;
+    line-height:.96 !important;
+    margin:0 0 12px !important;
+    letter-spacing:.6px !important;
+  }
+
+  .hero h2{
+    font-size:clamp(23px, 2vw, 29px) !important;
+    line-height:1.22 !important;
+    margin:0 0 15px !important;
+    letter-spacing:.4px !important;
+  }
+
+  .hero-desc{
+    max-width:530px !important;
+    font-size:clamp(16.5px, 1.15vw, 18.5px) !important;
+    line-height:1.62 !important;
+  }
+
+  .hero-badges{
+    margin-top:22px !important;
+    gap:9px !important;
+  }
+
+  .hero-badges span{
+    min-height:34px !important;
+    padding:7px 13px !important;
+    font-size:12px !important;
+  }
+
+  .hero-buttons{
+    margin-top:24px !important;
+    gap:12px !important;
+  }
+
+  .hero-btn{
+    min-width:160px !important;
+    min-height:48px !important;
+    padding:12px 22px !important;
+    font-size:14.5px !important;
+    border-radius:999px !important;
+  }
+
+  .hero-btn.primary{
+    box-shadow:0 12px 36px rgba(56,189,248,.22) !important;
+  }
+
+  .hero-btn.secondary{
+    border-width:2px !important;
+  }
+
+  .hero-image img{
+    width:clamp(300px, 24vw, 360px) !important;
+    height:clamp(390px, 34vw, 480px) !important;
+    border-radius:26px !important;
+  }
+}
