@@ -1,4 +1,4 @@
-  .contact{
+.contact{
   text-align:center;
   padding:100px 50px;
   margin:80px auto;
@@ -3818,5 +3818,28 @@ html, body{
 @media (max-width:768px){
   .blog-card h3{
     min-height:auto !important;
+  }
+}
+
+
+/* Step 2: daha hızlı ilk açılış */
+#loader{
+  transition:opacity .28s ease, visibility .28s ease;
+}
+
+.loader-content{
+  animation:loaderEnter .38s ease forwards;
+}
+
+.loader-progress-bar{
+  animation:loaderProgress .65s ease forwards;
+}
+
+@media (prefers-reduced-motion: reduce){
+  #loader,
+  .loader-content,
+  .loader-progress-bar{
+    animation:none !important;
+    transition:none !important;
   }
 }
