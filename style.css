@@ -4220,232 +4220,71 @@ html, body{
 }
 
 /* =========================================================
-   NAVBAR SON DÜZENLEME
-   - Marka ve menü çakışması giderildi
-   - FITNESS yazısı fitness sayfasındaki yeşile çevrildi
+   HERO ETİKET VE BUTON HİZALAMA
 ========================================================= */
 
-:root{
-  --fitness-green:#a3e635;
-  --fitness-green-light:#bef264;
+.hero-badges{
+  width:100% !important;
+  max-width:500px !important;
+  display:grid !important;
+  grid-template-columns:repeat(4, minmax(0, 1fr)) !important;
+  gap:10px !important;
+  margin-top:24px !important;
 }
 
-/* Marka renkleri */
-.brand-main{
-  color:#ffffff !important;
+.hero-badges span{
+  min-height:42px !important;
+  padding:0 10px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  text-align:center !important;
+  white-space:nowrap !important;
+  box-sizing:border-box !important;
 }
 
-.brand-main span{
-  color:#0ea5e9 !important;
+.hero-buttons{
+  width:100% !important;
+  max-width:500px !important;
+  display:grid !important;
+  grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
+  gap:14px !important;
+  margin-top:22px !important;
 }
 
-.brand-fitness{
-  color:var(--fitness-green) !important;
-  text-shadow:0 0 18px rgba(163,230,53,.16);
+.hero-btn{
+  width:100% !important;
+  min-width:0 !important;
+  min-height:58px !important;
+  padding:0 20px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  text-align:center !important;
+  box-sizing:border-box !important;
 }
 
-.brand-fitness:hover{
-  color:var(--fitness-green-light) !important;
-}
-
-.brand-separator{
-  color:rgba(255,255,255,.68) !important;
-}
-
-/* Masaüstü navbar */
-@media (min-width:1101px){
-  .navbar{
-    min-height:78px !important;
-    padding:0 48px !important;
-    display:grid !important;
-    grid-template-columns:300px minmax(0,1fr) 180px !important;
-    align-items:center !important;
-    gap:24px !important;
+@media (max-width:768px){
+  .hero-badges{
+    max-width:340px !important;
+    grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
   }
 
-  .logo.brand-logo{
-    justify-self:start !important;
-    width:300px !important;
+  .hero-badges span{
+    min-height:40px !important;
+  }
+
+  .hero-buttons{
     max-width:300px !important;
-    display:flex !important;
-    flex-direction:row !important;
-    align-items:baseline !important;
-    gap:6px !important;
-    font-size:20px !important;
-    letter-spacing:.25px !important;
-    white-space:nowrap !important;
+    grid-template-columns:1fr !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
   }
 
-  .brand-main,
-  .brand-extra,
-  .brand-fitness{
-    white-space:nowrap !important;
-  }
-
-  .brand-extra{
-    display:inline-flex !important;
-    align-items:baseline !important;
-    gap:5px !important;
-    font-size:.76em !important;
-  }
-
-  #mobileMenu{
-    justify-self:center !important;
-    width:100% !important;
-    display:flex !important;
-    align-items:center !important;
-    justify-content:center !important;
-    gap:25px !important;
-    min-width:0 !important;
-  }
-
-  #mobileMenu a{
-    padding:0 !important;
-    font-size:14px !important;
-    font-weight:600 !important;
-    white-space:nowrap !important;
-  }
-
-  .nav-socials{
-    justify-self:end !important;
-    width:180px !important;
-    display:flex !important;
-    align-items:center !important;
-    justify-content:flex-end !important;
-    gap:14px !important;
-  }
-
-  .nav-socials a{
-    font-size:18px !important;
-  }
-
-  .language-toggle{
-    margin-left:4px !important;
-  }
-}
-
-/* Orta masaüstü / tablet yatay */
-@media (min-width:769px) and (max-width:1100px){
-  .navbar{
-    min-height:76px !important;
-    padding:0 24px !important;
-    grid-template-columns:245px minmax(0,1fr) 150px !important;
-    gap:16px !important;
-  }
-
-  .logo.brand-logo{
-    width:245px !important;
-    max-width:245px !important;
-    font-size:16px !important;
-    gap:5px !important;
-  }
-
-  .brand-extra{
-    font-size:.72em !important;
-  }
-
-  #mobileMenu{
-    gap:15px !important;
-  }
-
-  #mobileMenu a{
-    font-size:12.5px !important;
-  }
-
-  .nav-socials{
-    width:150px !important;
-    gap:10px !important;
-  }
-
-  .nav-socials a{
-    font-size:16px !important;
-  }
-
-  .lang-btn{
-    padding:5px 8px !important;
-    font-size:10px !important;
-  }
-}
-
-/* Mobil marka görünümü */
-@media (max-width:768px){
-  .logo.brand-logo{
-    max-width:205px !important;
-    display:flex !important;
-    flex-direction:column !important;
-    align-items:flex-start !important;
-    gap:5px !important;
-    white-space:normal !important;
-  }
-
-  .brand-main{
-    font-size:15px !important;
-    white-space:nowrap !important;
-  }
-
-  .brand-extra{
-    display:inline-flex !important;
-    align-items:baseline !important;
-    gap:5px !important;
-    font-size:11px !important;
-    letter-spacing:1px !important;
-    white-space:nowrap !important;
-  }
-
-  .brand-fitness{
-    color:var(--fitness-green) !important;
-  }
-}
-
-@media (max-width:390px){
-  .logo.brand-logo{
-    max-width:178px !important;
-  }
-
-  .brand-main{
-    font-size:13.5px !important;
-  }
-
-  .brand-extra{
-    font-size:10px !important;
-  }
-}
-
-/* FITNESS YAZISI BOYUT DÜZELTMESİ */
-@media (min-width:1101px){
-  .brand-extra{
-    font-size:1em !important;
-  }
-
-  .brand-fitness{
-    font-size:1em !important;
-    font-weight:900 !important;
-  }
-
-  .brand-separator{
-    font-size:.82em !important;
-  }
-}
-
-@media (min-width:769px) and (max-width:1100px){
-  .brand-extra{
-    font-size:.95em !important;
-  }
-
-  .brand-fitness{
-    font-size:1em !important;
-    font-weight:900 !important;
-  }
-}
-
-@media (max-width:768px){
-  .brand-extra{
-    font-size:11px !important;
-  }
-
-  .brand-fitness{
-    font-size:11px !important;
-    font-weight:900 !important;
+  .hero-btn{
+    min-height:52px !important;
   }
 }
 
