@@ -4067,6 +4067,200 @@ html, body{
   }
 }
 
+/* ===============================
+   2026 SON PARLATMA
+   İlk ekran, mobil taşma, loader ve footer
+================================ */
+html,
+body{
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden !important;
+}
+
+body{
+  position:relative;
+}
+
+#loader{
+  transition:opacity .32s ease, visibility .32s ease !important;
+}
+
+.loader-content{
+  animation:loaderEnter .45s ease forwards !important;
+}
+
+.loader-progress-bar{
+  animation:loaderProgress .75s ease forwards !important;
+}
+
+.footer{
+  width:100% !important;
+  max-width:100vw !important;
+  box-sizing:border-box !important;
+  overflow:hidden !important;
+}
+
+.footer-logo,
+.footer-text,
+.footer-socials,
+.footer-copy{
+  width:auto !important;
+  max-width:100% !important;
+  box-sizing:border-box !important;
+}
+
+@media (min-width:769px){
+  .hero{
+    min-height:min(780px, 100svh) !important;
+    padding:108px 40px 48px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+  }
+
+  .hero-wrapper{
+    width:min(1120px, 92vw) !important;
+    max-width:1120px !important;
+    display:grid !important;
+    grid-template-columns:minmax(0, 1.08fr) minmax(280px, .72fr) !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:clamp(36px, 5vw, 66px) !important;
+  }
+
+  .hero-text{
+    order:1 !important;
+    max-width:640px !important;
+    text-align:left !important;
+  }
+
+  .hero-image{
+    order:2 !important;
+    justify-content:flex-end !important;
+  }
+
+  .hero-small{
+    margin-bottom:14px !important;
+  }
+
+  .hero h1{
+    font-size:clamp(58px, 5.4vw, 78px) !important;
+    line-height:.94 !important;
+    letter-spacing:1px !important;
+  }
+
+  .hero h2{
+    font-size:clamp(23px, 2vw, 27px) !important;
+  }
+
+  .hero-desc{
+    max-width:570px !important;
+    font-size:18px !important;
+    line-height:1.62 !important;
+  }
+
+  .hero-image img{
+    width:min(330px, 27vw) !important;
+    height:clamp(390px, 48vh, 430px) !important;
+    border-radius:28px !important;
+  }
+}
+
+@media (max-width:768px){
+  .navbar,
+  .hero,
+  .stats-section,
+  .gallery-section,
+  .about,
+  .services,
+  .packages-section,
+  .cta-section,
+  .tests,
+  .testimonials,
+  .blog-section,
+  .performance-faq,
+  .contact-form,
+  .official-socials,
+  .footer{
+    max-width:100vw !important;
+  }
+
+  .hero{
+    padding:82px 18px 46px !important;
+    min-height:auto !important;
+  }
+
+  .hero-wrapper{
+    width:min(100%, 390px) !important;
+    margin:0 auto !important;
+    gap:22px !important;
+  }
+
+  .hero-image{
+    order:-1 !important;
+  }
+
+  .hero-text{
+    order:1 !important;
+  }
+
+  .hero-image img{
+    width:min(205px, 54vw) !important;
+    height:min(270px, 71vw) !important;
+    border-radius:26px !important;
+  }
+
+  .hero h1{
+    letter-spacing:.6px !important;
+  }
+
+  .hero-buttons{
+    width:100% !important;
+  }
+
+  .hero-btn{
+    width:100% !important;
+    max-width:296px !important;
+  }
+
+  #mobileMenu{
+    left:50% !important;
+    right:auto !important;
+    width:min(76vw, 280px) !important;
+    max-height:min(620px, calc(100dvh - 110px)) !important;
+    box-sizing:border-box !important;
+    overflow-y:auto !important;
+    padding:12px !important;
+    gap:4px !important;
+    background:rgba(2,6,23,.995) !important;
+    backdrop-filter:none !important;
+    -webkit-backdrop-filter:none !important;
+    transform:translateX(-50%) translateY(-8px) !important;
+  }
+
+  #mobileMenu.active{
+    transform:translateX(-50%) translateY(0) !important;
+  }
+
+  #mobileMenu a{
+    min-height:40px !important;
+    padding:9px 14px !important;
+    color:#f8fafc !important;
+  }
+}
+
+@media (max-width:390px){
+  .hero{
+    padding-left:16px !important;
+    padding-right:16px !important;
+  }
+
+  .hero h1{
+    font-size:34px !important;
+  }
+}
+
 </style>
 </head>
 
@@ -4126,8 +4320,8 @@ html, body{
     </a>
 
     <div class="language-toggle">
-      <button id="trBtn" class="lang-btn active">TR</button>
-      <button id="enBtn" class="lang-btn">EN</button>
+      <button id="trBtn" class="lang-btn active" type="button" aria-pressed="true">TR</button>
+      <button id="enBtn" class="lang-btn" type="button" aria-pressed="false">EN</button>
     </div>
   </div>
 
@@ -4176,7 +4370,15 @@ html, body{
     </div>
 
     <div class="hero-image">
-      <img src="profile1.jpeg" alt="Sefa Akan">
+      <img
+        src="profile1-960.jpeg"
+        srcset="profile1-640.jpeg 640w, profile1-960.jpeg 960w"
+        sizes="(max-width: 768px) 58vw, 330px"
+        alt="Sefa Akan atletik performans antrenörü"
+        width="720"
+        height="960"
+        decoding="async"
+        fetchpriority="high">
     </div>
 
   </div>
@@ -4289,7 +4491,15 @@ html, body{
   <div class="about-container">
 
     <div class="about-image">
-      <img src="profile1.jpeg" alt="Sefa Akan">
+      <img
+        src="profile1-960.jpeg"
+        srcset="profile1-640.jpeg 640w, profile1-960.jpeg 960w"
+        sizes="(max-width: 768px) 70vw, 360px"
+        alt="Sefa Akan"
+        width="720"
+        height="960"
+        loading="lazy"
+        decoding="async">
     </div>
 
     <div class="about-content">
@@ -4937,22 +5147,30 @@ fadeElements.forEach(el=>{
 const glow = document.querySelector(".cursor-glow");
 
 document.addEventListener("mousemove", (e)=>{
+  if(!glow) return;
   glow.style.left = e.clientX + "px";
   glow.style.top = e.clientY + "px";
 });
 
-window.addEventListener("load", ()=>{
+function hideLoader(){
   const loader = document.getElementById("loader");
+  if(!loader || loader.dataset.hidden === "true") return;
+  loader.dataset.hidden = "true";
 
   setTimeout(()=>{
     loader.style.opacity = "0";
+    loader.style.visibility = "hidden";
 
     setTimeout(()=>{
       loader.style.display = "none";
-    }, 800);
+    }, 360);
 
-  }, 1800);
-});
+  }, 450);
+}
+
+document.addEventListener("DOMContentLoaded", hideLoader);
+window.addEventListener("load", hideLoader);
+setTimeout(hideLoader, 1400);
 </script>
 <script>
 window.addEventListener("load", function(){
@@ -5079,7 +5297,7 @@ function changeVideo(videoSrc, posterSrc, button){
 }
 </script>
 
-<a href="https://wa.me/905015440670" class="whatsapp-float" target="_blank">
+<a href="https://wa.me/905015440670" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp ile başvur">
   <i class="fa-brands fa-whatsapp"></i>
 </a>
 <script>
@@ -5090,12 +5308,16 @@ document.addEventListener("DOMContentLoaded", function(){
 
   function switchLanguage(lang){
     document.querySelectorAll("[data-tr][data-en]").forEach(function(el){
-      el.innerHTML = el.getAttribute("data-" + lang);
+      el.textContent = el.getAttribute("data-" + lang);
     });
+
+    document.documentElement.lang = lang;
 
     if(trBtn && enBtn){
       trBtn.classList.toggle("active", lang === "tr");
       enBtn.classList.toggle("active", lang === "en");
+      trBtn.setAttribute("aria-pressed", lang === "tr" ? "true" : "false");
+      enBtn.setAttribute("aria-pressed", lang === "en" ? "true" : "false");
     }
 
     localStorage.setItem("siteLang", lang);
