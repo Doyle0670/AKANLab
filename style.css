@@ -4066,3 +4066,196 @@ html, body{
     height:350px !important;
   }
 }
+
+/* Step 4: yazı ve buton oranları */
+.hero{
+  padding-top:112px !important;
+  padding-bottom:42px !important;
+}
+
+.hero-wrapper{
+  width:min(92%, 1120px) !important;
+  max-width:1120px !important;
+  grid-template-columns:minmax(0, 1.06fr) minmax(280px, .94fr) !important;
+  gap:clamp(30px, 4.6vw, 64px) !important;
+}
+
+.hero-small{
+  font-size:12px !important;
+  letter-spacing:4.2px !important;
+  margin-bottom:12px !important;
+}
+
+.hero h1{
+  font-size:clamp(56px, 6.25vw, 80px) !important;
+  line-height:.96 !important;
+  margin-bottom:12px !important;
+}
+
+.hero h2{
+  font-size:clamp(22px, 2.15vw, 29px) !important;
+  line-height:1.24 !important;
+  margin-bottom:16px !important;
+}
+
+.hero-desc{
+  max-width:550px !important;
+  font-size:clamp(16px, 1.28vw, 18.5px) !important;
+  line-height:1.68 !important;
+}
+
+.hero-badges{
+  margin-top:22px !important;
+  gap:9px !important;
+}
+
+.hero-badges span{
+  min-height:34px !important;
+  padding:7px 13px !important;
+  font-size:12.5px !important;
+}
+
+.hero-buttons{
+  margin-top:24px !important;
+  gap:12px !important;
+}
+
+.hero-btn,
+.package-btn,
+.contact-form button{
+  min-height:48px !important;
+  border-radius:999px !important;
+  font-size:15px !important;
+  line-height:1.15 !important;
+  letter-spacing:.1px !important;
+}
+
+.hero-btn{
+  min-width:164px !important;
+  padding:12px 22px !important;
+}
+
+.package-btn{
+  padding:13px 22px !important;
+}
+
+.contact-form button{
+  padding:14px 22px !important;
+}
+
+.video-tabs button{
+  min-height:42px !important;
+  padding:10px 16px !important;
+  font-size:13px !important;
+  border-radius:999px !important;
+}
+
+.cta-card h2{
+  font-size:clamp(28px, 3vw, 36px) !important;
+}
+
+.cta-card p:not(.section-label){
+  font-size:16.5px !important;
+}
+
+@media (max-width:960px){
+  .hero-wrapper{
+    width:min(100%, 590px) !important;
+    gap:24px !important;
+  }
+
+  .hero h1{
+    font-size:clamp(48px, 10vw, 66px) !important;
+  }
+}
+
+@media (max-width:768px){
+  .hero{
+    padding:90px 16px 30px !important;
+  }
+
+  .hero-wrapper{
+    gap:20px !important;
+  }
+
+  .hero-small{
+    font-size:10.5px !important;
+    letter-spacing:2.8px !important;
+    margin-bottom:9px !important;
+  }
+
+  .hero h1{
+    font-size:clamp(38px, 11.4vw, 50px) !important;
+    line-height:.98 !important;
+    margin-bottom:9px !important;
+  }
+
+  .hero h2{
+    font-size:clamp(18px, 5vw, 22px) !important;
+    margin-bottom:12px !important;
+  }
+
+  .hero-desc{
+    max-width:330px !important;
+    font-size:14.2px !important;
+    line-height:1.58 !important;
+  }
+
+  .hero-badges{
+    width:min(100%, 320px) !important;
+    margin-top:16px !important;
+    gap:7px !important;
+  }
+
+  .hero-badges span{
+    min-height:34px !important;
+    padding:7px 9px !important;
+    font-size:11px !important;
+  }
+
+  .hero-buttons{
+    width:min(100%, 320px) !important;
+    margin-top:18px !important;
+    gap:9px !important;
+  }
+
+  .hero-btn{
+    min-height:48px !important;
+    padding:12px 15px !important;
+    font-size:14px !important;
+  }
+
+  .hero-image img{
+    width:min(70vw, 278px) !important;
+    height:min(45vh, 350px) !important;
+  }
+
+  .video-tabs button{
+    min-height:40px !important;
+    padding:9px 13px !important;
+    font-size:12px !important;
+  }
+
+  .package-btn,
+  .contact-form button{
+    min-height:48px !important;
+    font-size:14px !important;
+  }
+}
+
+@media (max-width:380px){
+  .hero-desc{
+    max-width:300px !important;
+    font-size:13.7px !important;
+  }
+
+  .hero-buttons,
+  .hero-badges{
+    width:min(100%, 292px) !important;
+  }
+
+  .hero-image img{
+    width:min(74vw, 258px) !important;
+    height:330px !important;
+  }
+}
