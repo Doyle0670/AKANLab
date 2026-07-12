@@ -1815,3 +1815,74 @@ section {
   }
 }
 
+/* =========================================================
+   PERFORMANS SAYFASIYLA AYNI NAVBAR HİZASI
+========================================================= */
+
+/* Masaüstünde navbar tam sayfa genişliğini kullanır.
+   Sol ve sağ boşluklar performans sayfasıyla eşittir. */
+@media (min-width:1101px){
+  .navbar{
+    width:100% !important;
+    max-width:none !important;
+    min-height:78px !important;
+    margin:0 !important;
+    padding:0 46px !important;
+    grid-template-columns:305px minmax(0,1fr) 185px !important;
+    gap:22px !important;
+  }
+
+  .brand-logo{
+    width:305px !important;
+    max-width:305px !important;
+    justify-self:start !important;
+    font-size:20px !important;
+    gap:6px !important;
+  }
+
+  .nav-links{
+    width:100% !important;
+    justify-self:center !important;
+    justify-content:center !important;
+    gap:25px !important;
+  }
+
+  .nav-links a{
+    font-size:14px !important;
+    font-weight:600 !important;
+  }
+
+  .nav-btn{
+    width:auto !important;
+    min-width:118px !important;
+    justify-self:end !important;
+    padding:13px 22px !important;
+    font-size:14px !important;
+  }
+}
+
+/* Orta ekranlarda da performans sayfasındaki boşluk düzeni korunur. */
+@media (min-width:861px) and (max-width:1100px){
+  .navbar{
+    width:100% !important;
+    max-width:none !important;
+    margin:0 !important;
+    padding:0 24px !important;
+    grid-template-columns:245px minmax(0,1fr) 150px !important;
+    gap:16px !important;
+  }
+
+  .brand-logo{
+    width:245px !important;
+    max-width:245px !important;
+  }
+
+  .nav-links{
+    gap:15px !important;
+  }
+
+  .nav-links a{
+    font-size:12.5px !important;
+  }
+}
+
