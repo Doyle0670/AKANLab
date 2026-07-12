@@ -1762,3 +1762,56 @@ section {
     font-size:.78em;
   }
 }
+
+/* =========================================================
+   MARKA - MENÜ ÇAKIŞMA DÜZELTMESİ
+========================================================= */
+@media (min-width:1081px){
+  .navbar{
+    max-width:1420px !important;
+    grid-template-columns:360px minmax(0,1fr) 150px !important;
+    gap:22px !important;
+    padding-left:40px !important;
+    padding-right:40px !important;
+  }
+
+  .brand-logo{
+    width:360px !important;
+    max-width:360px !important;
+    font-size:20px !important;
+    gap:6px !important;
+  }
+
+  .nav-links{
+    width:100% !important;
+    min-width:0 !important;
+    gap:23px !important;
+    justify-content:center !important;
+  }
+
+  .nav-links a{
+    font-size:13.5px !important;
+  }
+}
+
+@media (min-width:861px) and (max-width:1080px){
+  .navbar{
+    grid-template-columns:285px minmax(0,1fr) 120px !important;
+    gap:14px !important;
+  }
+
+  .brand-logo{
+    width:285px !important;
+    max-width:285px !important;
+    font-size:15px !important;
+  }
+
+  .nav-links{
+    gap:13px !important;
+  }
+
+  .nav-links a{
+    font-size:12px !important;
+  }
+}
+
