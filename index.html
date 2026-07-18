@@ -47,7 +47,7 @@
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="style.css?v=20260718-hero-polish">
+  <link rel="stylesheet" href="style.css?v=20260718-gallery-page">
 
   <!-- Structured data -->
   <script type="application/ld+json">
@@ -179,7 +179,7 @@
       <a href="#paketler" data-tr="Paketler" data-en="Packages">Paketler</a>
       <a href="#testler" data-tr="Testler" data-en="Tests">Testler</a>
       <a href="#hakkimda" data-tr="Hakkımda" data-en="About">Hakkımda</a>
-      <a href="#galeri" data-tr="Galeri" data-en="Gallery">Galeri</a>
+      <a href="/galeri/" data-tr="Galeri" data-en="Gallery">Galeri</a>
       <a href="#blog" data-tr="Blog" data-en="Blog">Blog</a>
       <a href="#iletisim" data-tr="Başvuru" data-en="Apply">Başvuru</a>
       <a href="/fitness/" class="mobile-fitness-link" data-tr="Fitness" data-en="Fitness">Fitness</a>
@@ -550,53 +550,50 @@
       </div>
     </section>
 
-    <section id="galeri" class="gallery-section section-shell fade-up">
+    <section id="galeri" class="gallery-preview section-shell fade-up">
       <div class="section-heading">
         <p class="section-label" data-tr="SAHADAN" data-en="FROM THE FIELD">SAHADAN</p>
-        <h2 data-tr="Antrenman, test ve gelişim sürecinden görüntüler" data-en="Training, testing and development in action">Antrenman, test ve gelişim sürecinden görüntüler</h2>
-        <p data-tr="Sprint, kuvvet, çeviklik ve performans testlerinin sahadaki uygulamalarını videolardan inceleyebilirsin."
-           data-en="See field applications of sprint, strength, agility and performance testing in the videos.">
-          Sprint, kuvvet, çeviklik ve performans testlerinin sahadaki uygulamalarını videolardan inceleyebilirsin.
+        <h2 data-tr="Antrenman ve test sürecini sahada incele" data-en="See training and testing in action">Antrenman ve test sürecini sahada incele</h2>
+        <p data-tr="Ana sayfayı hızlı ve sade tutmak için burada kısa bir ön izleme sunuluyor. Tüm videoları ve çalışma kategorilerini ayrı galeri sayfasında inceleyebilirsin."
+           data-en="This page shows a short preview to keep the homepage fast and focused. View all videos and training categories on the dedicated gallery page.">
+          Ana sayfayı hızlı ve sade tutmak için burada kısa bir ön izleme sunuluyor. Tüm videoları ve çalışma kategorilerini ayrı galeri sayfasında inceleyebilirsin.
         </p>
       </div>
 
-      <div class="gallery-video">
-        <div class="video-player">
-          <video id="mainVideo" controls preload="metadata" poster="video-kapak-fotoğrafı.png" playsinline>
-            <source src="editvideo1.mp4" type="video/mp4">
-            Tarayıcınız video etiketini desteklemiyor.
-          </video>
-        </div>
+      <div class="gallery-preview-layout">
+        <a class="gallery-preview-media" href="/galeri/" aria-label="Tüm saha galerisini aç">
+          <img src="video-kapak-fotoğrafı.png" alt="Akan Performance saha antrenmanı galeri kapağı" width="1280" height="720" loading="lazy">
+          <span class="gallery-preview-shade" aria-hidden="true"></span>
+          <span class="gallery-preview-play" aria-hidden="true"><i class="fa-solid fa-play"></i></span>
+          <span class="gallery-preview-badge" data-tr="TAM GALERİ" data-en="FULL GALLERY">TAM GALERİ</span>
+        </a>
 
-        <div class="video-tabs" role="group" aria-label="Video seçimi">
-          <button type="button" data-video="editvideo1.mp4" data-poster="video-kapak-fotoğrafı.png" class="active">GENEL</button>
-          <button type="button" data-video="video.mp4" data-poster="video-kapak-fotoğrafı.png">DRILL 1</button>
-          <button type="button" data-video="video2.mp4" data-poster="video2-kapak-fotoğrafı.png">DRILL 2</button>
-          <button type="button" data-video="video3.mp4" data-poster="video3-kapak-fotoğrafı.png">DRILL 3</button>
-        </div>
-      </div>
+        <div class="gallery-preview-content">
+          <p class="gallery-preview-kicker" data-tr="VİDEO VE SAHA İÇERİKLERİ" data-en="VIDEO AND FIELD CONTENT">VİDEO VE SAHA İÇERİKLERİ</p>
+          <h3 data-tr="Sprint, çeviklik, güç ve test uygulamaları" data-en="Sprint, agility, power and testing sessions">Sprint, çeviklik, güç ve test uygulamaları</h3>
+          <p data-tr="Saha çalışmalarının yalnızca sonucunu değil; kullanılan drillleri, test yaklaşımını ve gelişim sürecini de görüntüler üzerinden incele."
+             data-en="Explore not only the outcome, but also the drills, testing approach and development process through field footage.">
+            Saha çalışmalarının yalnızca sonucunu değil; kullanılan drillleri, test yaklaşımını ve gelişim sürecini de görüntüler üzerinden incele.
+          </p>
 
-      <div class="gallery-grid">
-        <article class="gallery-card">
-          <div class="gallery-icon">⚡</div>
-          <h3 data-tr="Sprint drillleri" data-en="Sprint drills">Sprint drillleri</h3>
-          <p data-tr="İvmelenme, maksimum hız ve koşu mekaniği için saha içi uygulamalar." data-en="Field-based work for acceleration, maximum speed and sprint mechanics.">İvmelenme, maksimum hız ve koşu mekaniği için saha içi uygulamalar.</p>
-        </article>
-        <article class="gallery-card">
-          <div class="gallery-icon">💥</div>
-          <h3 data-tr="Patlayıcı güç" data-en="Explosive power">Patlayıcı güç</h3>
-          <p data-tr="Sıçrama, sağlık topu ve kuvvet aktarımı çalışmalarıyla sahaya yönelik güç gelişimi." data-en="Power development through jumps, medicine-ball work and force transfer.">Sıçrama, sağlık topu ve kuvvet aktarımı çalışmalarıyla sahaya yönelik güç gelişimi.</p>
-        </article>
-        <article class="gallery-card">
-          <div class="gallery-icon">🔄</div>
-          <h3 data-tr="Çeviklik ve frenleme" data-en="Agility and deceleration">Çeviklik ve frenleme</h3>
-          <p data-tr="Yön değiştirme, frenleme, reaksiyon ve saha içi hareket kalitesi çalışmaları." data-en="Change of direction, deceleration, reaction and field-movement quality.">Yön değiştirme, frenleme, reaksiyon ve saha içi hareket kalitesi çalışmaları.</p>
-        </article>
-        <article class="gallery-card">
-          <div class="gallery-icon">📈</div>
-          <h3 data-tr="Test günleri" data-en="Testing days">Test günleri</h3>
-          <p data-tr="Sprint, sıçrama, çeviklik ve hareket verileriyle gelişimin düzenli takibi." data-en="Regular progress tracking through sprint, jump, agility and movement data.">Sprint, sıçrama, çeviklik ve hareket verileriyle gelişimin düzenli takibi.</p>
-        </article>
+          <div class="gallery-preview-tags" aria-label="Galeri kategorileri">
+            <span><i class="fa-solid fa-bolt"></i><b data-tr="Sprint" data-en="Sprint">Sprint</b></span>
+            <span><i class="fa-solid fa-arrows-left-right"></i><b data-tr="Çeviklik" data-en="Agility">Çeviklik</b></span>
+            <span><i class="fa-solid fa-dumbbell"></i><b data-tr="Güç" data-en="Power">Güç</b></span>
+            <span><i class="fa-solid fa-chart-line"></i><b data-tr="Test" data-en="Testing">Test</b></span>
+          </div>
+
+          <div class="gallery-preview-actions">
+            <a href="/galeri/" class="hero-btn primary">
+              <span data-tr="Tüm galeriyi incele" data-en="View full gallery">Tüm galeriyi incele</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="https://www.instagram.com/sefa.akann/" target="_blank" rel="noopener noreferrer" class="hero-btn secondary">
+              <i class="fa-brands fa-instagram"></i>
+              <span data-tr="Instagram" data-en="Instagram">Instagram</span>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -880,6 +877,7 @@
         <a href="#surec" data-tr="Sistem" data-en="System">Sistem</a>
         <a href="#services" data-tr="Hizmetler" data-en="Services">Hizmetler</a>
         <a href="#testler" data-tr="Testler" data-en="Tests">Testler</a>
+        <a href="/galeri/" data-tr="Galeri" data-en="Gallery">Galeri</a>
         <a href="#iletisim" data-tr="Başvuru" data-en="Apply">Başvuru</a>
       </div>
       <div class="footer-socials">
