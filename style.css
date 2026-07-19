@@ -2978,3 +2978,30 @@ main{
     grid-column:auto;
   }
 }
+
+/* GERÇEK SAYFA BAŞI HEDEFİ VE FOOTER YUKARI BAĞLANTILARI */
+.top-anchor{
+  position:absolute;
+  top:0;
+  left:0;
+  width:1px;
+  height:1px;
+  pointer-events:none;
+}
+
+.footer-logo{
+  display:inline-block;
+  color:#fff;
+  text-decoration:none;
+  cursor:pointer;
+}
+
+.footer-logo:visited{
+  color:#fff;
+}
+
+.footer-logo:focus-visible,
+.footer-bottom .scroll-top-link:focus-visible{
+  outline:3px solid rgba(56,189,248,0.75);
+  outline-offset:6px;
+}

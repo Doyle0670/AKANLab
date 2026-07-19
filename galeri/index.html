@@ -91,6 +91,7 @@
 
 <body class="gallery-page">
   <a class="skip-link" href="#gallery-main">İçeriğe geç</a>
+  <span id="top" class="top-anchor" aria-hidden="true"></span>
 
   <div class="space-bg" aria-hidden="true">
     <div class="stars stars1"></div>
@@ -101,7 +102,7 @@
   </div>
   <div class="cursor-glow" aria-hidden="true"></div>
 
-  <header class="navbar" id="top">
+  <header class="navbar">
     <div class="logo brand-logo">
       <a href="/" class="brand-main" aria-label="AKAN Performance ana sayfa">AKAN <span>PERFORMANCE</span></a>
       <span class="brand-extra">
@@ -311,7 +312,7 @@
   <footer class="footer">
     <div class="footer-inner">
       <div>
-        <div class="footer-logo">AKAN <span>PERFORMANCE</span></div>
+        <a class="footer-logo scroll-top-link" href="#top" aria-label="Sayfanın başına dön">AKAN <span>PERFORMANCE</span></a>
         <p class="footer-text" data-tr="Ankara ve Manisa’da bilimsel testlere dayalı atletik performans gelişimi." data-en="Athletic performance development based on scientific testing in Ankara and Manisa.">Ankara ve Manisa’da bilimsel testlere dayalı atletik performans gelişimi.</p>
       </div>
       <div class="footer-links">
@@ -328,7 +329,7 @@
     </div>
     <div class="footer-bottom">
       <p>© 2026 Sefa Akan — All Rights Reserved</p>
-      <a href="#top" aria-label="Sayfanın başına dön"><i class="fa-solid fa-arrow-up"></i></a>
+      <a href="#top" class="scroll-top-link" aria-label="Sayfanın başına dön"><i class="fa-solid fa-arrow-up"></i></a>
     </div>
   </footer>
 
@@ -424,6 +425,22 @@
           videos.forEach(other => {
             if (other !== video) other.pause();
           });
+        });
+      });
+
+      // Footer logosu ve yukarı ok için güvenilir sayfa başı davranışı.
+      $$('.scroll-top-link').forEach(link => {
+        link.addEventListener('click', event => {
+          event.preventDefault();
+          setMenuState?.(false);
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: prefersReducedMotion ? 'auto' : 'smooth'
+          });
+          if (window.location.hash) {
+            history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
+          }
         });
       });
 

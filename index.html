@@ -145,6 +145,7 @@
 
 <body>
   <a class="skip-link" href="#main-content">İçeriğe geç</a>
+  <span id="top" class="top-anchor" aria-hidden="true"></span>
 
   <div id="loader" aria-hidden="true">
     <div class="loader-content">
@@ -164,7 +165,7 @@
   </div>
   <div class="cursor-glow" aria-hidden="true"></div>
 
-  <header class="navbar" id="top">
+  <header class="navbar">
     <div class="logo brand-logo">
       <a href="#top" class="brand-main" aria-label="AKAN Performance ana sayfa">AKAN <span>PERFORMANCE</span></a>
       <span class="brand-extra">
@@ -590,7 +591,7 @@
             </a>
             <a href="https://www.instagram.com/sefa.akann/" target="_blank" rel="noopener noreferrer" class="hero-btn secondary">
               <i class="fa-brands fa-instagram"></i>
-              <span data-tr="Instagram" data-en="Instagram"> Instagram</span>
+              <span data-tr="Instagram" data-en="Instagram">Instagram</span>
             </a>
           </div>
         </div>
@@ -870,7 +871,7 @@
   <footer class="footer">
     <div class="footer-inner">
       <div>
-        <div class="footer-logo">AKAN <span>PERFORMANCE</span></div>
+        <a class="footer-logo scroll-top-link" href="#top" aria-label="Sayfanın başına dön">AKAN <span>PERFORMANCE</span></a>
         <p class="footer-text" data-tr="Ankara ve Manisa’da bilimsel testlere dayalı atletik performans gelişimi." data-en="Athletic performance development based on scientific testing in Ankara and Manisa.">Ankara ve Manisa’da bilimsel testlere dayalı atletik performans gelişimi.</p>
       </div>
       <div class="footer-links">
@@ -888,7 +889,7 @@
     </div>
     <div class="footer-bottom">
       <p>© 2026 Sefa Akan — All Rights Reserved</p>
-      <a href="#top" aria-label="Sayfanın başına dön"><i class="fa-solid fa-arrow-up"></i></a>
+      <a href="#top" class="scroll-top-link" aria-label="Sayfanın başına dön"><i class="fa-solid fa-arrow-up"></i></a>
     </div>
   </footer>
 
@@ -1123,6 +1124,22 @@
           ? `Merhaba Sefa Hocam, atletik performans çalışmaları için ön başvuru yapmak istiyorum.\n\nAd Soyad: ${value('name')}\nYaş: ${value('age')}\nSpor Branşı: ${value('sport')}\nÇalışma Tercihi: ${value('format')}\nMevcut Seviye / Takım / Lig: ${value('level')}\nHaftalık Uygunluk: ${value('days')}\nTelefon: ${value('phone')}\nSakatlık / Ağrı Durumu: ${value('injury')}\nHedef: ${value('goal')}`
           : `Hello Coach Sefa, I would like to apply for athletic performance training.\n\nFull Name: ${value('name')}\nAge: ${value('age')}\nSport: ${value('sport')}\nTraining Preference: ${value('format')}\nCurrent Level / Team / League: ${value('level')}\nWeekly Availability: ${value('days')}\nPhone: ${value('phone')}\nInjury / Pain Status: ${value('injury')}\nGoal: ${value('goal')}`;
         window.open(`https://wa.me/905015440670?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+      });
+
+      // Footer logosu ve yukarı ok için güvenilir sayfa başı davranışı.
+      $$('.scroll-top-link').forEach(link => {
+        link.addEventListener('click', event => {
+          event.preventDefault();
+          setMenuState?.(false);
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: prefersReducedMotion ? 'auto' : 'smooth'
+          });
+          if (window.location.hash) {
+            history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
+          }
+        });
       });
 
       // Masaüstü imleç ışığı.
